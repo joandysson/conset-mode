@@ -4,29 +4,30 @@ document.getElementById('generate-code').addEventListener('click', function() {
     const buttonOptions = document.getElementById('button-options').value;
     const customBannerTitle = document.getElementById('banner-title').value || 'Cookie settings';
     const showCheckboxes = buttonOptions === 'all';
+    const borderRadius = document.getElementById('border-radius').value;
 
     const previewInfo = `
     <div id="preview-info" style="display: block;">
-        <button id="btn-close-preview" class="btn-close-preview">Clone preview</button>
+        <button id="btn-close-preview" class="btn-close-preview">Close preview</button>
     </div>
-    `
+    `;
 
     const bannerHTML = `
     <div id="cookie-consent-banner" class="cookie-consent-banner ${placement}">
         <h3>${customBannerTitle}</h3>
         <p>${bannerText}</p>
         ${showCheckboxes ? `
-            <button id="btn-accept-all" class="cookie-consent-button btn-success">Accept All</button>
-            <button id="btn-accept-some" class="cookie-consent-button btn-outline">Accept Selection</button>
-            <button id="btn-reject-all" class="cookie-consent-button btn-grayscale">Reject All</button>
+            <button id="btn-accept" class="cookie-consent-button btn-success">Accept All</button>
+            <button id="btn-reject" class="cookie-consent-button btn-grayscale">Reject All</button>
+            <button id="btn-settings" class="cookie-consent-button btn-outline">Settings</button>
             <div class="cookie-consent-options">
                 <label><input id="consent-necessary" type="checkbox" value="Necessary" checked disabled>Necessary</label>
                 <label><input id="consent-analytics" type="checkbox" value="Analytics" checked>Analytics</label>
                 <label><input id="consent-preferences" type="checkbox" value="Preferences" checked>Preferences</label>
-                <label><input id="consent-marketing" type="checkbox" value="Marketing">Marketing</label>
+                <label><input id="consent-marketing" type="checkbox" value="Marketing" checked>Marketing</label>
             </div>
         ` : `
-            <button id="btn-accept-all" class="cookie-consent-button btn-success">Accept</button>
+            <button id="btn-accept" class="cookie-consent-button btn-success">Accept</button>
         `}
     </div>
     `;
@@ -38,21 +39,47 @@ document.getElementById('generate-code').addEventListener('click', function() {
 
     const bannerCSS = `
     .cookie-consent-banner {
-        display: none;
         position: fixed;
-        left: 0;
-        right: 0;
         background-color: #f8f9fa;
-        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
         color: black;
         padding: 15px;
         font-size: 14px;
         text-align: center;
         z-index: 1000;
+        border-radius: ${borderRadius}px;
     }
 
-    .cookie-consent-banner.${placement} {
-        ${placement === 'bottom' ? 'bottom: 0;' : placement === 'top' ? 'top: 0;' : ''}
+    .cookie-consent-banner.bottom {
+        bottom: 0;
+        left: 0;
+        right: 0;
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .cookie-consent-banner.top {
+        top: 0;
+        left: 0;
+        right: 0;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .cookie-consent-banner.bottom-left {
+        bottom: 5px;
+        left: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .cookie-consent-banner.bottom-right {
+        bottom: 5px;
+        right: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .cookie-consent-banner.bottom-center {
+        bottom: 5px;
+        left: 50%;
+        transform: translateX(-50%);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
     `;
 
@@ -94,16 +121,7 @@ document.getElementById('generate-code').addEventListener('click', function() {
     }
 
     // Attach event listeners after inserting banner HTML into the DOM
-    document.getElementById('btn-accept-all').addEventListener('click', function() {
-        setConsentAndHideBanner({
-            necessary: true,
-            analytics: true,
-            preferences: true,
-            marketing: true
-        });
-    });
-
-    document.getElementById('btn-accept-some').addEventListener('click', function() {
+    document.getElementById('btn-accept').addEventListener('click', function() {
         setConsentAndHideBanner({
             necessary: true,
             analytics: document.getElementById('consent-analytics').checked,
@@ -112,7 +130,7 @@ document.getElementById('generate-code').addEventListener('click', function() {
         });
     });
 
-    document.getElementById('btn-reject-all').addEventListener('click', function() {
+    document.getElementById('btn-reject').addEventListener('click', function() {
         setConsentAndHideBanner({
             necessary: false,
             analytics: false,
@@ -124,6 +142,18 @@ document.getElementById('generate-code').addEventListener('click', function() {
     // Display the consent banner
     document.getElementById('cookie-consent-banner').style.display = 'block';
     `;
+
+    // Remove any existing style element with id 'dynamic-banner-css'
+    const existingStyleElement = document.getElementById('dynamic-banner-css');
+    if (existingStyleElement) {
+        existingStyleElement.remove();
+    }
+
+    // Insert the new CSS into the document head
+    const styleElement = document.createElement('style');
+    styleElement.id = 'dynamic-banner-css'; // Give it an id for future reference
+    styleElement.textContent = bannerCSS;
+    document.head.appendChild(styleElement);
 
     // Update generated code sections (HTML, CSS, JS)
     document.getElementById('generated-html').innerText = bannerHTML;
@@ -155,3 +185,23 @@ function copyToClipboard(elementId) {
 
     alert('Code copied to clipboard!');
 }
+
+// Function to handle changes in placement selection
+function handlePlacementChange() {
+    const placement = document.getElementById('placement').value;
+    const borderRadiusInput = document.getElementById('border-radius');
+
+    console.log(placement);
+    // Disable the border radius input for 'bottom' and 'top' placements
+    if (placement === 'bottom' || placement === 'top') {
+        borderRadiusInput.disabled = true;
+    } else {
+        borderRadiusInput.disabled = false;
+    }
+}
+
+// Add event listener to placement select element
+document.getElementById('placement').addEventListener('change', handlePlacementChange);
+
+// Call the function initially to set the initial state based on the default value
+handlePlacementChange();
