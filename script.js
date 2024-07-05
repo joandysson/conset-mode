@@ -7,8 +7,7 @@ document.getElementById('generate-code').addEventListener('click', function() {
 
     const previewInfo = `
     <div id="preview-info" style="display: block;">
-        <p>This is a preview of your consent banner.</p>
-        <button id="close-preview">Click here to close</button>
+        <button id="btn-close-preview" class="btn-close-preview">Clone preview</button>
     </div>
     `
 
@@ -36,9 +35,6 @@ document.getElementById('generate-code').addEventListener('click', function() {
     const bannerElement = document.createRange().createContextualFragment(bannerHTML);
 
     bannerElement.getElementById('cookie-consent-banner').prepend(previewInfoElement);
-
-
-    console.log(previewInfoElement, bannerElement)
 
     const bannerCSS = `
     .cookie-consent-banner {
@@ -135,15 +131,14 @@ document.getElementById('generate-code').addEventListener('click', function() {
     document.getElementById('generated-js').innerText = bannerJS;
 
     // Set the banner content
+    document.getElementById('preview-section').innerText = '';
     document.getElementById('preview-section').append(bannerElement);
 
     // Show the preview info
     // document.getElementById('preview-info').style.display = 'block';
 
-    ['btn-reject-all', 'btn-accept-all', 'btn-accept-some'].forEach(function(id) {
-        document.getElementById(id).addEventListener('click', function () {
-            document.getElementById('cookie-consent-banner').style.display = 'none';
-        });
+    document.getElementById('btn-close-preview').addEventListener('click', function () {
+        document.getElementById('cookie-consent-banner').style.display = 'none';
     });
 });
 
