@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consent Mode Banner</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Consent <span class="blue">Mode</span> Banner</h1>
+        </header>
+        <main>
+            <section class="config-section">
+                <h2>Configuration</h2>
+                <!-- Your configuration form and code generation UI goes here -->
+                <div id="customization-ui">
+                    <h3>Customize Your Consent Banner</h3>
+                    <form id="customization-form">
+                        <label for="placement">Banner Placement:</label>
+                        <select id="placement" name="placement">
+                            <option value="bottom">Bottom</option>
+                            <option value="top">Top</option>
+                        </select>
+                        <label for="banner-title">Banner Title:</label>
+                        <input type="text" id="banner-title" placeholder="Cookie settings">
+
+                        <label for="button-options">Button Options:</label>
+                        <select id="button-options">
+                            <option value="all">Show All Buttons</option>
+                            <option value="accept-only">Accept Only Button</option>
+                        </select>
+
+                        <label for="banner-text">Banner Text:</label>
+                        <textarea id="banner-text" name="banner-text">We use cookies to provide you with the best possible experience...</textarea>
+
+                        <button type="button" id="generate-code">Generate Code</button>
+                    </form>
+
+                    <h3>Generated Code</h3>
+
+                    <div class="code-section">
+                        <h4>HTML Code (Place inside &lt;body&gt; tag)</h4>
+                        <pre><code id="generated-html"></code></pre>
+                        <button onclick="copyToClipboard('generated-html')">Copy HTML Code</button>
+
+                        <h4>CSS Code (Place inside &lt;head&gt; tag or external stylesheet)</h4>
+                        <pre><code id="generated-css"></code></pre>
+                        <button onclick="copyToClipboard('generated-css')">Copy CSS Code</button>
+
+                        <h4>JavaScript Code (Place before closing &lt;/body&gt; tag)</h4>
+                        <pre><code id="generated-js"></code></pre>
+                        <button onclick="copyToClipboard('generated-js')">Copy JS Code</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Additional sections as needed -->
+        </main>
+
+        <!-- Preview section -->
+        <section id="preview-section">
+
+        </section>
+
+        <footer>
+            <!-- Footer content -->
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
