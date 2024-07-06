@@ -477,7 +477,7 @@ document.getElementById('example-code').addEventListener('click', async () => {
     URL.revokeObjectURL(url);
 });
 
-document.getElementById('cdn-code').addEventListener('click', async () => {
+document.getElementById('cdn-code')?.addEventListener('click', async () => {
     const [bannerHTML, bannerCSS, bannerJS] = generatePreview()
     const minifiedHTML = await HTMLMinifier.minify(bannerHTML, {
         collapseWhitespace: true,
