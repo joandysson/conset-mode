@@ -1,26 +1,15 @@
 var toggle = null;
 
-document.getElementById('generate-code').addEventListener('click', () => {
-    const placement = document.getElementById('placement').value;
-    const bannerText = document.getElementById('banner-text').value;
-    const buttonOptions = document.getElementById('button-options').value;
-    const customBannerTitle = document.getElementById('banner-title').value;
-    const showCheckboxes = buttonOptions === 'all';
-    const borderRadius = document.getElementById('border-radius').value;
-    const btnRadius = document.getElementById('button-radius').value;
-
-    const inputSuccess = document.getElementById('input-success').value;
-    const inputReject = document.getElementById('input-reject').value;
-    const inputSettings = document.getElementById('input-settings').value;
-    const inputToggle = document.getElementById('input-toggle').value;
-
-    const previewInfo = `
+function previewInfoHTML() {
+   return `
     <div id="preview-info" style="display: block;">
         <button id="btn-close-preview" class="btn-close-preview">Close preview</button>
     </div>
     `;
+}
 
-    const bannerHTML = `
+function getBannerHTML(placement, customBannerTitle, bannerText, showCheckboxes) {
+    return `
     <div id="cookie-consent-banner" class="cookie-consent-banner ${placement}">
         ${customBannerTitle ? `<h3>${customBannerTitle}</h3>`: ''}
         <p>${bannerText}</p>
@@ -69,13 +58,10 @@ document.getElementById('generate-code').addEventListener('click', () => {
         `}
     </div>
     `;
+}
 
-    const previewInfoElement = document.createRange().createContextualFragment(previewInfo);
-    const bannerElement = document.createRange().createContextualFragment(bannerHTML);
-
-    bannerElement.getElementById('cookie-consent-banner').prepend(previewInfoElement);
-
-    const bannerCSS = `
+function getBannerCSS(borderRadius, inputToggle, btnRadius, inputSuccess, inputReject, inputSettings) {
+    return `
     .cookie-consent-banner {
         position: fixed;
         display: none;
@@ -265,7 +251,10 @@ document.getElementById('generate-code').addEventListener('click', () => {
     }
     `;
 
-    const bannerJS = `
+}
+
+function getBannerJS(showCheckboxes) {
+    return `
     window.dataLayer = window.dataLayer || [];
     function gtag() {
         dataLayer.push(arguments);
@@ -365,59 +354,98 @@ document.getElementById('generate-code').addEventListener('click', () => {
         document.getElementById('cookie-consent-banner').style.display = 'block';
     }
     `;
+}
+
+function addAndRemoveDynamicStyleCss(bannerCSS) {
+    const id = 'dynamic-banner-css';
 
     // Remove any existing style element with id 'dynamic-banner-css'
-    const existingStyleElement = document.getElementById('dynamic-banner-css');
+    const existingStyleElement = document.getElementById(id);
     if (existingStyleElement) {
         existingStyleElement.remove();
     }
 
     // Insert the new CSS into the document head
     const styleElement = document.createElement('style');
-    styleElement.id = 'dynamic-banner-css'; // Give it an id for future reference
+    styleElement.id = id; // Give it an id for future reference
     styleElement.textContent = bannerCSS;
     document.head.appendChild(styleElement);
+}
 
-    // Update generated code sections (HTML, CSS, JS)
+function replacePreview(bannerElement) {
+    document.getElementById('preview-section').innerText = '';
+    document.getElementById('preview-section').append(bannerElement);
+}
+
+function insertCodeInPage(bannerHTML, bannerCSS, bannerJS) {
     document.getElementById('generated-html').innerText = bannerHTML;
     document.getElementById('generated-css').innerText = bannerCSS;
     document.getElementById('generated-js').innerText = bannerJS;
+}
 
-    // Set the banner content
-    document.getElementById('preview-section').innerText = '';
-    document.getElementById('preview-section').append(bannerElement);
+function getBannerElementPreview(previewInfo, bannerHTML) {
+    const previewInfoElement = document.createRange().createContextualFragment(previewInfo);
+    const bannerElement = document.createRange().createContextualFragment(bannerHTML);
+    bannerElement.getElementById('cookie-consent-banner').prepend(previewInfoElement);
 
-    // Show the preview info
-    // document.getElementById('preview-info').style.display = 'block';
+    return bannerElement;
+}
+
+function getBannerCode() {
+    const placement = document.getElementById('placement').value;
+    const bannerText = document.getElementById('banner-text').value;
+    const buttonOptions = document.getElementById('button-options').value;
+    const customBannerTitle = document.getElementById('banner-title').value;
+    const showCheckboxes = buttonOptions === 'all';
+    const borderRadius = document.getElementById('border-radius').value;
+    const btnRadius = document.getElementById('button-radius').value;
+
+    const inputSuccess = document.getElementById('input-success').value;
+    const inputReject = document.getElementById('input-reject').value;
+    const inputSettings = document.getElementById('input-settings').value;
+    const inputToggle = document.getElementById('input-toggle').value;
+
+    const previewInfo = previewInfoHTML();
+    const bannerHTML = getBannerHTML(placement, customBannerTitle, bannerText, showCheckboxes);
+    const bannerCSS = getBannerCSS(borderRadius, inputToggle, btnRadius, inputSuccess, inputReject, inputSettings);
+    const bannerJS = getBannerJS(showCheckboxes)
+
+    return [previewInfo, bannerHTML, bannerCSS, bannerJS]
+}
+
+function generatepreview() {
+    const [previewInfo, bannerHTML, bannerCSS, bannerJS] = getBannerCode();
+
+    const bannerElementPreview = getBannerElementPreview(previewInfo, bannerHTML)
+    addAndRemoveDynamicStyleCss(bannerCSS)
+    replacePreview(bannerElementPreview)
 
     document.getElementById('btn-close-preview').addEventListener('click', function () {
         document.getElementById('cookie-consent-banner').style.display = 'none';
     });
 
-    if (showCheckboxes) {
-        document.getElementById('btn-settings').addEventListener('click', () => {
-            const element = document.getElementById('cookie-consent-options');
-            const display = element.style.display === 'flex' ? 'none': 'flex'
-            document.getElementById('cookie-consent-options').style.display = display
-            toggle = display
-        });
-    }
+    document.getElementById('btn-settings')?.addEventListener('click', () => {
+        const element = document.getElementById('cookie-consent-options');
+        const display = element.style.display === 'flex' ? 'none': 'flex'
+        document.getElementById('cookie-consent-options').style.display = display
+        toggle = display
+    });
 
     document.getElementById('cookie-consent-banner').style.display = 'block';
 
+    return [bannerHTML, bannerCSS, bannerJS]
+}
+
+document.getElementById('generate-code').addEventListener('click', () => {
+    const [bannerHTML, bannerCSS, bannerJS] = generatepreview()
+
+    insertCodeInPage(bannerHTML, bannerCSS, bannerJS)
 });
 
 function copyToClipboard(elementId) {
     const codeElement = document.getElementById(elementId);
     const codeText = codeElement.innerText;
-
-    const textarea = document.createElement('textarea');
-    textarea.value = codeText;
-    document.body.appendChild(textarea);
-    textarea.select();
-    document.execCommand('copy');
-    document.body.removeChild(textarea);
-
+    navigator.clipboard.writeText(codeText);
     alert('Code copied to clipboard!');
 }
 
@@ -445,15 +473,12 @@ document.addEventListener('DOMContentLoaded', (_) => {
 
     form.addEventListener('input', (event) => {
         const input = event.target;
-        document.getElementById('generate-code').click()
+        generatepreview()
 
-        if(input.name !== 'button-options') {
-            const display = input.name === 'input-toggle' ? 'flex' : toggle
-
-            if(document.getElementById('cookie-consent-options')) {
-                document.getElementById('cookie-consent-options').style.display = display
-                toggle = display
-            }
+        const display = input.name === 'input-toggle' ? 'flex' : toggle
+        if(document.getElementById('cookie-consent-options')) {
+            document.getElementById('cookie-consent-options').style.display = display
+            toggle = display
         }
 
         if(input.type === 'number' && input.value > 10) {
