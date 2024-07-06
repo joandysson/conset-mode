@@ -78,6 +78,7 @@ document.getElementById('generate-code').addEventListener('click', () => {
     const bannerCSS = `
     .cookie-consent-banner {
         position: fixed;
+        display: none;
         background-color: #f8f9fa;
         color: black;
         padding: 15px;
@@ -305,6 +306,8 @@ document.getElementById('generate-code').addEventListener('click', () => {
             preferences: document.getElementById('consent-preferences').checked,
             marketing: document.getElementById('consent-marketing').checked
         });
+
+        setCookie('cookieConsent', 'accepted', 30);
     });
 
     document.getElementById('btn-reject').addEventListener('click', function() {
@@ -314,10 +317,9 @@ document.getElementById('generate-code').addEventListener('click', () => {
             preferences: false,
             marketing: false
         });
-    });
 
-    // Display the consent banner
-    document.getElementById('cookie-consent-banner').style.display = 'block';
+        setCookie('cookieConsent', 'reject', 30);
+    });
 
     ${showCheckboxes ? `
         document.getElementById('btn-settings').addEventListener('click', function() {
@@ -329,6 +331,35 @@ document.getElementById('generate-code').addEventListener('click', () => {
             }
         });
         `: ``}
+
+
+    function setCookie(name, value, days) {
+        const date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        const expires = "expires=" + date.toUTCString();
+        document.cookie = name + "=" + value + ";" + expires + ";path=/";
+    }
+
+    function getCookie(name) {
+        const nameEQ = name + "=";
+        const ca = document.cookie.split(';');
+        for (let i = 0; i < ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) === ' ') {
+                c = c.substring(1, c.length);
+            }
+            if (c.indexOf(nameEQ) === 0) {
+                return c.substring(nameEQ.length, c.length);
+            }
+        }
+        return null;
+    }
+
+    const consent = getCookie('cookieConsent');
+    if (!consent) {
+        // Display the consent banner
+        document.getElementById('cookie-consent-banner').style.display = 'block';
+    }
     `;
 
     // Remove any existing style element with id 'dynamic-banner-css'
@@ -367,6 +398,8 @@ document.getElementById('generate-code').addEventListener('click', () => {
             toggle = display
         });
     }
+
+    document.getElementById('cookie-consent-banner').style.display = 'block';
 
 });
 
