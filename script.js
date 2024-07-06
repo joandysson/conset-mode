@@ -1,10 +1,18 @@
-document.getElementById('generate-code').addEventListener('click', function() {
+var toggle = null;
+
+document.getElementById('generate-code').addEventListener('click', () => {
     const placement = document.getElementById('placement').value;
     const bannerText = document.getElementById('banner-text').value;
     const buttonOptions = document.getElementById('button-options').value;
     const customBannerTitle = document.getElementById('banner-title').value || 'Cookie settings';
     const showCheckboxes = buttonOptions === 'all';
     const borderRadius = document.getElementById('border-radius').value;
+    const btnRadius = document.getElementById('button-radius').value;
+
+    const inputSuccess = document.getElementById('input-success').value;
+    const inputReject = document.getElementById('input-reject').value;
+    const inputSettings = document.getElementById('input-settings').value;
+    const inputToggle = document.getElementById('input-toggle').value;
 
     const previewInfo = `
     <div id="preview-info" style="display: block;">
@@ -17,14 +25,44 @@ document.getElementById('generate-code').addEventListener('click', function() {
         <h3>${customBannerTitle}</h3>
         <p>${bannerText}</p>
         ${showCheckboxes ? `
-            <button id="btn-accept" class="cookie-consent-button btn-success">Accept All</button>
-            <button id="btn-reject" class="cookie-consent-button btn-grayscale">Reject All</button>
-            <button id="btn-settings" class="cookie-consent-button btn-outline">Settings</button>
-            <div class="cookie-consent-options">
-                <label><input id="consent-necessary" type="checkbox" value="Necessary" checked disabled>Necessary</label>
-                <label><input id="consent-analytics" type="checkbox" value="Analytics" checked>Analytics</label>
-                <label><input id="consent-preferences" type="checkbox" value="Preferences" checked>Preferences</label>
-                <label><input id="consent-marketing" type="checkbox" value="Marketing" checked>Marketing</label>
+            <button id="btn-accept" class="cookie-consent-button btn-success">Accept</button>
+            <button id="btn-reject" class="cookie-consent-button btn-reject">Reject</button>
+            <button id="btn-settings" class="cookie-consent-button btn-settings">Settings</button>
+            <div id="cookie-consent-options" class="cookie-consent-options">
+                <div class="settings-cookies-container">
+                    <div class="option">
+                        <label for="consent-necessary" data-type="title" >Necessary</label>
+                        <label class="toggle">
+                            <input id="consent-necessary" type="checkbox" value="Necessary" checked disabled>
+                            <span class="slider principal"></span>
+                        </label>
+                        <p class="description">Enable essential cookies for the website to function properly.</p>
+                    </div>
+                    <div class="option">
+                        <label for="consent-analytics" data-type="title">Analytics</label>
+                        <label class="toggle">
+                            <input id="consent-analytics" type="checkbox" value="Analytics" checked>
+                            <span class="slider"></span>
+                        </label>
+                        <p class="description">Allow anonymous tracking of website usage to improve user experience.</p>
+                    </div>
+                    <div class="option">
+                        <label for="consent-preferences" data-type="title">Preferences</label>
+                        <label class="toggle">
+                            <input id="consent-preferences" type="checkbox" value="Preferences" checked>
+                            <span class="slider"></span>
+                        </label>
+                        <p class="description">Remember user preferences such as language and region settings.</p>
+                    </div>
+                    <div class="option">
+                        <label for="consent-marketing" data-type="title">Marketing</label>
+                        <label class="toggle">
+                            <input id="consent-marketing" type="checkbox" value="Marketing" checked>
+                            <span class="slider"></span>
+                        </label>
+                        <p class="description">Enable personalized advertisements based on user interests and behavior.</p>
+                    </div>
+                </div>
             </div>
         ` : `
             <button id="btn-accept" class="cookie-consent-button btn-success">Accept</button>
@@ -46,7 +84,7 @@ document.getElementById('generate-code').addEventListener('click', function() {
         font-size: 14px;
         text-align: center;
         z-index: 1000;
-        border-radius: ${borderRadius}px;
+        border-radius: ${borderRadius > 10 ? 10: borderRadius }px;
     }
 
     .cookie-consent-banner.bottom {
@@ -64,22 +102,161 @@ document.getElementById('generate-code').addEventListener('click', function() {
     }
 
     .cookie-consent-banner.bottom-left {
-        bottom: 5px;
-        left: 5px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        bottom: 15px;
+        left: 15px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     }
 
     .cookie-consent-banner.bottom-right {
-        bottom: 5px;
-        right: 5px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        bottom: 15px;
+        right: 15px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     }
 
     .cookie-consent-banner.bottom-center {
-        bottom: 5px;
+        width: 100%;
+        max-width: 660px;
+        bottom: 15px;
         left: 50%;
         transform: translateX(-50%);
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .cookie-consent-options {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .settings-cookies-container {
+        margin-top: 20px;
+        padding: 10px;
+        margin-top: 15px;
+        background-color: #f3f3f3;
+        border-radius: ${borderRadius > 10 ? 10: borderRadius }px;
+    }
+
+    .option {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin: 10px 0;
+        width: 100%;
+        max-width: 650px;
+    }
+
+    .option label {
+
+        font-weight: bold;
+        text-align: left;
+    }
+
+    .option label[data-type="title"] {
+        min-width: 85px
+    }
+
+    .option .toggle {
+        display: inline-block;
+        width: 50px;
+        height: 26px;
+        position: relative;
+    }
+
+    .option .toggle input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    .option .toggle .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        transition: .4s;
+        border-radius: 15px;
+    }
+
+    .option .toggle .slider:before {
+        position: absolute;
+        content: "";
+        height: 18px;
+        width: 18px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        transition: .4s;
+        border-radius: 50%;
+    }
+
+    .option .toggle input:checked + .slider {
+        background-color: ${inputToggle};
+    }
+
+    .option .toggle input:checked + .slider.principal {
+        background-color: #ff0000;
+    }
+
+    .option .toggle input:checked + .slider:before {
+        transform: translateX(20px);
+    }
+
+    .option p.description {
+        flex: 1;
+        font-size: 0.9rem;
+        color: #666;
+        text-align: justify;
+        margin: 0;
+        padding-left: 10px;
+    }
+
+    .cookie-consent-button {
+        padding: 8px 16px;
+        font-size: 1rem;
+        cursor: pointer;
+        border: none;
+        border-radius: ${btnRadius > 10 ? 10 : btnRadius}px;
+        color: #fff;
+    }
+
+    .cookie-consent-button:active {
+        opacity: 0.8;
+    }
+
+    .btn-success {
+        background-color: ${inputSuccess}
+    }
+
+    .btn-success:hover {
+        background-color: ${inputSuccess};
+    }
+
+    .btn-reject {
+        background-color: ${inputReject}
+    }
+
+    .btn-reject:hover {
+        background-color: ${inputReject};
+    }
+
+    .btn-settings {
+        background-color: ${inputSettings}
+    }
+
+    .btn-settings:hover {
+        background-color: ${inputSettings};
+    }
+
+    @media only screen and (max-width: 720px) {
+        .cookie-consent-banner {
+            width: auto !important;
+            right: 0 !important;
+            left: 0 !important;
+            transform: translateX(0%) !important;
+        }
     }
     `;
 
@@ -141,6 +318,17 @@ document.getElementById('generate-code').addEventListener('click', function() {
 
     // Display the consent banner
     document.getElementById('cookie-consent-banner').style.display = 'block';
+
+    ${showCheckboxes ? `
+        document.getElementById('btn-settings').addEventListener('click', function() {
+            const element = document.getElementById('cookie-consent-options');
+            if(element.style.display === 'flex') {
+                document.getElementById('cookie-consent-options').style.display = 'none'
+            } else {
+                document.getElementById('cookie-consent-options').style.display = 'flex'
+            }
+        });
+        `: ``}
     `;
 
     // Remove any existing style element with id 'dynamic-banner-css'
@@ -170,13 +358,23 @@ document.getElementById('generate-code').addEventListener('click', function() {
     document.getElementById('btn-close-preview').addEventListener('click', function () {
         document.getElementById('cookie-consent-banner').style.display = 'none';
     });
+
+    if (showCheckboxes) {
+        document.getElementById('btn-settings').addEventListener('click', () => {
+            const element = document.getElementById('cookie-consent-options');
+            const display = element.style.display === 'flex' ? 'none': 'flex'
+            document.getElementById('cookie-consent-options').style.display = display
+            toggle = display
+        });
+    }
+
 });
 
 function copyToClipboard(elementId) {
     const codeElement = document.getElementById(elementId);
     const codeText = codeElement.innerText;
 
-    const textarea = document.createElement('textarea'  );
+    const textarea = document.createElement('textarea');
     textarea.value = codeText;
     document.body.appendChild(textarea);
     textarea.select();
@@ -191,7 +389,6 @@ function handlePlacementChange() {
     const placement = document.getElementById('placement').value;
     const borderRadiusInput = document.getElementById('border-radius');
 
-    console.log(placement);
     // Disable the border radius input for 'bottom' and 'top' placements
     if (placement === 'bottom' || placement === 'top') {
         borderRadiusInput.disabled = true;
@@ -205,3 +402,26 @@ document.getElementById('placement').addEventListener('change', handlePlacementC
 
 // Call the function initially to set the initial state based on the default value
 handlePlacementChange();
+
+document.addEventListener('DOMContentLoaded', (_) => {
+    const form = document.getElementById('customization-form');
+
+    form.addEventListener('input', (event) => {
+        const input = event.target;
+        document.getElementById('generate-code').click()
+
+        if(input.name !== 'button-options') {
+            const display = input.name === 'input-toggle' ? 'flex' : toggle
+
+            if(document.getElementById('cookie-consent-options')) {
+                document.getElementById('cookie-consent-options').style.display = display
+                toggle = display
+            }
+        }
+
+        if(input.type === 'number' && input.value > 10) {
+            input.value = 10
+        }
+
+    });
+});

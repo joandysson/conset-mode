@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
     <div class="container">
@@ -29,14 +31,39 @@
                             <option value="bottom-center">Bottom Center</option>
                         </select>
 
-                        <label for="border-radius">Border Radius (0-15px):</label>
-                        <input type="number" id="border-radius" name="border-radius" min="0" max="15" value="0">
+                        <label for="border-radius">Border Radius (0-10px):</label>
+                        <input type="number" id="border-radius" name="border-radius" min="0" max="10" value="0">
+
+                        <label for="button-radius">Button Radius (0-10px):</label>
+                        <input type="number" id="button-radius" name="button-radius" min="0" max="10" value="0">
 
                         <label for="banner-title">Banner Title:</label>
                         <input type="text" id="banner-title" placeholder="Cookie settings">
 
+                        <div class="color-group">
+                            <div class="color-group-child">
+                                <label for="input-success">Accept Button Color:</label>
+                                <input type="color" id="input-success" name="input-success" value="#007bff">
+                            </div>
+
+                            <div class="color-group-child">
+                                <label for="input-reject">Reject Button Color:</label>
+                                <input type="color" id="input-reject" name="input-reject" value="#007bff">
+                            </div>
+
+                            <div class="color-group-child">
+                                <label for="input-settings">Settings Button Color:</label>
+                                <input type="color" id="input-settings" name="input-settings" value="#007bff">
+                            </div>
+
+                            <div class="color-group-child">
+                                <label for="input-toggle">Toggle:</label>
+                                <input type="color" id="input-toggle" name="input-toggle" value="#007bff">
+                            </div>
+                        </div>
+
                         <label for="button-options">Button Options:</label>
-                        <select id="button-options">
+                        <select id="button-options" name="button-options">
                             <option value="all">Show All Buttons</option>
                             <option value="accept-only">Accept Only Button</option>
                         </select>
@@ -80,4 +107,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
