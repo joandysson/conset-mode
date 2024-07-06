@@ -312,7 +312,7 @@ document.getElementById('generate-code').addEventListener('click', () => {
 
     document.getElementById('btn-reject').addEventListener('click', function() {
         setConsentAndHideBanner({
-            necessary: false,
+            necessary: true,
             analytics: false,
             preferences: false,
             marketing: false
