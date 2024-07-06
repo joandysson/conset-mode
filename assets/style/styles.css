@@ -145,6 +145,10 @@ main {
     margin-bottom: 10px;
 }
 
+.code-section pre code {
+    word-break: break-all;
+}
+
 pre {
     background-color: #f3f3f3;
     padding: 10px;
@@ -192,5 +196,11 @@ footer {
 @media only screen and (max-width: 810px) {
     .color-group {
         flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .container {
+        padding: 20px 2px;
     }
 }
