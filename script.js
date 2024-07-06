@@ -223,6 +223,7 @@ document.getElementById('generate-code').addEventListener('click', () => {
         border: none;
         border-radius: ${btnRadius > 10 ? 10 : btnRadius}px;
         color: #fff;
+        margin: 1px 0;
     }
 
     .cookie-consent-button:active {
@@ -259,6 +260,7 @@ document.getElementById('generate-code').addEventListener('click', () => {
             right: 0 !important;
             left: 0 !important;
             transform: translateX(0%) !important;
+            margin: 0 1px;
         }
     }
     `;
