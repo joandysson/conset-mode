@@ -5,6 +5,7 @@
     font-size: 14px;
     color: black;
     z-index: 1001;
+    top: 5px;
 }
 
 body {

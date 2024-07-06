@@ -4,7 +4,7 @@ document.getElementById('generate-code').addEventListener('click', () => {
     const placement = document.getElementById('placement').value;
     const bannerText = document.getElementById('banner-text').value;
     const buttonOptions = document.getElementById('button-options').value;
-    const customBannerTitle = document.getElementById('banner-title').value || 'Cookie settings';
+    const customBannerTitle = document.getElementById('banner-title').value;
     const showCheckboxes = buttonOptions === 'all';
     const borderRadius = document.getElementById('border-radius').value;
     const btnRadius = document.getElementById('button-radius').value;
@@ -22,7 +22,7 @@ document.getElementById('generate-code').addEventListener('click', () => {
 
     const bannerHTML = `
     <div id="cookie-consent-banner" class="cookie-consent-banner ${placement}">
-        <h3>${customBannerTitle}</h3>
+        ${customBannerTitle ? `<h3>${customBannerTitle}</h3>`: ''}
         <p>${bannerText}</p>
         ${showCheckboxes ? `
             <button id="btn-accept" class="cookie-consent-button btn-success">Accept</button>
@@ -103,12 +103,14 @@ document.getElementById('generate-code').addEventListener('click', () => {
     }
 
     .cookie-consent-banner.bottom-left {
+        max-width: 660px;
         bottom: 15px;
         left: 15px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     }
 
     .cookie-consent-banner.bottom-right {
+        max-width: 660px;
         bottom: 15px;
         right: 15px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
