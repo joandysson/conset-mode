@@ -272,7 +272,6 @@ function getBannerJS(showCheckboxes) {
         gtag('consent', 'default', JSON.parse(localStorage.getItem('consentMode')));
     }
 
-    // Function to set consent preferences and hide banner
     function setConsentAndHideBanner(consent) {
         const consentMode = {
             'functionality_storage': consent.necessary ? 'granted' : 'denied',
@@ -286,12 +285,10 @@ function getBannerJS(showCheckboxes) {
         hideBanner();
     }
 
-    // Function to hide the consent banner
     function hideBanner() {
         document.getElementById('cookie-consent-banner').style.display = 'none';
     }
 
-    // Attach event listeners after inserting banner HTML into the DOM
     document.getElementById('btn-accept').addEventListener('click', function() {
         setConsentAndHideBanner({
             necessary: true,
@@ -350,7 +347,6 @@ function getBannerJS(showCheckboxes) {
 
     const consent = getCookie('cookieConsent');
     if (!consent) {
-        // Display the consent banner
         document.getElementById('cookie-consent-banner').style.display = 'block';
     }
     `;
@@ -413,7 +409,7 @@ function getBannerCode() {
     return [previewInfo, bannerHTML, bannerCSS, bannerJS]
 }
 
-function generatepreview() {
+function generatePreview() {
     const [previewInfo, bannerHTML, bannerCSS, bannerJS] = getBannerCode();
 
     const bannerElementPreview = getBannerElementPreview(previewInfo, bannerHTML)
@@ -436,10 +432,106 @@ function generatepreview() {
     return [bannerHTML, bannerCSS, bannerJS]
 }
 
-document.getElementById('generate-code').addEventListener('click', () => {
-    const [bannerHTML, bannerCSS, bannerJS] = generatepreview()
+function getExampleCode(html, css, js) {
+    return `
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Toolz.at - Banner</title>
+        <style>
+            ${css}
+        </style>
+    </head>
+    <body>
+        ${html}
+        <script>
+        ${js}
+        </script>
+    </body>
+    </html>
+    `;
+}
 
+document.getElementById('generate-code').addEventListener('click', async () => {
+    const [bannerHTML, bannerCSS, bannerJS] = generatePreview()
     insertCodeInPage(bannerHTML, bannerCSS, bannerJS)
+});
+
+document.getElementById('example-code').addEventListener('click', async () => {
+    const [bannerHTML, bannerCSS, bannerJS] = generatePreview()
+
+    const exempleCode = getExampleCode(bannerHTML, bannerCSS, bannerJS);
+    const blob = new Blob([exempleCode], { type: 'application/json' });
+    const url = URL.createObjectURL(blob)
+
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = 'data.html';
+
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+    URL.revokeObjectURL(url);
+});
+
+document.getElementById('cdn-code').addEventListener('click', async () => {
+    const [bannerHTML, bannerCSS, bannerJS] = generatePreview()
+    const minifiedHTML = await HTMLMinifier.minify(bannerHTML, {
+        collapseWhitespace: true,
+        removeComments: true,
+        minifyCSS: true,
+        minifyJS: true
+    });
+
+    const minifiedCSS = await HTMLMinifier.minify(bannerCSS, {
+        collapseWhitespace: true,
+        removeComments: true,
+        minifyCSS: true,
+        minifyJS: true
+    });
+
+    const minifiedJS = await Terser.minify(bannerJS, { sourceMap: true })
+
+    const html = new Blob([minifiedHTML], { type: 'text/html' });
+    const css = new Blob([minifiedCSS], { type: 'text/css' });
+    const js = new Blob([minifiedJS], { type: 'text/javascript' });
+
+    const htmlFile = new File([html], 'data.txt', { type: 'text/html' });
+    const cssFile = new File([css], 'data.txt', { type: 'text/css' });
+    const jsFile = new File([js], 'data.txt', { type: 'text/javascript' });
+
+    // Create FormData object and append files
+    const formData = new FormData();
+    formData.append('html', htmlFile);
+    formData.append('css', cssFile);
+    formData.append('js', jsFile);
+
+    // Perform the upload via fetch
+    const uploadUrl = 'https://tooz.at/cdn/file'; // Replace with your actual upload endpoint
+    const requestOptions = {
+        method: 'POST',
+        body: formData
+    };
+
+    try {
+        const response = await fetch(uploadUrl, requestOptions);
+        if (response.ok) {
+            console.log('Files uploaded successfully!');
+            // Handle success
+        } else {
+            console.error('Failed to upload files.');
+            // Handle error
+        }
+    } catch (error) {
+        console.error('Error uploading files:', error.message);
+        if (error.response) {
+            console.error('Server responded with:', error.response.status);
+        }
+    }
+
 });
 
 function copyToClipboard(elementId) {
@@ -473,7 +565,7 @@ document.addEventListener('DOMContentLoaded', (_) => {
 
     form.addEventListener('input', (event) => {
         const input = event.target;
-        generatepreview()
+        generatePreview()
 
         const display = input.name === 'input-toggle' ? 'flex' : toggle
         if(document.getElementById('cookie-consent-options')) {

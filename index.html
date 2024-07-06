@@ -51,6 +51,13 @@
     <meta name="google-adsense-account" content="ca-pub-2263036903177870">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2263036903177870"
      crossorigin="anonymous"></script>
+
+    <!-- https://cdn.jsdelivr.net/npm/html-minifier-terser@7.2.0/dist/htmlminifier.umd.bundle.min.js -->
+    <script src="assets/js/libs/htmlminifier.umd.bundle.min.js"></script>
+    <!-- https://cdn.jsdelivr.net/npm/source-map@0.7.3/dist/source-map.js -->
+    <script src="assets/js/libs/source-map.js"></script>
+    <!-- https://cdn.jsdelivr.net/npm/terser/dist/bundle.min.js -->
+    <script src="assets/js/libs/terser.bundle.min.js"></script>
 </head>
 
 <body>
@@ -116,6 +123,8 @@
                         <textarea id="banner-text" name="banner-text">We use cookies to provide you with the best possible experience...</textarea>
 
                         <button type="button" id="generate-code">Generate Code</button>
+                        <button type="button" id="example-code">Download Code</button>
+                        <!-- <button type="button" id="cdn-code">CDN Code (Recomendaded)</button> -->
                     </form>
 
                     <h3>Generated Code</h3>
@@ -149,7 +158,7 @@
         </footer>
     </div>
 
-    <script src="script.js?v=0.0.1"></script>
+    <script src="assets/js/script.js?v=0.0.2"></script>
 </body>
 
 </html>
