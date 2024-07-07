@@ -300,7 +300,7 @@ function getBannerJS(showCheckboxes) {
         setCookie('cookieConsent', 'accepted', 30);
     });
 
-    document.getElementById('btn-reject').addEventListener('click', function() {
+    document.getElementById('btn-reject')?.addEventListener('click', function() {
         setConsentAndHideBanner({
             necessary: true,
             analytics: false,
@@ -499,9 +499,9 @@ document.getElementById('cdn-code')?.addEventListener('click', async () => {
     const css = new Blob([minifiedCSS], { type: 'text/css' });
     const js = new Blob([minifiedJS], { type: 'text/javascript' });
 
-    const htmlFile = new File([html], 'data.txt', { type: 'text/html' });
-    const cssFile = new File([css], 'data.txt', { type: 'text/css' });
-    const jsFile = new File([js], 'data.txt', { type: 'text/javascript' });
+    const htmlFile = new File([html], 'data.html', { type: 'text/html' });
+    const cssFile = new File([css], 'data.css', { type: 'text/css' });
+    const jsFile = new File([js], 'data.js', { type: 'text/javascript' });
 
     // Create FormData object and append files
     const formData = new FormData();
@@ -510,7 +510,7 @@ document.getElementById('cdn-code')?.addEventListener('click', async () => {
     formData.append('js', jsFile);
 
     // Perform the upload via fetch
-    const uploadUrl = 'https://tooz.at/cdn/file'; // Replace with your actual upload endpoint
+    const uploadUrl = 'http://localhost/cdn/upload'; // Replace with your actual upload endpoint
     const requestOptions = {
         method: 'POST',
         body: formData
