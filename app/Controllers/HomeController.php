@@ -55,14 +55,6 @@ class HomeController
     public function getbanner($data): void
     {
         try {
-
-            header('Content-Type: application/json');
-            echo json_encode([
-                'dir3' => dirname(dirname(__DIR__)),
-                'dir4' => scandir(dirname(dirname(__DIR__)) .'/storage/uploads' )
-        ]);
-            return;
-
             $directory = dirname(dirname(__DIR__)) . "/storage/uploads/{$data['id']}";
             $files = array_diff(scandir($directory), array('..', '.'));
 
