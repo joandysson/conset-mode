@@ -28,7 +28,7 @@ class HomeController
         try {
             $data = $this->bannerService->create();
             $id = $data['banner_id'];
-            $uploadsDir = dirname(dirname(__DIR__)) . "/storage/uploads/$id";
+            $uploadsDir = dirname(dirname(__DIR__)) . "/astorage/uploads/$id";
             foreach ($_FILES as $key => $value) {
                 if ($value['error'] !== UPLOAD_ERR_OK) {
                     continue;
