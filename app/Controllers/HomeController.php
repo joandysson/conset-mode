@@ -58,10 +58,7 @@ class HomeController
 
             header('Content-Type: application/json');
             echo json_encode([
-                'dir' => __DIR__,
-                'dir2' => dirname(__DIR__),
-                'dir3' => dirname(dirname(__DIR__)),
-                'dir4' => scandir(dirname(dirname(__DIR__)))
+                'dir4' => scandir(dirname(dirname(__DIR__))) . '/storage'
         ]);
             return;
 
