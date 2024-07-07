@@ -292,9 +292,9 @@ function getBannerJS(showCheckboxes) {
     document.getElementById('btn-accept').addEventListener('click', function() {
         setConsentAndHideBanner({
             necessary: true,
-            analytics: document.getElementById('consent-analytics').checked,
-            preferences: document.getElementById('consent-preferences').checked,
-            marketing: document.getElementById('consent-marketing').checked
+            analytics: document.getElementById('consent-analytics')?.checked ?? true,
+            preferences: document.getElementById('consent-preferences')?.checked ?? true,
+            marketing: document.getElementById('consent-marketing')?.checked ?? true
         });
 
         setCookie('cookieConsent', 'accepted', 30);
