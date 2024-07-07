@@ -11,9 +11,5 @@ RewriteEngine On
 #RewriteCond %{HTTPS} off
 #RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-<IfModule mod_headers.c>
-Header set Access-Control-Allow-Origin "*"
-</IfModule>
-
 # ROUTER URL Rewrite
 RewriteRule !.(\.gif|\.jpg|\.png|\.swf|\.xml|\.html|\.txt)$ server.php
