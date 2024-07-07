@@ -22,7 +22,7 @@ jsContentDiv.id = 'js-content';
 document.body.appendChild(jsContentDiv);
 
 // Fetch data and insert content
-fetch(`http://toolz.at/files/${toozBannerId}`)
+fetch(`https://toolz.at/files/${toozBannerId}`)
     .then(response => response.json())
     .then(data => {
         if (data.error) {
