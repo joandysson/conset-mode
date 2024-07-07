@@ -12,7 +12,9 @@
 
     <div class="container">
         <header>
-            <h1>Consent <span class="blue">Mode</span> Banner</h1>
+            <a href="/">
+                <h1>Consent <span class="blue">Mode</span> Banner</h1>
+            </a>
         </header>
         <main>
             <section class="config-section">
@@ -75,6 +77,14 @@
                         <button type="button" id="cdn-code">CDN Code (Recomendaded)</button>
                     </form>
 
+                    <h3>Generated CDN Code</h3>
+
+                    <div class="code-section">
+                        <h4>CDN Code (Place inside &lt;head&gt; tag)</h4>
+                        <pre><code id="generated-link"></code></pre>
+                        <button onclick="copyToClipboard('generated-link')">Copy CSN Code</button>
+                    </div>
+
                     <h3>Generated Code</h3>
 
                     <div class="code-section">
@@ -101,8 +111,8 @@
 
         </section>
 
-        <?php include 'layouts/footer.php' ?>
     </div>
+    <?php include 'layouts/footer.php' ?>
 
     <?php include 'layouts/script.php' ?>
 

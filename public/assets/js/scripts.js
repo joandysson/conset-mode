@@ -352,6 +352,13 @@ function getBannerJS(showCheckboxes) {
     `;
 }
 
+function getCdn(id) {
+
+    return `
+        <script src="${window.location.origin}/public/assets/js/cdn/script.js" data-tooz-banner-id="${id}"></script>
+    `
+}
+
 function addAndRemoveDynamicStyleCss(bannerCSS) {
     const id = 'dynamic-banner-css';
 
@@ -497,7 +504,7 @@ document.getElementById('cdn-code')?.addEventListener('click', async () => {
 
     const html = new Blob([minifiedHTML], { type: 'text/html' });
     const css = new Blob([minifiedCSS], { type: 'text/css' });
-    const js = new Blob([minifiedJS], { type: 'text/javascript' });
+    const js = new Blob([minifiedJS.code], { type: 'text/javascript' });
 
     const htmlFile = new File([html], 'data.html', { type: 'text/html' });
     const cssFile = new File([css], 'data.css', { type: 'text/css' });
@@ -510,7 +517,7 @@ document.getElementById('cdn-code')?.addEventListener('click', async () => {
     formData.append('js', jsFile);
 
     // Perform the upload via fetch
-    const uploadUrl = 'http://localhost/cdn/upload'; // Replace with your actual upload endpoint
+    const uploadUrl = '/cdn/upload'; // Replace with your actual upload endpoint
     const requestOptions = {
         method: 'POST',
         body: formData
@@ -519,6 +526,9 @@ document.getElementById('cdn-code')?.addEventListener('click', async () => {
     try {
         const response = await fetch(uploadUrl, requestOptions);
         if (response.ok) {
+            const data = await response.json();
+            const cdn = getCdn(data.id).trim();
+            document.getElementById('generated-link').innerText = cdn;
             console.log('Files uploaded successfully!');
             // Handle success
         } else {
@@ -531,7 +541,6 @@ document.getElementById('cdn-code')?.addEventListener('click', async () => {
             console.error('Server responded with:', error.response.status);
         }
     }
-
 });
 
 function copyToClipboard(elementId) {

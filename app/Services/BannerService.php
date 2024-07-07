@@ -2,30 +2,29 @@
 
 namespace App\Services;
 
-use App\Models\ShortUrl;
+use App\Models\Banner;
+use Ramsey\Uuid\Uuid;
 
-class ExampleService {
 
-    private ShortUrl $shortUrl;
+class BannerService {
+
+    private Banner $banner;
 
     public function __construct() {
-        $this->shortUrl = new ShortUrl();
+        $this->banner = new Banner();
     }
 
     public function getByShortId(string $shorId)
     {
-        return $this->shortUrl->getByShortId($shorId);
+        return $this->banner->getByShortId($shorId);
     }
 
-    public function create(string $url, string|null $personalize): array
+    public function create(): array
     {
         $date = date('Y-m-d H:i:s');
 
-        return $this->shortUrl->create([
-            'short_id' => $personalize ?? $this->uniqidId(),
-            'url' =>  $url,
-            'quantity' => null,
-            'ref_url' => '',
+        return $this->banner->create([
+            'banner_id' => Uuid::uuid7(),
             'created_at' => $date,
             'updated_at' => $date
         ]);
@@ -33,14 +32,14 @@ class ExampleService {
 
     public function deleteByShortId(string $shortId)
     {
-        $this->shortUrl->deleteByShortId($shortId);
+        $this->banner->deleteByShortId($shortId);
     }
 
     public function addAccessInRedirect(array $short)
     {
         $quantity = ($short['quantity'] ?? 0) + 1;
 
-        $this->shortUrl->update($short['id'], [
+        $this->banner->update($short['id'], [
             'quantity' => $quantity,
             'updated_at' => date('Y-m-d H:i:s')
         ]);
@@ -71,7 +70,7 @@ class ExampleService {
     {
         $ids = $this->createRandomString($lengthChars, 10);
 
-        $returnedIds = $this->shortUrl->getByShortIds($ids);
+        $returnedIds = $this->banner->getByShortIds($ids);
 
         if(!$returnedIds) {
             return $ids[0];

@@ -1,32 +1,12 @@
-DROP TABLE IF EXISTS users;
-DROP TABLE IF EXISTS urls;
-DROP TABLE IF EXISTS reports_url;
+DROP TABLE IF EXISTS banner;
+DROP TABLE IF EXISTS contacts;
 
-CREATE TABLE users (
+CREATE TABLE banner (
 	id INT NOT NULL AUTO_INCREMENT,
-  name VARCHAR(50) NOT NULL,
-  email VARCHAR(50) NOT NULL,
-  password VARCHAR(200) NOT NULL,
-  PRIMARY KEY(id)
-) ENGINE = INNODB;
-
-CREATE TABLE urls (
-	id INT NOT NULL AUTO_INCREMENT,
-  short_id VARCHAR(100) NULL,
-  url TEXT NOT NULL,
-  quantity INT NULL,
-  ref_url VARCHAR(100) NULL,
+  banner_id VARCHAR(100) NULL,
   created_at DATETIME NOT NULL,
   updated_at DATETIME NOT NULL,
-  PRIMARY KEY(id)
-) ENGINE = INNODB;
-
-CREATE TABLE reports_url (
-	id INT NOT NULL AUTO_INCREMENT,
-  short_id VARCHAR(100) NULL,
-  url TEXT NOT NULL,
-  comment VARCHAR(100) NULL,
-  created_at DATETIME NOT NULL,
+  deleted_at DATETIME,
   PRIMARY KEY(id)
 ) ENGINE = INNODB;
 
@@ -39,11 +19,7 @@ CREATE TABLE contacts (
   PRIMARY KEY(id)
 ) ENGINE = INNODB;
 
-CREATE UNIQUE INDEX short_id_index
-ON urls (short_id);
+CREATE UNIQUE INDEX banner_id_index
+ON banner (banner_id);
 
-ALTER TABLE urls
-ADD deleted_at DATETIME;
-
-
-ALTER TABLE urls MODIFY short_id VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_bin;
+ALTER TABLE banner MODIFY short_id VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_bin;

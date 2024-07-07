@@ -7,12 +7,12 @@ use App\Config\Model\BaseModel;
 /**
  * @package App\Models
  */
-class ShortUrl extends BaseModel
+class Banner extends BaseModel
 {
     /**
      * @var string
      */
-    private static $table = 'urls';
+    private static $table = 'banner';
 
     /**
      * @return array
