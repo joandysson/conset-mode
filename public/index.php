@@ -3,6 +3,9 @@
 require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . 'vendor' . DIRECTORY_SEPARATOR . 'autoload.php';
 require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . 'app' . DIRECTORY_SEPARATOR . 'Config' . DIRECTORY_SEPARATOR . 'functions.php';
 
+
+header("Referrer-Policy: no-referrer");
+
 // Specify domains from which requests are allowed
 header('Access-Control-Allow-Origin: *');
 
