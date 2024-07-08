@@ -9,7 +9,7 @@
 <!-- Open Graph (Facebook, LinkedIn, etc.) -->
 <meta property="og:title" content="Free Consent Mode Banner Generator | Customizable & Easy to Use">
 <meta property="og:description" content="Create custom consent mode banners for your website with ease using our free web application. Customize placement, border radius, title, button options, colors, and more. Generate HTML, CSS, and JavaScript code snippets for seamless integration. Enhance user experience and comply with privacy regulations effortlessly.">
-<meta property="og:image" content="<?php echo asset('img/icon/apple-icon-180x180.png'); ?>">
+<meta property="og:image" content="<?php echo asset('images/png/logo.png'); ?>">
 <meta property="og:url" content="<?php echo getenv('APP_URL'); ?>">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Your Site Name">
@@ -18,7 +18,7 @@
 <meta name="twitter:card" content="logo">
 <meta name="twitter:title" content="Free Consent Mode Banner Generator | Customizable & Easy to Use">
 <meta name="twitter:description" content="Create custom consent mode banners for your website with ease using our free web application. Customize placement, border radius, title, button options, colors, and more. Generate HTML, CSS, and JavaScript code snippets for seamless integration. Enhance user experience and comply with privacy regulations effortlessly.">
-<meta name="twitter:image" content="<?php echo asset('img/icon/apple-icon-180x180.png'); ?>">
+<meta name="twitter:image" content="<?php echo asset('images/png/logo.png'); ?>">
 
 <link rel="apple-touch-icon" sizes="57x57" href="<?php echo asset('images/icon/apple-icon-57x57.png'); ?>">
 <link rel="apple-touch-icon" sizes="60x60" href="<?php echo asset('images/icon/apple-icon-60x60.png'); ?>">
@@ -35,7 +35,7 @@
 <link rel="icon" type="image/png" sizes="16x16" href="<?php echo asset('images/icon/favicon-16x16.png'); ?>">
 <link rel="manifest" href="<?php echo asset('images/icon/manifest.json'); ?>">
 <meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="<?php echo asset('img/icon/ms-icon-144x144.png'); ?>">
+<meta name="msapplication-TileImage" content="<?php echo asset('images/png/logo.png'); ?>">
 <meta name="theme-color" content="#ffffff">
 
 <link rel="stylesheet" href="<?php echo asset('css/styles.css?v=0.0.2'); ?> ">
