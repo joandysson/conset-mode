@@ -302,7 +302,7 @@ function getBannerJS(showCheckboxes) {
 
     document.getElementById('btn-reject')?.addEventListener('click', function() {
         setConsentAndHideBanner({
-            necessary: true,
+            necessary: false,
             analytics: false,
             preferences: false,
             marketing: false
