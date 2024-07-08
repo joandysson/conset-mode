@@ -20,3 +20,6 @@
 
     // End web app
 </script>
+
+
+<script src="https://toolz.at/public/assets/js/cdn/banner-cmp.js" data-tooz-banner-id="01908fdf-3e4e-71aa-9920-308659d2baff"></script>
