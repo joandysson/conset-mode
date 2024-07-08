@@ -355,7 +355,7 @@ function getBannerJS(showCheckboxes) {
 function getCdn(id) {
 
     return `
-        <script src="${window.location.origin}/public/assets/js/cdn/banner-cmp.js" data-tooz-banner-id="${id}"></script>
+        <script src="${window.location.origin}/public/assets/js/cdn/banner-cmp.js" data-toolz-banner-id="${id}"></script>
     `
 }
 

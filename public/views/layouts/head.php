@@ -3,14 +3,14 @@
 <title>Free Consent Mode Banner Generator | Customizable & Easy to Use</title>
 <meta name="description" content="Create custom consent mode banners for your website with ease using our free web application. Customize placement, border radius, title, button options, colors, and more. Generate HTML, CSS, and JavaScript code snippets for seamless integration. Enhance user experience and comply with privacy regulations effortlessly.">
 <meta name="keywords" content="consent mode banner, custom consent banner, free consent banner tool, website compliance, HTML CSS JavaScript snippets, privacy regulations">
-<!-- <meta name="author" content="Your Name or Company">
-<meta name="robots" content="index, follow"> -->
+<meta name="author" content="toolz.at">
+<meta name="robots" content="index, follow">
 
 <!-- Open Graph (Facebook, LinkedIn, etc.) -->
 <meta property="og:title" content="Free Consent Mode Banner Generator | Customizable & Easy to Use">
 <meta property="og:description" content="Create custom consent mode banners for your website with ease using our free web application. Customize placement, border radius, title, button options, colors, and more. Generate HTML, CSS, and JavaScript code snippets for seamless integration. Enhance user experience and comply with privacy regulations effortlessly.">
 <meta property="og:image" content="<?php echo asset('img/icon/apple-icon-180x180.png'); ?>">
-<!-- <meta property="og:url" content="https://yourwebsite.com"> -->
+<meta property="og:url" content="<?php echo getenv('APP_URL'); ?>">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Your Site Name">
 
@@ -19,8 +19,6 @@
 <meta name="twitter:title" content="Free Consent Mode Banner Generator | Customizable & Easy to Use">
 <meta name="twitter:description" content="Create custom consent mode banners for your website with ease using our free web application. Customize placement, border radius, title, button options, colors, and more. Generate HTML, CSS, and JavaScript code snippets for seamless integration. Enhance user experience and comply with privacy regulations effortlessly.">
 <meta name="twitter:image" content="<?php echo asset('img/icon/apple-icon-180x180.png'); ?>">
-<!-- <meta name="twitter:site" content="@YourTwitterHandle">
-<meta name="twitter:creator" content="@YourTwitterHandle"> -->
 
 <link rel="apple-touch-icon" sizes="57x57" href="<?php echo asset('images/icon/apple-icon-57x57.png'); ?>">
 <link rel="apple-touch-icon" sizes="60x60" href="<?php echo asset('images/icon/apple-icon-60x60.png'); ?>">

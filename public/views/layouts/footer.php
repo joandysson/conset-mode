@@ -6,5 +6,5 @@
         <span>|</span>
         <a href="/contact">Contact</a>
     </div>
-    <p>&copy; Copyright by tooz.at. All rights reserved.</p>
+    <p>&copy; Copyright by toloz.at. All rights reserved.</p>
 </footer>

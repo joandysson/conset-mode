@@ -19,7 +19,7 @@
         <main>
             <section class="config-section">
                 <h2>Contact</h2>
-                <p>contact@tooz.at</p>
+                <p>contact@toolz.at</p>
             </section>
 
             <!-- Additional sections as needed -->

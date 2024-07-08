@@ -2,11 +2,11 @@
 // Get the current script tag
 var scriptTag = document.currentScript;
 
-// Get the data-tooz-banner-id attribute
-var toozBannerId = scriptTag.getAttribute('data-tooz-banner-id');
+// Get the data-toolz-banner-id attribute
+var toolzBannerId = scriptTag.getAttribute('data-toolz-banner-id');
 
 // Output the value to the console (for testing)
-console.log('Tooz Banner ID:', toozBannerId);
+console.log('Toolz Banner ID:', toolzBannerId);
 
 // Create elements
 const styleElement = document.createElement('style');
@@ -22,7 +22,7 @@ jsContentDiv.id = 'js-content';
 document.body.appendChild(jsContentDiv);
 
 // Fetch data and insert content
-fetch(`https://toolz.at/files/${toozBannerId}`)
+fetch(`https://toolz.at/files/${toolzBannerId}`)
     .then(response => response.json())
     .then(data => {
         if (data.error) {
