@@ -80,7 +80,7 @@
                     <h3>Generated CDN Code</h3>
 
                     <div class="code-section">
-                        <h4>CDN Code (Place inside &lt;head&gt; tag)</h4>
+                        <h4>CDN Code (Place inside &lt;body&gt; tag)</h4>
                         <pre><code id="generated-link"></code></pre>
                         <button onclick="copyToClipboard('generated-link')">Copy CSN Code</button>
                     </div>
