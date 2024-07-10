@@ -2,6 +2,14 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<?php
+$head = [
+    'title' => 'Free Consent Mode Banner Generator | Customizable & Easy to Use',
+    'description' => 'Create custom consent mode banners for your website with ease using our free web application. Customize placement, border radius, title, button options, colors, and more. Generate HTML, CSS, and JavaScript code snippets for seamless integration. Enhance user experience and comply with privacy regulations effortlessly.',
+    'keywords' => 'consent mode banner, custom consent banner, free consent banner tool, website compliance, HTML CSS JavaScript snippets, privacy regulations'
+];
+?>
+
 <head>
     <?php include 'layouts/head.php' ?>
 </head>
@@ -23,25 +31,61 @@
                 <div id="customization-ui">
                     <h3>Customize Your Consent Banner</h3>
                     <form id="customization-form">
-                        <label for="placement">Banner Placement:</label>
-                        <select id="placement" name="placement">
-                            <option value="bottom">Bottom</option>
-                            <option value="top">Top</option>
-                            <option value="bottom-left">Bottom Left</option>
-                            <option value="bottom-right">Bottom Right</option>
-                            <option value="bottom-center">Bottom Center</option>
-                        </select>
-
-                        <label for="border-radius">Border Radius (0-10px):</label>
-                        <input type="number" id="border-radius" name="border-radius" min="0" max="10" value="0">
-
-                        <label for="button-radius">Button Radius (0-10px):</label>
-                        <input type="number" id="button-radius" name="button-radius" min="0" max="10" value="0">
-
                         <label for="banner-title">Banner Title:</label>
                         <input type="text" id="banner-title" value="Cookie settings" placeholder="Cookie settings">
 
-                        <div class="color-group">
+                        <label for="banner-text">Banner Text:</label>
+                        <textarea id="banner-text" name="banner-text">We use cookies to provide you with the best possible experience...</textarea>
+
+
+                        <label for="terms">Terms of use (Link)</label>
+                        <input type="url" id="terms" name="terms" value="" placeholder="https://toolz.at/terms">
+
+                        <label for="politics-privacy">Politics Privacy:</label>
+                        <input type="url" id="politics-privacy" name="politics-privacy" value="" placeholder="https://toolz.at/politics-privacy">
+
+                        <label for="button-options">Button Options:</label>
+                        <select id="button-options" name="button-options">
+                            <option value="all">Show All Buttons</option>
+                            <option value="accept-only">Accept Only Button</option>
+                        </select>
+
+                        <div class="input-group">
+                            <div class="btn-group-child">
+                                <label for="input-text-success">Accept Button Text:</label>
+                                <input
+                                    id="input-text-success"
+                                    name="input-text-success"
+                                    type="text"
+                                    value="Accept"
+                                    placeholder="Accept"
+                                >
+                            </div>
+
+                            <div class="btn-group-child">
+                                <label for="input-text-reject">Reject Button Text:</label>
+                                <input
+                                    id="input-text-reject"
+                                    name="input-text-reject"
+                                    type="text"
+                                    value="Reject"
+                                    placeholder="Reject"
+                                >
+                            </div>
+
+                            <div class="btn-group-child">
+                                <label for="input-text-settings">Settings Button Text:</label>
+                                <input
+                                    id="input-text-settings"
+                                    name="input-text-settings"
+                                    type="text"
+                                    value="Settings"
+                                    placeholder="Settings"
+                                >
+                            </div>
+                        </div>
+
+                        <div class="input-group">
                             <div class="color-group-child">
                                 <label for="input-success">Accept Button Color:</label>
                                 <input type="color" id="input-success" name="input-success" value="#007bff">
@@ -63,14 +107,20 @@
                             </div>
                         </div>
 
-                        <label for="button-options">Button Options:</label>
-                        <select id="button-options" name="button-options">
-                            <option value="all">Show All Buttons</option>
-                            <option value="accept-only">Accept Only Button</option>
+                        <label for="placement">Banner Placement:</label>
+                        <select id="placement" name="placement">
+                            <option value="bottom">Bottom</option>
+                            <option value="top">Top</option>
+                            <option value="bottom-left">Bottom Left</option>
+                            <option value="bottom-right">Bottom Right</option>
+                            <option value="bottom-center">Bottom Center</option>
                         </select>
 
-                        <label for="banner-text">Banner Text:</label>
-                        <textarea id="banner-text" name="banner-text">We use cookies to provide you with the best possible experience...</textarea>
+                        <label for="button-radius">Button Radius (0-10px):</label>
+                        <input type="number" id="button-radius" name="button-radius" min="0" max="10" value="0">
+
+                        <label for="border-radius">Border Radius (0-10px):</label>
+                        <input type="number" id="border-radius" name="border-radius" min="0" max="10" value="0">
 
                         <button type="button" id="generate-code">Generate Code</button>
                         <button type="button" id="example-code">Download Code</button>

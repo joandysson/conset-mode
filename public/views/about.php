@@ -1,8 +1,8 @@
 <?php
 $head = [
-    'title' => 'Contact Us | Free Consent Mode Banner Generator',
-    'description' => 'Get in touch with us for any queries, feedback, or support related to our free and customizable consent mode banner generator. We are here to help you.',
-    'keywords' => 'contact us, support, queries, feedback, consent mode banner, customizable consent banner'
+    'title' => 'About Us | Free Consent Mode Banner Generator',
+    'description' => 'Discover more about our mission to provide a free, customizable consent mode banner generator. Learn about our team and our commitment to compliance and user experience.',
+    'keywords' => 'about us, consent banner generator, our mission, compliance, user experience'
 ];
 ?>
 
@@ -25,8 +25,8 @@ $head = [
         </header>
         <main>
             <section class="config-section">
-                <h2>Contact</h2>
-                <p>contact@toolz.at</p>
+                <h2>About us</h2>
+
             </section>
 
             <!-- Additional sections as needed -->

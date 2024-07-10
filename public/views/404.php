@@ -1,3 +1,11 @@
+<?php
+$head = [
+    'title' => 'Page Not Found | Free Consent Mode Banner Generator',
+    'description' => 'Sorry, the page you are looking for does not exist. Return to our home page to generate customizable consent mode banners for your website.',
+    'keywords' => '404 page, page not found, error page, free consent mode banner, customizable consent banner'
+];
+?>
+
 <!DOCTYPE html>
 <html lang="<?php echo $langText['html']['lang'] ?>">
 

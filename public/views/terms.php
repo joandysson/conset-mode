@@ -1,3 +1,11 @@
+<?php
+$head = [
+    'title' => 'Terms of Service | Free Consent Mode Banner Generator',
+    'description' => 'Read our terms of service to understand the rules and guidelines for using our free consent mode banner generator. Ensure compliance and transparency.',
+    'keywords' => 'terms of service, consent banner terms, usage guidelines, compliance, transparency'
+];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

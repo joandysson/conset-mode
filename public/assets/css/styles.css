@@ -77,6 +77,7 @@ main {
 
 #customization-form select,
 #customization-form input[type="text"],
+#customization-form input[type="url"],
 #customization-form textarea,
 #customization-form input[type="number"],
 #customization-form input[type="color"] {
@@ -126,13 +127,17 @@ main {
     border-radius: 10px;
 }
 
-.color-group {
+.input-group {
     display: flex;
     justify-content: space-between;
 }
 
 .color-group-child {
     flex: 0.24;
+}
+
+.btn-group-child {
+    flex: 0.32;
 }
 
 .config-section h2 {
@@ -199,14 +204,14 @@ footer {
 }
 
 
-        .footer a {
-            text-decoration: none;
-            color: #333;
-            margin: 0 10px;
-        }
+.footer a {
+    text-decoration: none;
+    color: #333;
+    margin: 0 10px;
+}
 
 @media only screen and (max-width: 810px) {
-    .color-group {
+    .input-group {
         flex-direction: column;
     }
 }

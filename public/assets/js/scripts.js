@@ -1,4 +1,5 @@
 var toggle = null;
+var complementId = 'toolz-' + (new Date()).getTime();
 
 function previewInfoHTML() {
    return `
@@ -9,21 +10,36 @@ function previewInfoHTML() {
 }
 
 function getBannerHTML(placement, customBannerTitle, bannerText, showCheckboxes) {
+
+    const textBtnSuccess = document.getElementById('input-text-success').value;
+    const textBtnReject = document.getElementById('input-text-reject').value;
+    const textBtnSettings = document.getElementById('input-text-settings').value;
+
+    const linkTerms = document.getElementById('terms').value;
+    const linkPoliticsPrivacy = document.getElementById('politics-privacy').value;
+
     return `
     <div id="cookie-consent-banner" class="cookie-consent-banner ${placement}">
         ${customBannerTitle ? `<h3>${customBannerTitle}</h3>`: ''}
         <p>${bannerText}</p>
         ${showCheckboxes ? `
-            <button id="btn-accept" class="cookie-consent-button btn-success">Accept</button>
-            <button id="btn-reject" class="cookie-consent-button btn-reject">Reject</button>
-            <button id="btn-settings" class="cookie-consent-button btn-settings">Settings</button>
-            <div id="cookie-consent-options" class="cookie-consent-options">
+            <button id="btn-accept-${complementId}" class="cookie-consent-button btn-success-${complementId}">${textBtnSuccess}</button>
+            <button id="btn-reject-${complementId}" class="cookie-consent-button btn-reject-${complementId}">${textBtnReject}</button>
+            <button id="btn-settings-${complementId}" class="cookie-consent-button btn-settings-${complementId}">${textBtnSettings}</button>
+            ${linkTerms || linkPoliticsPrivacy ? `
+            <div class="internal-pages-links">
+                ${linkTerms ? `<a href="${linkTerms}">Terms of use</a>`: '' }
+                ${linkTerms && linkPoliticsPrivacy ? `<span>|</span>` : '' }
+                ${linkPoliticsPrivacy ? `<a href="${linkPoliticsPrivacy}">Privacy policy</a>`: '' }
+            </div>
+            ` : ''}
+            <div id="cookie-consent-options-${complementId}" class="cookie-consent-options-${complementId}">
                 <div class="settings-cookies-container">
                     <div class="option">
                         <label for="consent-necessary" data-type="title" >Necessary</label>
                         <label class="toggle">
                             <input id="consent-necessary" type="checkbox" value="Necessary" checked disabled>
-                            <span class="slider principal"></span>
+                            <span class="slider-${complementId} principal"></span>
                         </label>
                         <p class="description">Enable essential cookies for the website to function properly.</p>
                     </div>
@@ -31,7 +47,7 @@ function getBannerHTML(placement, customBannerTitle, bannerText, showCheckboxes)
                         <label for="consent-analytics" data-type="title">Analytics</label>
                         <label class="toggle">
                             <input id="consent-analytics" type="checkbox" value="Analytics" checked>
-                            <span class="slider"></span>
+                            <span class="slider-${complementId}"></span>
                         </label>
                         <p class="description">Allow anonymous tracking of website usage to improve user experience.</p>
                     </div>
@@ -39,7 +55,7 @@ function getBannerHTML(placement, customBannerTitle, bannerText, showCheckboxes)
                         <label for="consent-preferences" data-type="title">Preferences</label>
                         <label class="toggle">
                             <input id="consent-preferences" type="checkbox" value="Preferences" checked>
-                            <span class="slider"></span>
+                            <span class="slider-${complementId}"></span>
                         </label>
                         <p class="description">Remember user preferences such as language and region settings.</p>
                     </div>
@@ -47,14 +63,14 @@ function getBannerHTML(placement, customBannerTitle, bannerText, showCheckboxes)
                         <label for="consent-marketing" data-type="title">Marketing</label>
                         <label class="toggle">
                             <input id="consent-marketing" type="checkbox" value="Marketing" checked>
-                            <span class="slider"></span>
+                            <span class="slider-${complementId}"></span>
                         </label>
                         <p class="description">Enable personalized advertisements based on user interests and behavior.</p>
                     </div>
                 </div>
             </div>
         ` : `
-            <button id="btn-accept" class="cookie-consent-button btn-success">Accept</button>
+            <button id="btn-accept-${complementId}" class="cookie-consent-button btn-success">Accept</button>
         `}
     </div>
     `;
@@ -111,7 +127,7 @@ function getBannerCSS(borderRadius, inputToggle, btnRadius, inputSuccess, inputR
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     }
 
-    .cookie-consent-options {
+    .cookie-consent-options-${complementId} {
         display: none;
         flex-direction: column;
         align-items: center;
@@ -157,7 +173,7 @@ function getBannerCSS(borderRadius, inputToggle, btnRadius, inputSuccess, inputR
         height: 0;
     }
 
-    .option .toggle .slider {
+    .option .toggle .slider-${complementId} {
         position: absolute;
         cursor: pointer;
         top: 0;
@@ -169,7 +185,7 @@ function getBannerCSS(borderRadius, inputToggle, btnRadius, inputSuccess, inputR
         border-radius: 15px;
     }
 
-    .option .toggle .slider:before {
+    .option .toggle .slider-${complementId}:before {
         position: absolute;
         content: "";
         height: 18px;
@@ -181,15 +197,15 @@ function getBannerCSS(borderRadius, inputToggle, btnRadius, inputSuccess, inputR
         border-radius: 50%;
     }
 
-    .option .toggle input:checked + .slider {
+    .option .toggle input:checked + .slider-${complementId} {
         background-color: ${inputToggle};
     }
 
-    .option .toggle input:checked + .slider.principal {
+    .option .toggle input:checked + .slider-${complementId}.principal {
         background-color: #ff0000;
     }
 
-    .option .toggle input:checked + .slider:before {
+    .option .toggle input:checked + .slider-${complementId}:before {
         transform: translateX(20px);
     }
 
@@ -216,28 +232,38 @@ function getBannerCSS(borderRadius, inputToggle, btnRadius, inputSuccess, inputR
         opacity: 0.8;
     }
 
-    .btn-success {
+    .btn-success-${complementId} {
         background-color: ${inputSuccess}
     }
 
-    .btn-success:hover {
+    .btn-success-${complementId}:hover {
         background-color: ${inputSuccess};
     }
 
-    .btn-reject {
+    .btn-reject-${complementId} {
         background-color: ${inputReject}
     }
 
-    .btn-reject:hover {
+    .btn-reject-${complementId}:hover {
         background-color: ${inputReject};
     }
 
-    .btn-settings {
+    .btn-settings-${complementId} {
         background-color: ${inputSettings}
     }
 
-    .btn-settings:hover {
+    .btn-settings-${complementId}:hover {
         background-color: ${inputSettings};
+    }
+
+    .internal-pages-links {
+        margin: 5px;
+    }
+
+    .internal-pages-links a {
+        text-decoration: none;
+        color: #333;
+        margin: 0 10px;
     }
 
     @media only screen and (max-width: 720px) {
@@ -289,7 +315,7 @@ function getBannerJS(showCheckboxes) {
         document.getElementById('cookie-consent-banner').style.display = 'none';
     }
 
-    document.getElementById('btn-accept').addEventListener('click', function() {
+    document.getElementById('btn-accept-${complementId}').addEventListener('click', function() {
         setConsentAndHideBanner({
             necessary: true,
             analytics: document.getElementById('consent-analytics')?.checked ?? true,
@@ -300,7 +326,7 @@ function getBannerJS(showCheckboxes) {
         setCookie('cookieConsent', 'accepted', 30);
     });
 
-    document.getElementById('btn-reject')?.addEventListener('click', function() {
+    document.getElementById('btn-reject-${complementId}')?.addEventListener('click', function() {
         setConsentAndHideBanner({
             necessary: false,
             analytics: false,
@@ -312,12 +338,12 @@ function getBannerJS(showCheckboxes) {
     });
 
     ${showCheckboxes ? `
-        document.getElementById('btn-settings').addEventListener('click', function() {
-            const element = document.getElementById('cookie-consent-options');
+        document.getElementById('btn-settings-${complementId}').addEventListener('click', function() {
+            const element = document.getElementById('cookie-consent-options-${complementId}');
             if(element.style.display === 'flex') {
-                document.getElementById('cookie-consent-options').style.display = 'none'
+                document.getElementById('cookie-consent-options-${complementId}').style.display = 'none'
             } else {
-                document.getElementById('cookie-consent-options').style.display = 'flex'
+                document.getElementById('cookie-consent-options-${complementId}').style.display = 'flex'
             }
         });
         `: ``}
@@ -427,10 +453,10 @@ function generatePreview() {
         document.getElementById('cookie-consent-banner').style.display = 'none';
     });
 
-    document.getElementById('btn-settings')?.addEventListener('click', () => {
-        const element = document.getElementById('cookie-consent-options');
+    document.getElementById(`btn-settings-${complementId}`)?.addEventListener('click', () => {
+        const element = document.getElementById(`cookie-consent-options-${complementId}`);
         const display = element.style.display === 'flex' ? 'none': 'flex'
-        document.getElementById('cookie-consent-options').style.display = display
+        document.getElementById(`cookie-consent-options-${complementId}`).style.display = display
         toggle = display
     });
 
@@ -577,8 +603,8 @@ document.addEventListener('DOMContentLoaded', (_) => {
         generatePreview()
 
         const display = input.name === 'input-toggle' ? 'flex' : toggle
-        if(document.getElementById('cookie-consent-options')) {
-            document.getElementById('cookie-consent-options').style.display = display
+        if(document.getElementById(`cookie-consent-options-${complementId}`)) {
+            document.getElementById(`cookie-consent-options-${complementId}`).style.display = display
             toggle = display
         }
 

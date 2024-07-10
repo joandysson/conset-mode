@@ -9,6 +9,7 @@ Router::get('/files/{id}', 'HomeController:getbanner');
 Router::get('/terms', fn() => view('terms'));
 Router::get('/politics-privacy', fn() => view('politics-privacy'));
 Router::get('/contact', fn() => view('contact'));
+Router::get('/about', fn() => view('about'));
 
 Router::run();
 
