@@ -55,13 +55,11 @@ main {
 }
 
 .config-section {
-    /* flex: 1; */
     background-color: #f8f9fa;
     padding: 20px;
     border-radius: 5px;
     margin-bottom: 20px; /* Space between sections */
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    width: 100%; /* Full width on small screens */
 }
 
 /* Styling for the customization form */
