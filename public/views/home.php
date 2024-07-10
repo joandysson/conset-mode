@@ -190,7 +190,7 @@ $head = [
                 </details>
                 <details>
                     <summary>How do I implement the generated code on my website?</summary>
-                    <p>Simply copy the generated HTML, CSS, and JavaScript code and paste it into your website's code.</p>
+                    <p>Simply copy the generated code and paste it into your website's code.</p>
                 </details>
                 <details>
                     <summary>Is the banner compliant with GDPR and CCPA?</summary>
