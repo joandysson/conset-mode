@@ -9,22 +9,27 @@
 
 <url>
   <loc>https://toolz.at/</loc>
-  <lastmod>2024-07-07T22:06:22+00:00</lastmod>
+  <lastmod>2024-07-10T01:38:34+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://toolz.at/terms</loc>
-  <lastmod>2024-07-07T22:06:22+00:00</lastmod>
+  <lastmod>2024-07-10T01:38:34+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://toolz.at/politics-privacy</loc>
-  <lastmod>2024-07-07T22:06:22+00:00</lastmod>
+  <lastmod>2024-07-10T01:38:34+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://toolz.at/contact</loc>
-  <lastmod>2024-07-07T22:06:22+00:00</lastmod>
+  <lastmod>2024-07-10T01:38:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://toolz.at/about</loc>
+  <lastmod>2024-07-10T01:38:34+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 
