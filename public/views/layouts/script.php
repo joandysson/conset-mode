@@ -5,7 +5,7 @@
 <!-- https://cdn.jsdelivr.net/npm/terser/dist/bundle.min.js -->
 <script src="<?php echo asset('js/libs/terser.bundle.min.js'); ?>"></script>
 
-<script src="<?php echo asset('js/scripts.js?v=0.0.4'); ?>"></script>
+<script src="<?php echo asset('js/scripts.js?v=0.0.5'); ?>"></script>
 
 <script>
     // Start web app

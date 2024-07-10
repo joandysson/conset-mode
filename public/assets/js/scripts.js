@@ -487,12 +487,12 @@ function getExampleCode(html, css, js) {
     `;
 }
 
-document.getElementById('generate-code').addEventListener('click', async () => {
+document.getElementById('generate-code')?.addEventListener('click', async () => {
     const [bannerHTML, bannerCSS, bannerJS] = generatePreview()
     insertCodeInPage(bannerHTML, bannerCSS, bannerJS)
 });
 
-document.getElementById('example-code').addEventListener('click', async () => {
+document.getElementById('example-code')?.addEventListener('click', async () => {
     const [bannerHTML, bannerCSS, bannerJS] = generatePreview()
 
     const exempleCode = getExampleCode(bannerHTML, bannerCSS, bannerJS);
