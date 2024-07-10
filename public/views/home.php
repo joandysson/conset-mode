@@ -122,9 +122,9 @@ $head = [
                         <label for="border-radius">Border Radius (0-10px):</label>
                         <input type="number" id="border-radius" name="border-radius" min="0" max="10" value="0">
 
-                        <button type="button" id="generate-code">Generate Code</button>
-                        <button type="button" id="example-code">Download Code</button>
-                        <button type="button" id="cdn-code">CDN Code (Recomendaded)</button>
+                        <!-- <button type="button" id="generate-code">Generate Code</button>
+                        <button type="button" id="example-code">Download Code</button> -->
+                        <button type="button" id="cdn-code">Generate Banner</button>
                     </form>
 
                     <h3>Generated CDN Code</h3>
@@ -132,9 +132,9 @@ $head = [
                     <div class="code-section">
                         <h4>CDN Code (Place inside &lt;body&gt; tag)</h4>
                         <pre><code id="generated-link"></code></pre>
-                        <button onclick="copyToClipboard('generated-link')">Copy CSN Code</button>
+                        <button onclick="copyToClipboard('generated-link')">Copy</button>
                     </div>
-
+<!--
                     <h3>Generated Code</h3>
 
                     <div class="code-section">
@@ -149,7 +149,7 @@ $head = [
                         <h4>JavaScript Code (Place before closing &lt;/body&gt; tag)</h4>
                         <pre><code id="generated-js"></code></pre>
                         <button onclick="copyToClipboard('generated-js')">Copy JS Code</button>
-                    </div>
+                    </div> -->
                 </div>
             </section>
 
