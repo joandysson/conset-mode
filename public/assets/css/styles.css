@@ -100,6 +100,92 @@ main {
     margin-top: 0;
 }
 
+.faq-section {
+    margin-bottom: 20px;
+}
+
+.faq-title {
+    font-size: 2em;
+    text-align: center;
+}
+
+.faq {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.faq-question {
+    background-color: #f4f4f4;
+    padding: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-question::after {
+    content: '\002B'; /* Plus sign */
+    font-size: 1.5em;
+}
+
+.faq-question.active::after {
+    content: '\2212'; /* Minus sign */
+}
+
+.faq-answer {
+    display: none;
+    padding: 15px;
+    background-color: #fff;
+}
+
+.features-section {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.features-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.features-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.feature {
+    flex: 1 1 calc(33.333% - 20px);
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.feature-icon {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.feature-content h3 {
+    margin-top: 0;
+}
+
+.feature-content p {
+    margin: 0;
+}
+
 /* Styling for the customization form */
 #customization-form {
     background-color: #fff;
