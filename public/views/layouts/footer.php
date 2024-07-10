@@ -1,5 +1,5 @@
 <footer>
-<div>
+    <div>
         <a href="/">Home</a>
         <span>|</span>
         <a href="/terms">Terms</a>
