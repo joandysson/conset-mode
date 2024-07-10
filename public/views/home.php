@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,9 +22,30 @@ $head = [
             <a href="/">
                 <h1>Consent <span class="blue">Mode</span> Banner</h1>
             </a>
+            <p>Create customizable and compliant consent banners for your website with ease.</p>
         </header>
         <main>
-            <section class="config-section">
+            <section class="section-default">
+                <h2>How It Works</h2>
+                <ol>
+                    <li>Fill out the customization form below.</li>
+                    <li>Click the "Generate Banner" button to create your banner.</li>
+                    <li>Copy the generated code.</li>
+                    <li>Paste the code into your website to implement the consent banner.</li>
+                </ol>
+            </section>
+
+            <section class="section-default">
+                <h2>Features</h2>
+                <ul>
+                    <li>Fully customizable banners to match your website's design.</li>
+                    <li>Easy-to-use form with various options for placement and style.</li>
+                    <li>Compliant with GDPR and CCPA regulations.</li>
+                    <li>Free to use with no hidden costs.</li>
+                </ul>
+            </section>
+
+            <section class="section-default">
                 <h2>Configuration</h2>
                 <!-- Your configuration form and code generation UI goes here -->
                 <div id="customization-ui">
@@ -53,35 +73,17 @@ $head = [
                         <div class="input-group">
                             <div class="btn-group-child">
                                 <label for="input-text-success">Accept Button Text:</label>
-                                <input
-                                    id="input-text-success"
-                                    name="input-text-success"
-                                    type="text"
-                                    value="Accept"
-                                    placeholder="Accept"
-                                >
+                                <input id="input-text-success" name="input-text-success" type="text" value="Accept" placeholder="Accept">
                             </div>
 
                             <div class="btn-group-child">
                                 <label for="input-text-reject">Reject Button Text:</label>
-                                <input
-                                    id="input-text-reject"
-                                    name="input-text-reject"
-                                    type="text"
-                                    value="Reject"
-                                    placeholder="Reject"
-                                >
+                                <input id="input-text-reject" name="input-text-reject" type="text" value="Reject" placeholder="Reject">
                             </div>
 
                             <div class="btn-group-child">
                                 <label for="input-text-settings">Settings Button Text:</label>
-                                <input
-                                    id="input-text-settings"
-                                    name="input-text-settings"
-                                    type="text"
-                                    value="Settings"
-                                    placeholder="Settings"
-                                >
+                                <input id="input-text-settings" name="input-text-settings" type="text" value="Settings" placeholder="Settings">
                             </div>
                         </div>
 
@@ -134,7 +136,7 @@ $head = [
                         <pre><code id="generated-link"></code></pre>
                         <button onclick="copyToClipboard('generated-link')">Copy</button>
                     </div>
-<!--
+                    <!--
                     <h3>Generated Code</h3>
 
                     <div class="code-section">
@@ -151,6 +153,54 @@ $head = [
                         <button onclick="copyToClipboard('generated-js')">Copy JS Code</button>
                     </div> -->
                 </div>
+            </section>
+
+            <!-- Benefits Section -->
+            <section class="benefits-section">
+                <div class="card">
+                    <h3>Easy to Use</h3>
+                    <p>Generate your consent mode banner with a few clicks. No coding skills required.</p>
+                </div>
+                <div class="card">
+                    <h3>Customizable</h3>
+                    <p>Customize the banner's text, colors, and layout to fit your website's design.</p>
+                </div>
+                <div class="card">
+                    <h3>Responsive Design</h3>
+                    <p>Our banners are fully responsive and look great on all devices.</p>
+                </div>
+                <div class="card">
+                    <h3>Free</h3>
+                    <p>Use our consent mode banner generator for free. No hidden charges.</p>
+                </div>
+            </section>
+
+            <!-- Call to Action Section -->
+            <section class="call-to-action">
+                <h2>Discover Our App</h2>
+                <p>Experience the simplicity and efficiency of our PWA app for creating consent mode banners.</p>
+                <button onclick="window.location.href='app.html'">Try the App</button>
+            </section>
+
+            <section class="section-default">
+                <h2>Frequently Asked Questions</h2>
+                <details>
+                    <summary>Is this tool really free?</summary>
+                    <p>Yes, the Free Consent Mode Banner Generator is completely free to use.</p>
+                </details>
+                <details>
+                    <summary>How do I implement the generated code on my website?</summary>
+                    <p>Simply copy the generated HTML, CSS, and JavaScript code and paste it into your website's code.</p>
+                </details>
+                <details>
+                    <summary>Is the banner compliant with GDPR and CCPA?</summary>
+                    <p>Yes, our banners are designed to help you stay compliant with both GDPR and CCPA regulations.</p>
+                </details>
+            </section>
+
+            <section class="section-default">
+                <h2>Contact Us</h2>
+                <p>If you have any questions or need support, please <a href="/contact">contact us</a>.</p>
             </section>
 
             <!-- Additional sections as needed -->

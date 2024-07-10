@@ -24,19 +24,13 @@ $head = [
             </a>
         </header>
         <main>
-            <section class="config-section">
+            <section class="section-default">
                 <h2>Contact</h2>
                 <p>contact@toolz.at</p>
             </section>
 
             <!-- Additional sections as needed -->
         </main>
-
-        <!-- Preview section -->
-        <section id="preview-section">
-
-        </section>
-
     </div>
     <?php include 'layouts/footer.php' ?>
 
