@@ -25,22 +25,8 @@ $head = [
         </header>
         <main>
             <section class="section-default">
-                <!-- Contact Form Section -->
-                <section class="contact-form-section">
-                    <h2>Contact Us</h2>
-                    <form id="contact-form" action="/contact" method="post">
-                        <label for="name">Name:</label>
-                        <input type="text" id="name" name="name" required>
-
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required>
-
-                        <label for="message">Message:</label>
-                        <textarea id="message" name="message" required></textarea>
-
-                        <button type="submit">Send Message</button>
-                    </form>
-                </section>
+                <h1>Thank You!</h1>
+                <p>We appreciate you reaching out to us. Your message has been received, and we will get back to you shortly.</p>
             </section>
 
             <!-- Additional sections as needed -->

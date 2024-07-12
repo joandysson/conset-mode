@@ -8,11 +8,14 @@ Router::get('/files/{id}', 'HomeController:getbanner');
 
 Router::get('/terms', fn() => view('terms'));
 Router::get('/politics-privacy', fn() => view('politics-privacy'));
-Router::get('/contact', fn() => view('contact'));
+Router::get('/contact', 'ContactController:index');
+Router::post('/contact', 'ContactController:create');
 Router::get('/about', fn() => view('about'));
+Router::get('/thank-you', fn() => view('thank-you'));
 
 Router::run();
 
 if (Router::error()) {
+    http_response_code(404);
     view('404');
 }

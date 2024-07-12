@@ -16,14 +16,21 @@ $head = [
 <body>
     <?php include 'layouts/scriptTagManager.php' ?>
     <?php include 'layouts/header.php' ?>
-    <main>
-        <section id="urlbox">
-            <h1> 404 </h1>
-            <p class="boxtextcenter">page not found</p>
+
+    <div class="container">
+        <header>
+            <a href="/">
+                <h1>Consent <span class="blue">Mode</span> Banner</h1>
+            </a>
+        </header>
+        <main>
+        <section class="section-default">
+            <h1>Page not found</h1>
+            <p></p>
             <a href="/" class="colorbutton">Go back home </a><br><br>
         </section>
     </main>
-
+    </div>
     <?php include 'layouts/footer.php' ?>
     <?php include 'layouts/script.php' ?>
 </body>

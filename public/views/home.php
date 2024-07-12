@@ -25,24 +25,39 @@ $head = [
             <p>Create customizable and compliant consent banners for your website with ease.</p>
         </header>
         <main>
-            <section class="section-default">
+            <!-- How It Works Section -->
+            <section class="how-it-works-section">
                 <h2>How It Works</h2>
-                <ol>
-                    <li>Fill out the customization form below.</li>
-                    <li>Click the "Generate Banner" button to create your banner.</li>
-                    <li>Copy the generated code.</li>
-                    <li>Paste the code into your website to implement the consent banner.</li>
-                </ol>
-            </section>
-
-            <section class="section-default">
-                <h2>Features</h2>
-                <ul>
-                    <li>Fully customizable banners to match your website's design.</li>
-                    <li>Easy-to-use form with various options for placement and style.</li>
-                    <li>Compliant with GDPR and CCPA regulations.</li>
-                    <li>Free to use with no hidden costs.</li>
-                </ul>
+                <div class="steps-grid">
+                    <div class="step">
+                        <div class="step-icon">1️⃣</div>
+                        <div class="step-content">
+                            <h3>Select Preferences</h3>
+                            <p>Choose your preferred banner placement, title, and button options.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon">2️⃣</div>
+                        <div class="step-content">
+                            <h3>Customize Appearance</h3>
+                            <p>Adjust the banner's appearance by setting the border radius, colors, and text.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon">3️⃣</div>
+                        <div class="step-content">
+                            <h3>Generate Code</h3>
+                            <p>Click the generate button to receive your personalized banner code.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon">4️⃣</div>
+                        <div class="step-content">
+                            <h3>Implement</h3>
+                            <p>Copy the generated code and insert it into your website's HTML.</p>
+                        </div>
+                    </div>
+                </div>
             </section>
 
             <section class="section-default">
@@ -157,6 +172,8 @@ $head = [
 
             <!-- Benefits Section -->
             <section class="benefits-section">
+            <h2>Benefits</h2>
+            <div class="benefits-card">
                 <div class="card">
                     <h3>Easy to Use</h3>
                     <p>Generate your consent mode banner with a few clicks. No coding skills required.</p>
@@ -173,6 +190,8 @@ $head = [
                     <h3>Free</h3>
                     <p>Use our consent mode banner generator for free. No hidden charges.</p>
                 </div>
+            </div>
+
             </section>
 
             <!-- Call to Action Section -->
