@@ -1,6 +1,7 @@
 /db/
 /node_modules/
 /vendor/
-/storage
-.env
+storage/uploads/*
+!storage/uploads/.gitkeep
 .idea
+.env

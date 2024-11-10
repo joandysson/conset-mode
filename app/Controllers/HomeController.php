@@ -3,7 +3,7 @@
 namespace App\Controllers;
 
 use App\Services\BannerService;
-use \Throwable;
+use Throwable;
 
 class HomeController
 {
@@ -14,10 +14,8 @@ class HomeController
         $this->bannerService = new BannerService();
     }
 
-    /**
-     * @return void
-     */
-    public function index(): never
+
+    public function index(): void
     {
         view('home');
     }
@@ -27,14 +25,14 @@ class HomeController
         try {
             $data = $this->bannerService->create();
             $id = $data['banner_id'];
-            $uploadsDir = dirname(dirname(__DIR__)) . "/storage/uploads/$id";
+            $uploadsDir = dirname(__DIR__, 2) . "/storage/uploads/$id";
             foreach ($_FILES as $key => $value) {
                 if ($value['error'] !== UPLOAD_ERR_OK) {
                     continue;
                 }
 
                 if(!is_dir($uploadsDir)) {
-                    mkdir($uploadsDir);
+                    mkdir($uploadsDir, 0777, true);
                 }
 
                 $tmpName = $value['tmp_name'];
@@ -52,10 +50,10 @@ class HomeController
     }
 
 
-    public function getbanner($data): void
+    public function getBanner(array $data): void
     {
         try {
-            $directory = dirname(dirname(__DIR__)) . "/storage/uploads/{$data['id']}";
+            $directory = dirname(__DIR__, 2) . "/storage/uploads/{$data['id']}";
             $files = array_diff(scandir($directory), array('..', '.'));
 
             $fileContents = [];
@@ -72,5 +70,4 @@ class HomeController
             echo json_encode(['error' => $th->getMessage()]);
         }
     }
-
 }
