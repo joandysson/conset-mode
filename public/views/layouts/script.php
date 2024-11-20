@@ -61,4 +61,4 @@
     // End web app
 </script>
 
-<!-- <script src="https://cdn.toolz.at/banner-cmp.js" data-toolz-banner-id="019317b5-400d-7114-8f38-7b758e0bd9b9"></script> -->
+<script src="https://cdn.toolz.at/banner-cmp.js" data-toolz-banner-id="019317b5-400d-7114-8f38-7b758e0bd9b9"></script>
