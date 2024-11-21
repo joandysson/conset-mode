@@ -1,11 +1,21 @@
 // Get the current script tag
-var scriptTag = document.currentScript;
+const scriptTag = document.currentScript;
 
 // Get the data-toolz-banner-id attribute
-var toolzBannerId = scriptTag.getAttribute('data-toolz-banner-id');
+const toolzBannerId = scriptTag.getAttribute('data-toolz-banner-id');
+const src = scriptTag.getAttribute('src');
+
+const url  = new URL(src)
+const searchParams = new URLSearchParams(url.searchParams)
+const paramBannerId = searchParams.get('banner_id')
+
 
 // Output the value to the console (for testing)
 console.log('Toolz Banner ID:', toolzBannerId);
+
+const bannerId = toolzBannerId || paramBannerId
+console.log('Toolz Banner ID:', bannerId);
+
 
 (function () {
     if(toolzBannerId === undefined || toolzBannerId === null) {
