@@ -9,16 +9,15 @@ const url  = new URL(src)
 const searchParams = new URLSearchParams(url.searchParams)
 const paramBannerId = searchParams.get('banner_id')
 
-
 // Output the value to the console (for testing)
 console.log('Toolz Banner ID:', toolzBannerId);
 
 const bannerId = toolzBannerId || paramBannerId
-console.log('Toolz Banner ID:', bannerId);
+console.log('Banner ID:', bannerId);
 
 
 (function () {
-    if(toolzBannerId === undefined || toolzBannerId === null) {
+    if(bannerId === undefined || bannerId === null) {
         console.log('Toolz Banner ID not found')
         return
      }
@@ -37,7 +36,7 @@ console.log('Toolz Banner ID:', bannerId);
     document.body.appendChild(jsContentDiv);
 
     // Fetch data and insert content
-    fetch(`https://toolz.at/files/${toolzBannerId}`)
+    fetch(`https://toolz.at/files/${bannerId}`)
         .then(response => response.json())
         .then(data => {
             if (data.error) {
