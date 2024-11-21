@@ -15,7 +15,6 @@ console.log('Toolz Banner ID:', toolzBannerId);
 const bannerId = toolzBannerId || paramBannerId
 console.log('Banner ID:', bannerId);
 
-
 (function () {
     if(bannerId === undefined || bannerId === null) {
         console.log('Toolz Banner ID not found')
