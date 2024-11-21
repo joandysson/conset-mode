@@ -289,6 +289,8 @@ function getBannerJS(showCheckboxes) {
     if(localStorage.getItem('consentMode') === null){
         gtag('consent', 'default', {
             'ad_storage': 'denied',
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied',
             'analytics_storage': 'denied',
             'personalization_storage': 'denied',
             'functionality_storage': 'denied',
@@ -303,6 +305,8 @@ function getBannerJS(showCheckboxes) {
             'functionality_storage': consent.necessary ? 'granted' : 'denied',
             'security_storage': consent.necessary ? 'granted' : 'denied',
             'ad_storage': consent.marketing ? 'granted' : 'denied',
+            'ad_user_data': consent.marketing ? 'granted' : 'denied',
+            'ad_personalization': consent.marketing ? 'granted' : 'denied',
             'analytics_storage': consent.analytics ? 'granted' : 'denied',
             'personalization_storage': consent.preferences ? 'granted' : 'denied',
         };
