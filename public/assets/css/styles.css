@@ -252,7 +252,7 @@ header p {
     background-color: #303030;
 }
 
-ul li {
+ul li, ol li {
     list-style-position: inside;
     padding: 3px;
 }
