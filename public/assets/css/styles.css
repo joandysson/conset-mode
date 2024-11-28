@@ -577,6 +577,14 @@ footer p {
     padding: 20px 0;
 }
 
+.example-image {
+    text-align: center;
+}
+
+.example-image img {
+    width: 70%;
+}
+
 @media only screen and (max-width: 810px) {
     .input-group {
         flex-direction: column;

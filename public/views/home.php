@@ -17,7 +17,6 @@ $head = [
     <?php include 'layouts/scriptTagManager.php' ?>
     <?php include 'layouts/header.php' ?>
 
-
     <nav>
         <ul class="menu">
             <li><a href="#how-it-works">How It Works</a></li>
@@ -187,212 +186,196 @@ $head = [
             </section>
 
             <section id="data-privacy-laws" class="data-privacy-laws">
-                <div class="container">
-                    <header>
-                        <h2>Data Privacy Laws</h2>
-                        <p>Overview of key regulations protecting your data</p>
-                    </header>
-                    <div class="law">
-                        <h3>GDPR (General Data Protection Regulation)</h3>
-                        <p>A European Union regulation that ensures the protection of personal data and privacy for individuals within the EU. It mandates transparency, user consent, and the right to access, correct, and delete personal data.</p>
-                    </div>
-                    <div class="law">
-                        <h3>LGPD (Lei Geral de Proteção de Dados)</h3>
-                        <p>Brazil's data protection law designed to protect personal data and privacy. It gives individuals rights to access, correct, and delete their data, and requires businesses to obtain clear consent for data processing.</p>
-                    </div>
-                    <div class="law">
-                        <h3>CCPA (California Consumer Privacy Act)</h3>
-                        <p>A U.S. regulation granting California residents rights to know how their data is used, request deletion, and opt-out of data sales. It emphasizes transparency and user control over personal information.</p>
-                    </div>
-                    <div class="law">
-                        <h3>Other Laws</h3>
-                        <p>Similar regulations exist worldwide, such as Canada's PIPEDA, Australia's Privacy Act, and Japan's APPI. These laws aim to protect user privacy, ensure data security, and hold businesses accountable for data practices.</p>
-                    </div>
-                    <div class="note">
-                        <p><strong>Note:</strong> These laws vary by region but share common goals of protecting individual privacy, ensuring transparency, and granting users control over their data.</p>
-                    </div>
+                <h2>Data Privacy Laws</h2>
+                <p>Overview of key regulations protecting your data</p>
+                <div class="law">
+                    <h3>GDPR (General Data Protection Regulation)</h3>
+                    <p>A European Union regulation that ensures the protection of personal data and privacy for individuals within the EU. It mandates transparency, user consent, and the right to access, correct, and delete personal data.</p>
+                </div>
+                <div class="law">
+                    <h3>LGPD (Lei Geral de Proteção de Dados)</h3>
+                    <p>Brazil's data protection law designed to protect personal data and privacy. It gives individuals rights to access, correct, and delete their data, and requires businesses to obtain clear consent for data processing.</p>
+                </div>
+                <div class="law">
+                    <h3>CCPA (California Consumer Privacy Act)</h3>
+                    <p>A U.S. regulation granting California residents rights to know how their data is used, request deletion, and opt-out of data sales. It emphasizes transparency and user control over personal information.</p>
+                </div>
+                <div class="law">
+                    <h3>Other Laws</h3>
+                    <p>Similar regulations exist worldwide, such as Canada's PIPEDA, Australia's Privacy Act, and Japan's APPI. These laws aim to protect user privacy, ensure data security, and hold businesses accountable for data practices.</p>
+                </div>
+                <div class="note">
+                    <p><strong>Note:</strong> These laws vary by region but share common goals of protecting individual privacy, ensuring transparency, and granting users control over their data.</p>
                 </div>
             </section>
             <section id="cookie-banner-requirements" class="cookie-banner-necessity">
-                <div class="container">
-                    <header>
-                        <h2>Cookie Banner Requirements</h2>
-                    </header>
-                    <div class="content">
-                        <p>A cookie banner is typically required on websites to comply with data protection laws like GDPR, LGPD, and CCPA. Its purpose is to inform users about the use of cookies and to obtain their consent for non-essential cookies.</p>
-                        <h3>When is a banner necessary?</h3>
-                        <p>A banner is required if your website uses cookies for purposes such as analytics, marketing, or personalizing user preferences. These cookies require explicit user consent.</p>
-                        <h3>Are banners required for necessary cookies?</h3>
-                        <p>In most jurisdictions, such as under GDPR, LGPD, and similar laws, banners are not required if your website only uses cookies that are strictly necessary for functionality. Examples include session cookies, authentication tokens, and cookies required for security or completing purchases. These cookies do not require user consent but must still be disclosed in the site's privacy policy.</p>
-                        <h3>Key Notes:</h3>
-                        <ul>
-                            <li><strong>GDPR:</strong> Requires consent for all cookies except those strictly necessary for functionality.</li>
-                            <li><strong>LGPD:</strong> Similar to GDPR, consent is needed for non-essential cookies.</li>
-                            <li><strong>CCPA:</strong> Does not mandate consent banners but requires websites to inform users about data collection and provide opt-out options for data sales.</li>
-                        </ul>
-                        <div class="note">
-                            <p><strong>Summary:</strong> Use a banner when deploying non-essential cookies. For strictly necessary cookies, disclosure in your privacy policy is sufficient in most cases.</p>
-                        </div>
+                <h2>Cookie Banner Requirements</h2>
+                <div class="content">
+                    <p>A cookie banner is typically required on websites to comply with data protection laws like GDPR, LGPD, and CCPA. Its purpose is to inform users about the use of cookies and to obtain their consent for non-essential cookies.</p>
+                    <h3>When is a banner necessary?</h3>
+                    <p>A banner is required if your website uses cookies for purposes such as analytics, marketing, or personalizing user preferences. These cookies require explicit user consent.</p>
+                    <h3>Are banners required for necessary cookies?</h3>
+                    <p>In most jurisdictions, such as under GDPR, LGPD, and similar laws, banners are not required if your website only uses cookies that are strictly necessary for functionality. Examples include session cookies, authentication tokens, and cookies required for security or completing purchases. These cookies do not require user consent but must still be disclosed in the site's privacy policy.</p>
+                    <h3>Key Notes:</h3>
+                    <ul>
+                        <li><strong>GDPR:</strong> Requires consent for all cookies except those strictly necessary for functionality.</li>
+                        <li><strong>LGPD:</strong> Similar to GDPR, consent is needed for non-essential cookies.</li>
+                        <li><strong>CCPA:</strong> Does not mandate consent banners but requires websites to inform users about data collection and provide opt-out options for data sales.</li>
+                    </ul>
+                    <div class="note">
+                        <p><strong>Summary:</strong> Use a banner when deploying non-essential cookies. For strictly necessary cookies, disclosure in your privacy policy is sufficient in most cases.</p>
                     </div>
                 </div>
             </section>
             <section id="data-categories" class="data-categories">
-                <div class="container">
-                    <header>
-                        <h2>Data Categories</h2>
-                        <p>Understanding how we use your data</p>
-                    </header>
-                    <div class="category">
-                        <h3>Necessary</h3>
-                        <p><strong>Essential for website functionality:</strong> This category includes data that is strictly necessary for the website to function properly.</p>
-                        <ul>
-                            <li>Examples: Session cookies, authentication tokens, and data required to complete a purchase.</li>
-                            <li><strong>User consent:</strong> Typically, users don't have the option to opt-out of necessary data processing.</li>
-                        </ul>
-                    </div>
-                    <div class="category">
-                        <h3>Marketing</h3>
-                        <p><strong>Used for targeted advertising:</strong> This category includes data used to personalize ads and track user behavior for marketing purposes.</p>
-                        <ul>
-                            <li>Examples: Cookies that track browsing history, demographic information, and interests.</li>
-                            <li><strong>User consent:</strong> Users can usually opt-out of marketing data processing.</li>
-                        </ul>
-                    </div>
-                    <div class="category">
-                        <h3>Analytics</h3>
-                        <p><strong>Used for website performance and user behavior:</strong> This category includes data used to analyze website traffic, user engagement, and other metrics to improve the website's performance.</p>
-                        <ul>
-                            <li>Examples: Cookies that track page views, time spent on site, and click-through rates.</li>
-                            <li><strong>User consent:</strong> Users can usually opt-out of analytics data processing.</li>
-                        </ul>
-                    </div>
-                    <div class="category">
-                        <h3>Preferences</h3>
-                        <p><strong>Used for personalized user experience:</strong> This category includes data used to customize the website's appearance or content based on user preferences.</p>
-                        <ul>
-                            <li>Examples: Cookies that remember language preferences, theme choices, or previously viewed products.</li>
-                            <li><strong>User consent:</strong> Users can usually opt-out of preference data processing.</li>
-                        </ul>
-                    </div>
-                    <div class="note">
-                        <p><strong>Summary:</strong> Necessary data is essential for the website to function. Marketing data is used to target ads and track user behavior. Analytics data is used to analyze website performance. Preferences data is used to personalize the user experience. Users typically have more control over marketing, analytics, and preference data processing.</p>
-                    </div>
+                <h2>Data Categories</h2>
+                <p>Understanding how we use your data</p>
+                <div class="category">
+                    <h3>Necessary</h3>
+                    <p><strong>Essential for website functionality:</strong> This category includes data that is strictly necessary for the website to function properly.</p>
+                    <ul>
+                        <li>Examples: Session cookies, authentication tokens, and data required to complete a purchase.</li>
+                        <li><strong>User consent:</strong> Typically, users don't have the option to opt-out of necessary data processing.</li>
+                    </ul>
+                </div>
+                <div class="category">
+                    <h3>Marketing</h3>
+                    <p><strong>Used for targeted advertising:</strong> This category includes data used to personalize ads and track user behavior for marketing purposes.</p>
+                    <ul>
+                        <li>Examples: Cookies that track browsing history, demographic information, and interests.</li>
+                        <li><strong>User consent:</strong> Users can usually opt-out of marketing data processing.</li>
+                    </ul>
+                </div>
+                <div class="category">
+                    <h3>Analytics</h3>
+                    <p><strong>Used for website performance and user behavior:</strong> This category includes data used to analyze website traffic, user engagement, and other metrics to improve the website's performance.</p>
+                    <ul>
+                        <li>Examples: Cookies that track page views, time spent on site, and click-through rates.</li>
+                        <li><strong>User consent:</strong> Users can usually opt-out of analytics data processing.</li>
+                    </ul>
+                </div>
+                <div class="category">
+                    <h3>Preferences</h3>
+                    <p><strong>Used for personalized user experience:</strong> This category includes data used to customize the website's appearance or content based on user preferences.</p>
+                    <ul>
+                        <li>Examples: Cookies that remember language preferences, theme choices, or previously viewed products.</li>
+                        <li><strong>User consent:</strong> Users can usually opt-out of preference data processing.</li>
+                    </ul>
+                </div>
+                <div class="note">
+                    <p><strong>Summary:</strong> Necessary data is essential for the website to function. Marketing data is used to target ads and track user behavior. Analytics data is used to analyze website performance. Preferences data is used to personalize the user experience. Users typically have more control over marketing, analytics, and preference data processing.</p>
                 </div>
             </section>
             <section id="banner-configuration-options" class="banner-configuration-guide">
-                <div class="container">
-                    <header>
-                        <h2>Banner Configuration Options</h2>
-                    </header>
-                    <div class="content">
-                        <p>Customize your consent banner directly from our site to meet your website's needs. Below are the configuration options available and how they affect the banner's behavior:</p>
-                        These are all the configuration options you can make on your banner, below we will explain each section.
-                        <img width="100%" class="border-1px" src="<?php echo asset('images/png/preferences.png') ?>">
+                <h2>Banner Configuration Options</h2>
+                <div class="content">
+                    <p>Customize your consent banner directly from our site to meet your website's needs. Below are the configuration options available and how they affect the banner's behavior:</p>
+                    These are all the configuration options you can make on your banner, below we will explain each section.
+                    <div class="example-image">
+                        <img class="border-1px" src="<?php echo asset('images/png/preferences.png') ?>">
+                    </div>
 
-                        <h3>Once you start editing, a pop-up like this will appear with the name <em> "Close Preview"</em> </h3>
-                        <p>From this point on you can see all the settings you are making</p>
-                        <img width="100%" class="border-1px" src="<?php echo asset('images/png/banner.png') ?>">
+                    <h3>Once you start editing, a pop-up like this will appear with the name <em> "Close Preview"</em> </h3>
+                    <p>From this point on you can see all the settings you are making</p>
+                    <div class="example-image">
+                        <img class="border-1px" src="<?php echo asset('images/png/banner.png') ?>">
+                    </div>
 
-                        <h3>By clicking on settings you can also see the cookie settings</h3>
-                        <p>These are the options that a user can choose.
-                            <a href="#data-categories">learning more here.</a>
-                        </p>
-                        <img width="100%" class="border-1px" src="<?php echo asset('images/png/banner-preference.png') ?>">
+                    <h3>By clicking on settings you can also see the cookie settings</h3>
+                    <p>These are the options that a user can choose.
+                        <a href="#data-categories">learning more here.</a>
+                    </p>
+                    <div class="example-image">
+                        <img class="border-1px" src="<?php echo asset('images/png/banner-preference.png') ?>">
+                    </div>
 
-                        <h3>1. Configure title and description of your banner</h3>
-                        <p>This information appears for the user to read and understand what it is.</p>
-                        <div class="example-image">
-                            <img width="100%" class="border-1px" src="<?php echo asset('images/png/title-and-description.png') ?>">
-                        </div>
-                        <!-- <h3>1. Define Cookie Categories</h3>
-                        <p>Configure which cookie categories (e.g., Necessary, Marketing, Analytics, Preferences) appear on the banner and set their default states.</p>
-                        <div class="example-image">
-                            <p><em>Insert an image here showing the interface for managing cookie categories.</em></p>
-                        </div> -->
+                    <h3>1. Configure title and description of your banner</h3>
+                    <p>This information appears for the user to read and understand what it is.</p>
+                    <div class="example-image">
+                        <img class="border-1px" src="<?php echo asset('images/png/title-and-description.png') ?>">
+                    </div>
+                    <!-- <h3>1. Define Cookie Categories</h3>
+                    <p>Configure which cookie categories (e.g., Necessary, Marketing, Analytics, Preferences) appear on the banner and set their default states.</p>
+                    <div class="example-image">
+                        <p><em>Insert an image here showing the interface for managing cookie categories.</em></p>
+                    </div> -->
 
-                        <h3>2. Design the Banner's Appearance</h3>
-                        <p>Customize the banner's style, including colors, borders, and placement on the page (top, bottom, or modal).</p>
-                        <div class="example-image">
-                            <img width="100%" class="border-1px" src="<?php echo asset('images/png/aparence.png') ?>">
-                        </div>
+                    <h3>2. Design the Banner's Appearance</h3>
+                    <p>Customize the banner's style, including colors, borders, and placement on the page (top, bottom, or modal).</p>
+                    <div class="example-image">
+                        <img class="border-1px" src="<?php echo asset('images/png/aparence.png') ?>">
+                    </div>
 
-                        <h3>4. Choose buttons options</h3>
-                        <p>Enable all buttons or not and customize button name.</p>
-                        <div class="example-image">
-                            <img width="100%" class="border-1px" src="<?php echo asset('images/png/button-options.png') ?>">
-                        </div>
+                    <h3>4. Choose buttons options</h3>
+                    <p>Enable all buttons or not and customize button name.</p>
+                    <div class="example-image">
+                        <img class="border-1px" src="<?php echo asset('images/png/button-options.png') ?>">
+                    </div>
 
-                        <h3>5. Adding terms and policy</h3>
-                        <p>You can add your terms of service and privacy policy to your banner</p>
-                        <div class="example-image">
-                            <img width="100%" class="border-1px" src="<?php echo asset('images/png/terms-and-politics.png') ?>">
-                        </div>
+                    <h3>5. Adding terms and policy</h3>
+                    <p>You can add your terms of service and privacy policy to your banner</p>
+                    <div class="example-image">
+                        <img class="border-1px" src="<?php echo asset('images/png/terms-and-politics.png') ?>">
+                    </div>
 
 
-                        <h3>6. Save</h3>
-                        <p>You just need to click on <strong><em>Generate Banner</em></strong> button and a code will be displayed below
-                            <br>
-                            see how:
-                            <br>
-                            <a href="#how-to-configure-consent-mode">
-                                how Configure it on your website
-                            </a>
-                            <br>
-                            <!-- <a href="#">
-                                how Configure it on your website with google tag manager
-                            </a> -->
-                        </p>
+                    <h3>6. Save</h3>
+                    <p>You just need to click on <strong><em>Generate Banner</em></strong> button and a code will be displayed below
+                        <br>
+                        see how:
+                        <br>
+                        <a href="#how-to-configure-consent-mode">
+                            how Configure it on your website
+                        </a>
+                        <br>
+                        <!-- <a href="#">
+                            how Configure it on your website with google tag manager
+                        </a> -->
+                    </p>
 
-                        <div class="note">
-                            <p>Using these configuration options, you can create a consent banner tailored to your website's branding and legal compliance needs.</p>
-                        </div>
+                    <div class="note">
+                        <p>Using these configuration options, you can create a consent banner tailored to your website's branding and legal compliance needs.</p>
                     </div>
                 </div>
             </section>
             <section id="how-to-configure-consent-mode" class="consent-mode-tutorial">
-                <div class="container">
-                    <header>
-                        <h2>How to Configure Consent Mode on Your Website</h2>
-                    </header>
-                    <div class="content">
-                        <p>Follow this step-by-step tutorial to implement consent mode on your website using the provided script. This ensures compliance with data protection laws while maintaining control over cookie behavior.</p>
+                <h2>How to Configure Consent Mode on Your Website</h2>
+                <div class="content">
+                    <p>Follow this step-by-step tutorial to implement consent mode on your website using the provided script. This ensures compliance with data protection laws while maintaining control over cookie behavior.</p>
 
-                        <h3>Step 1: Add the Consent Banner Script</h3>
-                        <p>Include the script in the end of &lt;body&gt; section of your website to enable the consent banner.
-                        </p>
-                        <pre>
-                            <code>
-&lt;script src="https://cdn.toolz.at/banner-cmp.js" data-toolz-banner-id="&lt; Your banner ID &gt;"&gt;&lt;/script&gt;
-                            </code>
+                    <h3>Step 1: Add the Consent Banner Script</h3>
+                    <p>Include the script in the end of &lt;body&gt; section of your website to enable the consent banner.
+                    </p>
+                    <pre>
+                            <code>&lt;script src="https://cdn.toolz.at/banner-cmp.js" data-toolz-banner-id="&lt; Your banner ID &gt;"&gt;&lt;/script&gt;</code>
                         </pre>
 
-                        <p>This script initializes the consent banner and connects it to your configuration.</p>
-                        <h3>Step 2: Preview How It Looks on Your Site</h3>
-                        <p>Once implemented, the banner should appear on your website, allowing users to select their preferences. Here's an example of how it might look:</p>
-                        <div class="example-image">
-                            <img width="100%" class="border-1px" src="<?php echo asset('images/png/banner-example.png') ?>">
-                        </div>
+                    <p>This script initializes the consent banner and connects it to your configuration.</p>
+                    <h3>Step 2: Preview How It Looks on Your Site</h3>
+                    <p>Once implemented, the banner should appear on your website, allowing users to select their preferences. Here's an example of how it might look:</p>
+                    <div class="example-image">
+                        <img class="border-1px" src="<?php echo asset('images/png/banner-example.png') ?>">
+                    </div>
 
-                        <h3>Step 3: Verify Consent Tracking (optional)</h3>
-                        <p>Test the consent banner to ensure that it correctly tracks user choices and applies them.
-                            Check that cookies behave according to user selections and only load after consent when required.
-                        </p>
-                        <p>
-                            If you use Google Tag Manager on your website,
-                            just go to your website option and when you enter the preview, you will be able to see all the options and there will be a new option called <strong><em>Consent Default</em></strong> with initial personalization.
-                            In case the user decides to refuse some options, it will also appear as in the example below.
-                        </p>
-                        <div class="example-image">
-                            <img width="100%" class="border-1px" src="<?php echo asset('images/png/gtm-tracking.png') ?>">
-                        </div>
+                    <h3>Step 3: Verify Consent Tracking (optional)</h3>
+                    <p>Test the consent banner to ensure that it correctly tracks user choices and applies them.
+                        Check that cookies behave according to user selections and only load after consent when required.
+                    </p>
+                    <p>
+                        If you use Google Tag Manager on your website,
+                        just go to your website option and when you enter the preview, you will be able to see all the options and there will be a new option called <strong><em>Consent Default</em></strong> with initial personalization.
+                        In case the user decides to refuse some options, it will also appear as in the example below.
+                    </p>
+                    <div class="example-image">
+                        <img class="border-1px" src="<?php echo asset('images/png/gtm-tracking.png') ?>">
+                    </div>
 
 
-                        <h3>Step 5: Update Your Privacy Policy</h3>
-                        <p>Ensure that your privacy policy reflects the use of the consent banner and explains how user preferences are managed.</p>
+                    <h3>Step 5: Update Your Privacy Policy</h3>
+                    <p>Ensure that your privacy policy reflects the use of the consent banner and explains how user preferences are managed.</p>
 
-                        <div class="note">
-                            <p>After completing these steps, your website will comply with cookie consent regulations, providing transparency and control to users.</p>
-                        </div>
+                    <div class="note">
+                        <p>After completing these steps, your website will comply with cookie consent regulations, providing transparency and control to users.</p>
                     </div>
                 </div>
             </section>
@@ -455,13 +438,8 @@ $head = [
                 <h2>Contact Us</h2>
                 <p>If you have any questions or need support, please <a href="/contact">contact us</a>.</p>
             </section>
-
-            <!-- Additional sections as needed -->
         </main>
-
-        <!-- Preview section -->
         <section id="preview-section">
-
         </section>
 
     </div>
