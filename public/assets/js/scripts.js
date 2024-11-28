@@ -514,7 +514,8 @@ document.getElementById('example-code')?.addEventListener('click', async () => {
     URL.revokeObjectURL(url);
 });
 
-document.getElementById('cdn-code')?.addEventListener('click', async () => {
+document.getElementById('cdn-code')?.addEventListener('click', async (e) => {
+    e.target.setAttribute('disabled', 'disabled')
     const [bannerHTML, bannerCSS, bannerJS] = generatePreview()
     const minifiedHTML = await HTMLMinifier.minify(bannerHTML, {
         collapseWhitespace: true,
@@ -557,15 +558,19 @@ document.getElementById('cdn-code')?.addEventListener('click', async () => {
         const response = await fetch(uploadUrl, requestOptions);
         if (response.ok) {
             const data = await response.json();
-            const cdn = getCdn(data.id).trim();
-            document.getElementById('generated-link').innerText = cdn;
+            document.getElementById('generated-link').innerText = getCdn(data.id).trim();
+            document.getElementById('banner-id').innerText = data.id;
+            document.getElementById('result').style = 'display:block'
             console.log('Files uploaded successfully!');
             // Handle success
         } else {
             console.error('Failed to upload files.');
             // Handle error
         }
+
+        e.target.removeAttribute('disabled')
     } catch (error) {
+        e.target.removeAttribute('disabled')
         console.error('Error uploading files:', error.message);
         if (error.response) {
             console.error('Server responded with:', error.response.status);

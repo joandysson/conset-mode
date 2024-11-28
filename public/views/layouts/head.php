@@ -47,7 +47,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta name="theme-color" content="#ffffff">
 
 <link rel="stylesheet" href="<?php echo asset('css/styles.css?v=0.0.10'); ?> ">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 
 <meta name="google-adsense-account" content="ca-pub-2263036903177870">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2263036903177870"
