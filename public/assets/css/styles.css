@@ -83,7 +83,14 @@
 }
 
 * {
+    margin: 0;
+    padding: 0;
     font-family: 'Roboto', sans-serif;
+}
+
+p {
+    text-align: justify;
+    line-height: 22px;
 }
 
 #preview-info {
@@ -150,54 +157,104 @@ body {
 
 .container {
     max-width: 960px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    /* padding: 20px; */
+    /* background-color: #fff; */
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+}
+
+h2 {
+    text-align: center;
+    padding: 20px 0;
+}
+
+h3 {
+    padding: 10px 0;
 }
 
 header {
-    text-align: center;
-    margin-bottom: 20px;
+    margin: 30px 0;
 }
 
 header a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-decoration: none;
     color: #000000;
+}
+
+header a img {
+    width: 90px;
+    height: 90px;
 }
 
 header h1 {
     font-size: 2.5rem;
 }
 
+header p {
+    text-align: center;
+    margin: 0;
+}
+
 .blue {
     color: #007bff;
-    /* Blue color for "consent" */
 }
 
 .red {
     color: #dc3545;
-    /* Red color for "mode" */
 }
 
-main {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    /* Allow items to wrap */
-}
 
-.section-default {
+.section-default,
+.consent-mode-tutorial,
+.banner-configuration-guide,
+.cookie-banner-necessity,
+.data-privacy-laws,
+.data-categories,
+.data-privacy-laws,
+.how-it-works-section,
+.faq-section,
+.benefits-section,
+.call-to-action {
     background-color: #f8f9fa;
     padding: 20px;
     border-radius: 5px;
-    margin-bottom: 20px;
-    /* Space between sections */
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
-.how-it-works-section {
-    margin-bottom: 20px;
+.benefits-section .benefits-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.call-to-action {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.call-to-action p {
+    text-align: center;
+}
+
+.call-to-action button {
+    margin: 20px;
+    background-color: #000000;
+}
+
+.call-to-action button:hover {
+    background-color: #303030;
+}
+
+ul li {
+    list-style-position: inside;
+    padding: 3px;
 }
 
 .steps-grid {
@@ -222,23 +279,8 @@ main {
     margin-bottom: 10px;
 }
 
-.step-content h3 {
-    margin-top: 0;
-}
-
 .step-content p {
     margin: 0;
-}
-
-.benefits-section {
-    margin-bottom: 20px;
-}
-
-.benefits-section .benefits-card {
-    margin-bottom: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
 }
 
 .card {
@@ -248,28 +290,6 @@ main {
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.card h3 {
-    margin-top: 0;
-}
-
-.call-to-action {
-    margin-bottom: 20px;
-    text-align: center;
-    padding: 40px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.call-to-action h2 {
-    margin-top: 0;
-}
-
-.faq-section {
-    margin-bottom: 20px;
 }
 
 .faq-title {
@@ -282,7 +302,6 @@ main {
 }
 
 .faq-item {
-    margin-bottom: 20px;
     border: 1px solid #ddd;
     border-radius: 10px;
     overflow: hidden;
@@ -318,11 +337,6 @@ main {
     margin-top: 40px;
 }
 
-.features-section h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-}
-
 .features-grid {
     display: flex;
     flex-wrap: wrap;
@@ -345,10 +359,6 @@ main {
     margin-bottom: 10px;
 }
 
-.feature-content h3 {
-    margin-top: 0;
-}
-
 .feature-content p {
     margin: 0;
 }
@@ -362,11 +372,6 @@ main {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 600px;
     margin: 0 auto;
-}
-
-.contact-form-section h2 {
-    text-align: center;
-    margin-bottom: 20px;
 }
 
 #contact-form {
@@ -481,14 +486,6 @@ main {
     border-radius: 10px;
 }
 
-.call-to-action button {
-    background-color: #000000;
-}
-
-.call-to-action button:hover {
-    background-color: #303030;
-}
-
 .input-group {
     display: flex;
     justify-content: space-between;
@@ -500,11 +497,6 @@ main {
 
 .btn-group-child {
     flex: 0.32;
-}
-
-.config-section h2 {
-    font-size: 1.8rem;
-    margin-bottom: 15px;
 }
 
 .code-section {
@@ -558,7 +550,21 @@ button:active {
     background-color: #da0000;
 }
 
-footer, .note {
+
+.note {
+    margin: 10px 0;
+    text-align: justify;
+    background: #ffebcd;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+    box-shadow: 0 -4px 3px rgb(0 0 0 / 12%);
+}
+
+.space {
+    margin: 20px 0;
+}
+
+footer {
     text-align: center;
     margin-top: 20px;
     padding-top: 10px;
@@ -578,6 +584,7 @@ footer p {
 }
 
 .example-image {
+    margin: 15px;
     text-align: center;
 }
 
@@ -604,5 +611,9 @@ footer p {
 @media (max-width: 768px) {
     .step {
         flex: 1 1 100%;
+    }
+
+    header a {
+        flex-direction: column;
     }
 }
