@@ -17,14 +17,23 @@ $head = [
     <?php include 'layouts/scriptTagManager.php' ?>
     <?php include 'layouts/header.php' ?>
 
-    <div class="container">
-        <header>
-            <a href="/">
-                <h1>Consent <span class="blue">Mode</span> Banner</h1>
-            </a>
-        </header>
-        <main>
-            <section class="section-default">
+    <nav>
+        <ul class="menu">
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#configuration">Configuration</a></li>
+            <li><a href="#data-privacy-laws">Data Privacy Laws</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <a href="/">
+            <img src="<?php echo asset('images/png/logo.png') ?>" alt="">
+            <h1>Consent <span class="blue">Mode</span> Banner</h1>
+        </a>
+        <p>Create custom, data privacy and law-compliant consent banners for your website with ease.</p>
+    </header>
+    <main class="container">
+        <section class="section-default">
             <h2><span style="color: rgb(68, 68, 68);">Privacy Policy</span></h2>
             <p><span style="color: rgb(68, 68, 68);">Your privacy is important to us. It is toolz's policy to respect your privacy regarding any information we may collect from you across our website, <a href="https://toolz.at/">toolz</a>, and other sites we own and operate.</span></p>
             <p><span style="color: rgb(68, 68, 68);">We only ask for personal information when we truly need it to provide a service to you. We collect it by fair and lawful means, with your knowledge and consent. We also let you know why we’re collecting it and how it will be used.</span></p>
@@ -64,9 +73,8 @@ $head = [
             <h3><span style="color: rgb(68, 68, 68);">More information</span></h3>
             <p><span style="color: rgb(68, 68, 68);">Hopefully that has clarified things for you and as was previously mentioned if there is something that you aren't sure whether you need or not it's usually safer to leave cookies enabled in case it does interact with one of the features you use on our site.</span></p>
             <p><span style="color: rgb(68, 68, 68);">This policy is effective as of 7 July 2024 14:17.</span></p>
-            </section>
-        </main>
-    </div>
+        </section>
+    </main>
     <?php include 'layouts/footer.php' ?>
 </body>
 

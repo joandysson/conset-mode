@@ -17,35 +17,49 @@ $head = [
     <?php include 'layouts/scriptTagManager.php' ?>
     <?php include 'layouts/header.php' ?>
 
-    <div class="container">
-        <header>
-            <a href="/">
-                <h1>Consent <span class="blue">Mode</span> Banner</h1>
-            </a>
-        </header>
-        <main>
-            <section class="section-default">
-                <!-- Contact Form Section -->
-                <section class="contact-form-section">
-                    <h2>Contact Us</h2>
-                    <form id="contact-form" action="/contact" method="post">
-                        <label for="name">Name:</label>
-                        <input type="text" id="name" name="name" required>
+    <nav>
+        <ul class="menu">
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#configuration">Configuration</a></li>
+            <li><a href="#data-privacy-laws">Data Privacy Laws</a></li>
+        </ul>
+    </nav>
 
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required>
+    <header>
+        <a href="/">
+            <img src="<?php echo asset('images/png/logo.png') ?>" alt="">
+            <h1>Consent <span class="blue">Mode</span> Banner</h1>
+        </a>
+        <p>Create custom, data privacy and law-compliant consent banners for your website with ease.</p>
+    </header>
 
-                        <label for="message">Message:</label>
-                        <textarea id="message" name="message" required></textarea>
+    <header>
+        <a href="/">
+            <h1>Consent <span class="blue">Mode</span> Banner</h1>
+        </a>
+    </header>
+    <main class="container">
+        <section class="section-default">
+            <!-- Contact Form Section -->
+            <section class="contact-form-section">
+                <h2>Contact Us</h2>
+                <form id="contact-form" action="/contact" method="post">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
 
-                        <button type="submit">Send Message</button>
-                    </form>
-                </section>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+
+                    <button type="submit">Send Message</button>
+                </form>
             </section>
+        </section>
 
-            <!-- Additional sections as needed -->
-        </main>
-    </div>
+        <!-- Additional sections as needed -->
+    </main>
     <?php include 'layouts/footer.php' ?>
 
     <?php include 'layouts/script.php' ?>

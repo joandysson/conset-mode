@@ -16,15 +16,23 @@ $head = [
 <body>
     <?php include 'layouts/scriptTagManager.php' ?>
     <?php include 'layouts/header.php' ?>
+    <nav>
+        <ul class="menu">
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#configuration">Configuration</a></li>
+            <li><a href="#data-privacy-laws">Data Privacy Laws</a></li>
+        </ul>
+    </nav>
 
-    <div class="container">
-        <header>
-            <a href="/">
-                <h1>Consent <span class="blue">Mode</span> Banner</h1>
-            </a>
-        </header>
-        <main>
-            <section class="section-default">
+    <header>
+        <a href="/">
+            <img src="<?php echo asset('images/png/logo.png') ?>" alt="">
+            <h1>Consent <span class="blue">Mode</span> Banner</h1>
+        </a>
+        <p>Create custom, data privacy and law-compliant consent banners for your website with ease.</p>
+    </header>
+    <main class="container">
+        <section class="section-default">
             <h2><span style="color: rgb(68, 68, 68);">1. Terms of Service</span></h2>
             <h3><span style="color: rgb(68, 68, 68);">1. Terms</span></h3>
             <p><span style="color: rgb(68, 68, 68);">By accessing the website at <a href="https://toolz.at/">toolz</a> you are agreeing to be bound by these terms of service, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws. If you do not agree with any of these terms, you are prohibited from using or accessing this site. The materials contained in this website are protected by applicable copyright and trademark law.</span></p>
@@ -53,9 +61,8 @@ $head = [
             <p><span style="color: rgb(68, 68, 68);">toolz may revise these terms of service for its website at any time without notice. By using this website you are agreeing to be bound by the then current version of these terms of service.</span></p>
             <h3><span style="color: rgb(68, 68, 68);">8. Governing Law</span></h3>
             <p><span style="color: rgb(68, 68, 68);">These terms and conditions are governed by and construed in accordance with the laws of toolz and you irrevocably submit to the exclusive jurisdiction of the courts in that State or location.</span></p>
-            </section>
-        </main>
-    </div>
+        </section>
+    </main>
     <?php include 'layouts/footer.php' ?>
 </body>
 

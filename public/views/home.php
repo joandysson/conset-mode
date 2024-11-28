@@ -187,7 +187,7 @@ $head = [
         <div class="space"></div>
         <section id="data-privacy-laws" class="data-privacy-laws">
             <h2>Data Privacy Laws</h2>
-            <p>Overview of key regulations protecting your data</p>
+            <p class="text-center">Overview of key regulations protecting your data</p>
             <div class="law">
                 <h3>GDPR (General Data Protection Regulation)</h3>
                 <p>A European Union regulation that ensures the protection of personal data and privacy for individuals within the EU. It mandates transparency, user consent, and the right to access, correct, and delete personal data.</p>
@@ -231,7 +231,7 @@ $head = [
         <div class="space"></div>
         <section id="data-categories" class="data-categories">
             <h2>Data Categories</h2>
-            <p>Understanding how we use your data</p>
+            <p class="text-center">Understanding how we use your data</p>
             <div class="category">
                 <h3>Necessary</h3>
                 <p><strong>Essential for website functionality:</strong> This category includes data that is strictly necessary for the website to function properly.</p>
@@ -446,7 +446,7 @@ $head = [
         <div class="space"></div>
         <section class="section-default">
             <h2>Contact Us</h2>
-            <p>If you have any questions or need support, please <a href="/contact">contact us</a>.</p>
+            <p class="text-center">If you have any questions or need support, please <a href="/contact">contact us</a>.</p>
         </section>
         <section id="preview-section">
         </section>
