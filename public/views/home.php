@@ -73,7 +73,7 @@ $head = [
                 <h2>Configuration</h2>
                 <!-- Your configuration form and code generation UI goes here -->
                 <div id="customization-ui">
-                    <h3>Customize Your Consent Banner (<a href="#how-to-configure-consent-mode">See How to Configure</a>)</h3>
+                    <h3>Customize Your Consent Banner (<a href="#banner-configuration-options">See How to Configure</a>)</h3>
                     <form id="customization-form">
                         <label for="banner-title">Banner Title:</label>
                         <input type="text" id="banner-title" value="Cookie settings" placeholder="Cookie settings">
