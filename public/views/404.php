@@ -1,6 +1,6 @@
 <?php
 $head = [
-    'title' => 'Page Not Found | Free Consent Mode Banner Generator',
+    'title' => 'Page Not Found',
     'description' => 'Sorry, the page you are looking for does not exist. Return to our home page to generate customizable consent mode banners for your website.',
     'keywords' => '404 page, page not found, error page, free consent mode banner, customizable consent banner'
 ];
@@ -17,24 +17,16 @@ $head = [
     <?php include 'layouts/scriptTagManager.php' ?>
     <?php include 'layouts/header.php' ?>
 
-    <header>
-        <a href="/">
-            <img src="<?php echo asset('images/png/logo.png') ?>" alt="">
-            <h1>Consent <span class="blue">Mode</span> Banner</h1>
-        </a>
-        <p>Create custom, data privacy and law-compliant consent banners for your website with ease.</p>
-    </header>
-
-    <header>
-        <a href="/">
-            <h1>Consent <span class="blue">Mode</span> Banner</h1>
-        </a>
-    </header>
     <main class="container">
         <section class="section-default">
-            <h1>Page not found</h1>
-            <p></p>
-            <a href="/" class="colorbutton">Go back home </a><br><br>
+            <h2>Page not found</h3>
+            <p>Oops! The page you are looking for could not be found. Please check the URL or return to the home page.</p>
+
+            <div class="space"></div>
+
+            <div style="display: flex; justify-content: center;">
+                <a href="/" class="btn">Go back home </a>
+            </div>
         </section>
     </main>
     <?php include 'layouts/footer.php' ?>

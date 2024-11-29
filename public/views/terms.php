@@ -1,6 +1,6 @@
 <?php
 $head = [
-    'title' => 'Terms of Service | Free Consent Mode Banner Generator',
+    'title' => 'Terms of Service',
     'description' => 'Read our terms of service to understand the rules and guidelines for using our free consent mode banner generator. Ensure compliance and transparency.',
     'keywords' => 'terms of service, consent banner terms, usage guidelines, compliance, transparency'
 ];
@@ -16,21 +16,7 @@ $head = [
 <body>
     <?php include 'layouts/scriptTagManager.php' ?>
     <?php include 'layouts/header.php' ?>
-    <nav>
-        <ul class="menu">
-            <li><a href="#how-it-works">How It Works</a></li>
-            <li><a href="#configuration">Configuration</a></li>
-            <li><a href="#data-privacy-laws">Data Privacy Laws</a></li>
-        </ul>
-    </nav>
 
-    <header>
-        <a href="/">
-            <img src="<?php echo asset('images/png/logo.png') ?>" alt="">
-            <h1>Consent <span class="blue">Mode</span> Banner</h1>
-        </a>
-        <p>Create custom, data privacy and law-compliant consent banners for your website with ease.</p>
-    </header>
     <main class="container">
         <section class="section-default">
             <h2><span style="color: rgb(68, 68, 68);">1. Terms of Service</span></h2>

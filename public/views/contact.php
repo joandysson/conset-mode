@@ -1,6 +1,6 @@
 <?php
 $head = [
-    'title' => 'Contact Us | Free Consent Mode Banner Generator',
+    'title' => 'Contact us',
     'description' => 'Get in touch with us for any queries, feedback, or support related to our free and customizable consent mode banner generator. We are here to help you.',
     'keywords' => 'contact us, support, queries, feedback, consent mode banner, customizable consent banner'
 ];
@@ -17,27 +17,6 @@ $head = [
     <?php include 'layouts/scriptTagManager.php' ?>
     <?php include 'layouts/header.php' ?>
 
-    <nav>
-        <ul class="menu">
-            <li><a href="#how-it-works">How It Works</a></li>
-            <li><a href="#configuration">Configuration</a></li>
-            <li><a href="#data-privacy-laws">Data Privacy Laws</a></li>
-        </ul>
-    </nav>
-
-    <header>
-        <a href="/">
-            <img src="<?php echo asset('images/png/logo.png') ?>" alt="">
-            <h1>Consent <span class="blue">Mode</span> Banner</h1>
-        </a>
-        <p>Create custom, data privacy and law-compliant consent banners for your website with ease.</p>
-    </header>
-
-    <header>
-        <a href="/">
-            <h1>Consent <span class="blue">Mode</span> Banner</h1>
-        </a>
-    </header>
     <main class="container">
         <section class="section-default">
             <!-- Contact Form Section -->

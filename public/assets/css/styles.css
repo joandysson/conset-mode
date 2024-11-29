@@ -499,6 +499,14 @@ ul li, ol li {
     flex: 0.24;
 }
 
+.btn {
+    border-radius: 5px;
+    text-decoration: none;
+    padding: 10px 15px;
+    color: #fff;
+    background: #007bff;
+}
+
 .btn-group-child {
     flex: 0.32;
 }
@@ -565,7 +573,8 @@ button:active {
 }
 
 .space {
-    margin: 20px 0;
+    display: flex;
+    margin: 10px 0;
 }
 
 footer {

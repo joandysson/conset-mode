@@ -3,7 +3,7 @@
 
 <?php
 $head = [
-    'title' => 'Consent Mode Generator - Use For Free',
+    'title' => 'Generator',
     'description' => 'Create a free consent mode banner for your website with our easy-to-use tool. Ensure compliance with GDPR, LGPD, and CCPA while providing a seamless user experience. Customize design, placement, and functionality to match your brand, all while respecting user privacy. Perfect for websites of all sizes, our solution helps you stay aligned with global data privacy regulations without hassle. Try it now and make your website compliant today!.',
     'keywords' => 'GDPR, LGPD, CCPA, consent mode banner, custom consent banner, free consent banner tool, website compliance, HTML CSS JavaScript snippets, privacy regulations'
 ];
@@ -17,21 +17,6 @@ $head = [
     <?php include 'layouts/scriptTagManager.php' ?>
     <?php include 'layouts/header.php' ?>
 
-    <nav>
-        <ul class="menu">
-            <li><a href="#how-it-works">How It Works</a></li>
-            <li><a href="#configuration">Configuration</a></li>
-            <li><a href="#data-privacy-laws">Data Privacy Laws</a></li>
-        </ul>
-    </nav>
-
-    <header>
-        <a href="/">
-            <img src="<?php echo asset('images/png/logo.png') ?>" alt="">
-            <h1>Consent <span class="blue">Mode</span> Banner</h1>
-        </a>
-        <p>Create custom, data privacy and law-compliant consent banners for your website with ease.</p>
-    </header>
     <main class="container">
         <!-- How It Works Section -->
         <section class="how-it-works-section">

@@ -15,7 +15,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta name="robots" content="index, follow">
 
 <!-- Open Graph (Facebook, LinkedIn, etc.) -->
-<meta property="og:title" content="<?php echo $head['title'] ?>">
+<meta property="og:title" content="<?php echo $head['title'] . '- Consent Mode' ?>">
 <meta property="og:description" content="<?php echo $head['description'] ?>">
 <meta property="og:image" content="<?php echo asset('images/png/logo.png'); ?>">
 <meta property="og:url" content="<?php echo getenv('APP_URL'); ?>">

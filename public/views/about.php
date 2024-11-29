@@ -1,6 +1,6 @@
 <?php
 $head = [
-    'title' => 'About Us | Free Consent Mode Banner Generator',
+    'title' => 'About us',
     'description' => 'Discover more about our mission to provide a free, customizable consent mode banner generator. Learn about our team and our commitment to compliance and user experience.',
     'keywords' => 'about us, consent banner generator, our mission, compliance, user experience'
 ];
@@ -17,20 +17,7 @@ $head = [
     <?php include 'layouts/scriptTagManager.php' ?>
     <?php include 'layouts/header.php' ?>
 
-    <header>
-        <a href="/">
-            <img src="<?php echo asset('images/png/logo.png') ?>" alt="">
-            <h1>Consent <span class="blue">Mode</span> Banner</h1>
-        </a>
-        <p>Create custom, data privacy and law-compliant consent banners for your website with ease.</p>
-    </header>
-
-    <header>
-        <a href="/">
-            <h1>Consent <span class="blue">Mode</span> Banner</h1>
-        </a>
-    </header>
-    <main>
+    <main class="container">
         <section class="section-default">
             <h2>Welcome to Consent Mode Banner</h2>
             <p>The home of the Free Consent Mode Banner Generator. Our mission is to provide web developers, site owners, and digital marketers with a simple, effective, and customizable solution for managing cookie consent on their websites.</p>

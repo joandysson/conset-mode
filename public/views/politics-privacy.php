@@ -1,6 +1,6 @@
 <?php
 $head = [
-    'title' => 'Privacy Policy | Free Consent Mode Banner Generator',
+    'title' => 'Privacy Policy',
     'description' => 'Learn about our privacy policy and how we handle your data when you use our free consent mode banner generator. Your privacy and security are our priority.',
     'keywords' => 'privacy policy, data handling, user privacy, data security, consent banner'
 ];
@@ -17,21 +17,6 @@ $head = [
     <?php include 'layouts/scriptTagManager.php' ?>
     <?php include 'layouts/header.php' ?>
 
-    <nav>
-        <ul class="menu">
-            <li><a href="#how-it-works">How It Works</a></li>
-            <li><a href="#configuration">Configuration</a></li>
-            <li><a href="#data-privacy-laws">Data Privacy Laws</a></li>
-        </ul>
-    </nav>
-
-    <header>
-        <a href="/">
-            <img src="<?php echo asset('images/png/logo.png') ?>" alt="">
-            <h1>Consent <span class="blue">Mode</span> Banner</h1>
-        </a>
-        <p>Create custom, data privacy and law-compliant consent banners for your website with ease.</p>
-    </header>
     <main class="container">
         <section class="section-default">
             <h2><span style="color: rgb(68, 68, 68);">Privacy Policy</span></h2>
