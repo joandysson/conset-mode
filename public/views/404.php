@@ -19,7 +19,7 @@ $head = [
 
     <main class="container">
         <section class="section-default">
-            <h2>Page not found</h3>
+            <h1>Page not found</h1>
             <p>Oops! The page you are looking for could not be found. Please check the URL or return to the home page.</p>
 
             <div class="space"></div>
@@ -28,6 +28,11 @@ $head = [
                 <a href="/" class="btn">Go back home </a>
             </div>
         </section>
+        <div class="space"></div>
+
+        <!-- Call to Action Section -->
+        <?php include 'layouts/appSection.php' ?>
+
     </main>
     <?php include 'layouts/footer.php' ?>
     <?php include 'layouts/script.php' ?>

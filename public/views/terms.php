@@ -19,7 +19,7 @@ $head = [
 
     <main class="container">
         <section class="section-default">
-            <h2><span style="color: rgb(68, 68, 68);">1. Terms of Service</span></h2>
+            <h1><span style="color: rgb(68, 68, 68);">1. Terms of Service</span></h1>
             <h3><span style="color: rgb(68, 68, 68);">1. Terms</span></h3>
             <p><span style="color: rgb(68, 68, 68);">By accessing the website at <a href="https://toolz.at/">toolz</a> you are agreeing to be bound by these terms of service, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws. If you do not agree with any of these terms, you are prohibited from using or accessing this site. The materials contained in this website are protected by applicable copyright and trademark law.</span></p>
             <h3><span style="color: rgb(68, 68, 68);">2. Use License</span></h3>

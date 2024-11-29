@@ -21,7 +21,7 @@ $head = [
         <section class="section-default">
             <!-- Contact Form Section -->
             <section class="contact-form-section">
-                <h2>Contact Us</h2>
+                <h1>Contact Us</h1>
                 <form id="contact-form" action="/contact" method="post">
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" required>

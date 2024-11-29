@@ -19,7 +19,7 @@ $head = [
 
     <main class="container">
         <section class="section-default">
-            <h2><span style="color: rgb(68, 68, 68);">Privacy Policy</span></h2>
+            <h1><span style="color: rgb(68, 68, 68);">Privacy Policy</span></h1>
             <p><span style="color: rgb(68, 68, 68);">Your privacy is important to us. It is toolz's policy to respect your privacy regarding any information we may collect from you across our website, <a href="https://toolz.at/">toolz</a>, and other sites we own and operate.</span></p>
             <p><span style="color: rgb(68, 68, 68);">We only ask for personal information when we truly need it to provide a service to you. We collect it by fair and lawful means, with your knowledge and consent. We also let you know why we’re collecting it and how it will be used.</span></p>
             <p><span style="color: rgb(68, 68, 68);">We only retain collected information for as long as necessary to provide you with your requested service. What data we store, we’ll protect within commercially acceptable means to prevent loss and theft, as well as unauthorised access, disclosure, copying, use or modification.</span></p>
