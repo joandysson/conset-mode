@@ -1,3 +1,7 @@
+<?php
+$title =  $head['title'] . ' - Consent Mode';
+?>
+
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -8,14 +12,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title><?php echo $head['title'] . '- Consent Mode' ?></title>
+<title><?php echo $title ?></title>
 <meta name="description" content="<?php echo $head['description'] ?>">
 <meta name="keywords" content="<?php echo $head['description'] ?>">
 <meta name="author" content="toolz.at">
 <meta name="robots" content="index, follow">
 
 <!-- Open Graph (Facebook, LinkedIn, etc.) -->
-<meta property="og:title" content="<?php echo $head['title'] . ' - Consent Mode' ?>">
+<meta property="og:title" content="<?php echo $title ?>">
 <meta property="og:description" content="<?php echo $head['description'] ?>">
 <meta property="og:image" content="<?php echo asset('images/png/logo.png'); ?>">
 <meta property="og:url" content="<?php echo getenv('APP_URL'); ?>">
@@ -24,7 +28,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="logo">
-<meta name="twitter:title" content="<?php echo $head['title'] . '- Consent Mode' ?>">
+<meta name="twitter:title" content="<?php echo $title ?>">
 <meta name="twitter:description" content="<?php echo $head['description'] ?>">
 <meta name="twitter:image" content="<?php echo asset('images/png/logo.png'); ?>">
 
