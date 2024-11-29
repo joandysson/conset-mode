@@ -308,6 +308,8 @@ function getBannerJS(showCheckboxes) {
         gtag('consent', 'default', JSON.parse(localStorage.getItem('consentMode')));
     }
 
+    setDefaultConsent()
+
     function setConsentAndHideBanner(consent) {
         const consentMode = {
             'functionality_storage': consent.necessary ? 'granted' : 'denied',
