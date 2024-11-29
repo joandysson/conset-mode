@@ -8,7 +8,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title><?php echo $head['title'] ?></title>
+<title><?php echo $head['title'] . '- Consent Mode' ?></title>
 <meta name="description" content="<?php echo $head['description'] ?>">
 <meta name="keywords" content="<?php echo $head['description'] ?>">
 <meta name="author" content="toolz.at">
@@ -24,7 +24,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="logo">
-<meta name="twitter:title" content="<?php echo $head['title'] ?>">
+<meta name="twitter:title" content="<?php echo $head['title'] . '- Consent Mode' ?>">
 <meta name="twitter:description" content="<?php echo $head['description'] ?>">
 <meta name="twitter:image" content="<?php echo asset('images/png/logo.png'); ?>">
 
