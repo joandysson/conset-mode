@@ -330,7 +330,7 @@ $head = [
                     see how:
                     <br>
                     <a href="#how-to-configure-consent-mode">
-                        how Configure it on your website
+                        Configure it on your website
                     </a>
                     <br>
                     <!-- <a href="#">
