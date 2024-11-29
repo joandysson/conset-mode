@@ -4,8 +4,8 @@
 <?php
 $head = [
     'title' => 'Data Privacy Laws',
-    'description' => 'Create a free consent mode banner for your website with our easy-to-use tool. Ensure compliance with GDPR, LGPD, and CCPA while providing a seamless user experience. Customize design, placement, and functionality to match your brand, all while respecting user privacy. Perfect for websites of all sizes, our solution helps you stay aligned with global data privacy regulations without hassle. Try it now and make your website compliant today!.',
-    'keywords' => 'GDPR, LGPD, CCPA, consent mode banner, custom consent banner, free consent banner tool, website compliance, HTML CSS JavaScript snippets, privacy regulations'
+    'description' => 'Learn about essential data privacy laws, including GDPR, LGPD, and CCPA, designed to protect personal data and ensure companies handle information responsibly. Stay compliant, avoid penalties, and build trust with your users by aligning with data protection regulations.',
+    'keywords' => 'GDPR Compliance, Data Protection Laws, Personal Data Security'
 ];
 ?>
 

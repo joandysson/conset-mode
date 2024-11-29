@@ -4,8 +4,8 @@
 <?php
 $head = [
     'title' => 'Why use',
-    'description' => 'Create a free consent mode banner for your website with our easy-to-use tool. Ensure compliance with GDPR, LGPD, and CCPA while providing a seamless user experience. Customize design, placement, and functionality to match your brand, all while respecting user privacy. Perfect for websites of all sizes, our solution helps you stay aligned with global data privacy regulations without hassle. Try it now and make your website compliant today!.',
-    'keywords' => 'GDPR, LGPD, CCPA, consent mode banner, custom consent banner, free consent banner tool, website compliance, HTML CSS JavaScript snippets, privacy regulations'
+    'description' => 'Discover the benefits of adopting privacy-conscious practices, such as using the Google Consent Mode, to enhance user transparency and compliance with global regulations like GDPR and CCPA. Improve user trust while optimizing advertising performance and data collection.',
+    'keywords' => 'Data Privacy, Google Consent Mode, Privacy Compliance'
 ];
 ?>
 
