@@ -8,10 +8,9 @@ const src = scriptTag.getAttribute('src');
 const url  = new URL(src)
 const searchParams = new URLSearchParams(url.searchParams)
 const paramBannerId = searchParams.get('banner_id')
+var gtmUtmSource = searchParams.get('utm_source')
 
 // Output the value to the console (for testing)
-console.log('Toolz Banner ID:', toolzBannerId);
-
 const bannerId = toolzBannerId || paramBannerId
 console.log('Banner ID:', bannerId);
 

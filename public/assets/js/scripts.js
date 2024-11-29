@@ -286,17 +286,25 @@ function getBannerJS(showCheckboxes) {
         dataLayer.push(arguments);
     }
 
-    if(localStorage.getItem('consentMode') === null){
-        gtag('consent', 'default', {
-            'ad_storage': 'denied',
-            'ad_user_data': 'denied',
-            'ad_personalization': 'denied',
-            'analytics_storage': 'denied',
-            'personalization_storage': 'denied',
-            'functionality_storage': 'denied',
-            'security_storage': 'denied',
-        });
-    } else {
+    function setDefaultConsent() {
+        if(gtmUtmSource === 'gtm') {
+            return
+        }
+
+        if(localStorage.getItem('consentMode') === null) {
+            gtag('consent', 'default', {
+                'ad_storage': 'denied',
+                'ad_user_data': 'denied',
+                'ad_personalization': 'denied',
+                'analytics_storage': 'denied',
+                'personalization_storage': 'denied',
+                'functionality_storage': 'denied',
+                'security_storage': 'denied',
+            });
+
+            return
+        }
+
         gtag('consent', 'default', JSON.parse(localStorage.getItem('consentMode')));
     }
 
@@ -351,7 +359,6 @@ function getBannerJS(showCheckboxes) {
             }
         });
         `: ``}
-
 
     function setCookie(name, value, days) {
         const date = new Date();
