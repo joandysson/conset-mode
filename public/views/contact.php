@@ -37,12 +37,56 @@ $head = [
             </section>
         </section>
 
+        <div class="space"></div>
+        <?php include 'layouts/appSection.php' ?>
+        <div class="space"></div>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <h1 class="faq-title">Frequently Asked Questions</h1>
+            <div class="faq">
+                <div class="faq-item">
+                    <div class="faq-question">What is a Consent Mode Banner?</div>
+                    <div class="faq-answer">A consent mode banner is a tool that helps websites comply with GDPR regulations by informing users about cookies and allowing them to choose which cookies they want to accept.</div>
+                </div>
+                <div class="space"></div>
+
+                <div class="faq-item">
+                    <div class="faq-question">How can I customize my banner?</div>
+                    <div class="faq-answer">You can customize the text, colors, and layout of the banner using our easy-to-use generator. Simply fill out the form and generate the code.</div>
+                </div>
+                <div class="space"></div>
+                <div class="faq-item">
+                    <div class="faq-question">Is the banner responsive?</div>
+                    <div class="faq-answer">Yes, our banners are designed to be fully responsive and will look great on all devices, from desktop computers to mobile phones.</div>
+                </div>
+                <div class="space"></div>
+                <div class="faq-item">
+                    <div class="faq-question">Is this service free?</div>
+                    <div class="faq-answer">Yes, our consent mode banner generator is completely free to use. There are no hidden charges or fees.</div>
+                </div>
+            </div>
+        </section>
+
         <!-- Additional sections as needed -->
     </main>
     <?php include 'layouts/footer.php' ?>
 
     <?php include 'layouts/script.php' ?>
 
+    <script>
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', () => {
+                item.classList.toggle('active');
+                const answer = item.nextElementSibling;
+                if (item.classList.contains('active')) {
+                    answer.style.display = 'block';
+                } else {
+                    answer.style.display = 'none';
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

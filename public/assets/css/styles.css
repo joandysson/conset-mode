@@ -107,6 +107,7 @@ p {
     display: none;
 }
 
+/* Estilos existentes */
 .menu {
     list-style-type: none;
     padding: 0;
@@ -143,6 +144,23 @@ p {
     background-color: #0056b3;
 }
 
+/* Estilo para o botão de menu em telas pequenas */
+.menu-toggle {
+    display: none;
+    background-color: #007bff;
+    color: white;
+    font-size: 1.5rem;
+    border: none;
+    padding: 5px 0;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 0;
+}
+
+.menu-toggle:hover {
+    background-color: #0056b3;
+}
+
 .border-1px {
     border: solid 2px #000000;
 }
@@ -168,7 +186,7 @@ h1 {
     padding: 20px 0;
 }
 
-h2 {
+h2, h3 {
     padding: 10px 0;
 }
 
@@ -220,7 +238,9 @@ header p {
 .how-it-works-section,
 .faq-section,
 .benefits-section,
-.call-to-action {
+.call-to-action,
+.data-privacy-laws,
+.why-use {
     background-color: #f8f9fa;
     padding: 20px;
     border-radius: 5px;
@@ -587,9 +607,38 @@ footer {
 footer a {
     text-decoration: none;
     color: #333;
-    margin: 0 5px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
+footer a:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Estilos para o menu de footer */
+.footer-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Espaçamento entre os itens */
+}
+
+.footer-menu li {
+    display: inline-block;
+}
+
+/* Estilos de borda entre os itens */
+.footer-menu li:not(:last-child)::after {
+    content: '|';
+    margin-left: 15px;
+    color: #333;
+}
+
+/* Estilo para o texto do copyright */
 footer p {
     text-align: center;
     margin: 0;
@@ -628,5 +677,61 @@ footer p {
 
     header a {
         flex-direction: column;
+    }
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+    .footer-menu {
+        display: block;
+        padding: 0;
+    }
+
+    .footer-menu li {
+        text-align: start;
+        display: block;
+    }
+
+    .footer-menu li a {
+        background: none;
+        margin: 0 5%;
+        border-radius: 0;
+        display: block;
+        border-bottom: solid 0.1px #737373;
+    }
+
+    .footer-menu li a:o {
+        background: none;
+        margin: 0 5%;
+        border-radius: 0;
+        display: block;
+        border-bottom: solid 0.1px #737373;
+    }
+
+    .footer-menu li:not(:last-child)::after {
+        display: none;
+    }
+
+    .footer-menu li:not(:last-child)::after {
+        content: '';
+    }
+
+    .menu {
+        display: none; /* Esconde o menu em telas pequenas */
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+    }
+
+    .menu li a {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block; /* Exibe o botão de menu */
+    }
+
+    .menu.show {
+        display: flex; /* Exibe o menu quando ativado */
     }
 }

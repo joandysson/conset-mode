@@ -20,7 +20,7 @@ $head = [
     <main class="container">
         <!-- How It Works Section -->
         <section class="how-it-works-section">
-            <h1 id="how-it-works">How It Works</h1>
+            <h1 id="how-it-works">Steps to Implement your Consent Mode V2</h1>
             <div class="steps-grid">
                 <div class="step">
                     <div class="step-icon">1️⃣</div>
@@ -167,90 +167,6 @@ $head = [
                 <!--                        <pre><code id="generated-js"></code></pre>-->
                 <!--                        <button onclick="copyToClipboard('generated-js')">Copy JS Code</button>-->
                 <!--                    </div> -->
-            </div>
-        </section>
-        <div class="space"></div>
-        <section id="data-privacy-laws" class="data-privacy-laws">
-            <h1>Data Privacy Laws</h1>
-            <p class="text-center">Overview of key regulations protecting your data</p>
-            <div class="law">
-                <h2>GDPR (General Data Protection Regulation)</h2>
-                <p>A European Union regulation that ensures the protection of personal data and privacy for individuals within the EU. It mandates transparency, user consent, and the right to access, correct, and delete personal data.</p>
-            </div>
-            <div class="law">
-                <h2>LGPD (Lei Geral de Proteção de Dados)</h2>
-                <p>Brazil's data protection law designed to protect personal data and privacy. It gives individuals rights to access, correct, and delete their data, and requires businesses to obtain clear consent for data processing.</p>
-            </div>
-            <div class="law">
-                <h2>CCPA (California Consumer Privacy Act)</h2>
-                <p>A U.S. regulation granting California residents rights to know how their data is used, request deletion, and opt-out of data sales. It emphasizes transparency and user control over personal information.</p>
-            </div>
-            <div class="law">
-                <h2>Other Laws</h2>
-                <p>Similar regulations exist worldwide, such as Canada's PIPEDA, Australia's Privacy Act, and Japan's APPI. These laws aim to protect user privacy, ensure data security, and hold businesses accountable for data practices.</p>
-            </div>
-            <div class="note">
-                <p><strong>Note:</strong> These laws vary by region but share common goals of protecting individual privacy, ensuring transparency, and granting users control over their data.</p>
-            </div>
-        </section>
-        <div class="space"></div>
-        <section id="cookie-banner-requirements" class="cookie-banner-necessity">
-            <h1>Cookie Banner Requirements</h1>
-            <div class="content">
-                <p>A cookie banner is typically required on websites to comply with data protection laws like GDPR, LGPD, and CCPA. Its purpose is to inform users about the use of cookies and to obtain their consent for non-essential cookies.</p>
-                <h2>When is a banner necessary?</h2>
-                <p>A banner is required if your website uses cookies for purposes such as analytics, marketing, or personalizing user preferences. These cookies require explicit user consent.</p>
-                <h2>Are banners required for necessary cookies?</h2>
-                <p>In most jurisdictions, such as under GDPR, LGPD, and similar laws, banners are not required if your website only uses cookies that are strictly necessary for functionality. Examples include session cookies, authentication tokens, and cookies required for security or completing purchases. These cookies do not require user consent but must still be disclosed in the site's privacy policy.</p>
-                <h2>Key Notes:</h2>
-                <ul>
-                    <li><strong>GDPR:</strong> Requires consent for all cookies except those strictly necessary for functionality.</li>
-                    <li><strong>LGPD:</strong> Similar to GDPR, consent is needed for non-essential cookies.</li>
-                    <li><strong>CCPA:</strong> Does not mandate consent banners but requires websites to inform users about data collection and provide opt-out options for data sales.</li>
-                </ul>
-                <div class="note">
-                    <p><strong>Summary:</strong> Use a banner when deploying non-essential cookies. For strictly necessary cookies, disclosure in your privacy policy is sufficient in most cases.</p>
-                </div>
-            </div>
-        </section>
-        <div class="space"></div>
-        <section id="data-categories" class="data-categories">
-            <h1>Data Categories</h1>
-            <p class="text-center">Understanding how we use your data</p>
-            <div class="category">
-                <h2>Necessary</h2>
-                <p><strong>Essential for website functionality:</strong> This category includes data that is strictly necessary for the website to function properly.</p>
-                <ul>
-                    <li>Examples: Session cookies, authentication tokens, and data required to complete a purchase.</li>
-                    <li><strong>User consent:</strong> Typically, users don't have the option to opt-out of necessary data processing.</li>
-                </ul>
-            </div>
-            <div class="category">
-                <h2>Marketing</h2>
-                <p><strong>Used for targeted advertising:</strong> This category includes data used to personalize ads and track user behavior for marketing purposes.</p>
-                <ul>
-                    <li>Examples: Cookies that track browsing history, demographic information, and interests.</li>
-                    <li><strong>User consent:</strong> Users can usually opt-out of marketing data processing.</li>
-                </ul>
-            </div>
-            <div class="category">
-                <h2>Analytics</h2>
-                <p><strong>Used for website performance and user behavior:</strong> This category includes data used to analyze website traffic, user engagement, and other metrics to improve the website's performance.</p>
-                <ul>
-                    <li>Examples: Cookies that track page views, time spent on site, and click-through rates.</li>
-                    <li><strong>User consent:</strong> Users can usually opt-out of analytics data processing.</li>
-                </ul>
-            </div>
-            <div class="category">
-                <h2>Preferences</h2>
-                <p><strong>Used for personalized user experience:</strong> This category includes data used to customize the website's appearance or content based on user preferences.</p>
-                <ul>
-                    <li>Examples: Cookies that remember language preferences, theme choices, or previously viewed products.</li>
-                    <li><strong>User consent:</strong> Users can usually opt-out of preference data processing.</li>
-                </ul>
-            </div>
-            <div class="note">
-                <p><strong>Summary:</strong> Necessary data is essential for the website to function. Marketing data is used to target ads and track user behavior. Analytics data is used to analyze website performance. Preferences data is used to personalize the user experience. Users typically have more control over marketing, analytics, and preference data processing.</p>
             </div>
         </section>
         <div class="space"></div>
