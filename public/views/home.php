@@ -68,8 +68,8 @@ $head = [
             </div>
             <div class="box">
                 <div>🔘</div>
-                <h2>Customizable</h2>
-                <p>Change the colors, texts and position of the banner according to what works best for your website</p>
+                <h2>Easy to integrate</h2>
+                <p>Em poucos cliques o banner de consentimento estará disponível em seu site</p>
             </div>
             <div class="box">
                 <div>🔘</div>
