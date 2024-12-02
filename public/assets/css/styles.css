@@ -140,6 +140,10 @@ p {
     color: #fff;
 }
 
+.mt-40 {
+    margin-top: 40px;
+}
+
 .menu a:active {
     background-color: #0056b3;
 }
@@ -186,7 +190,8 @@ h1 {
     padding: 20px 0;
 }
 
-h2, h3 {
+h2,
+h3 {
     padding: 10px 0;
 }
 
@@ -227,6 +232,42 @@ header p {
     color: #dc3545;
 }
 
+.section-init {
+    padding: 60px 20px !important
+}
+
+
+.section-call-generation {
+    justify-content: space-between;
+    padding: 60px 20px;
+    align-items: center;
+    background: #303030;
+}
+
+.section-call-generation p {
+    font-size: xx-large;
+    text-align: center;
+    color: white;
+    line-height: 1.5;
+}
+
+.section-call-generation a {
+    font-size: large;
+}
+
+.section-banner-info {
+    display: flex;
+    margin: 60px 0;
+    text-align: center;
+}
+
+.section-banner-info .box:first-child {
+    border-right: 2px solid #ddd;
+}
+
+.section-banner-info .box:last-child {
+    border-left: 2px solid #ddd;
+}
 
 .section-default,
 .consent-mode-tutorial,
@@ -275,7 +316,8 @@ header p {
     background-color: #303030;
 }
 
-ul li, ol li {
+ul li,
+ol li {
     list-style-position: inside;
     padding: 3px;
 }
@@ -341,12 +383,14 @@ ul li, ol li {
 }
 
 .faq-question::after {
-    content: '\002B'; /* Plus sign */
+    content: '\002B';
+    /* Plus sign */
     font-size: 1.5em;
 }
 
 .faq-question.active::after {
-    content: '\2212'; /* Minus sign */
+    content: '\2212';
+    /* Minus sign */
 }
 
 .faq-answer {
@@ -526,6 +570,14 @@ ul li, ol li {
     background: #007bff;
 }
 
+.d-flex {
+    display: flex
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
 .btn-group-child {
     flex: 0.32;
 }
@@ -624,7 +676,8 @@ footer a:hover {
     margin: 0;
     display: flex;
     justify-content: center;
-    gap: 15px; /* Espaçamento entre os itens */
+    gap: 15px;
+    /* Espaçamento entre os itens */
 }
 
 .footer-menu li {
@@ -652,6 +705,50 @@ footer p {
 
 .example-image img {
     width: 70%;
+}
+
+.box {
+    /* background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 8px; */
+    padding: 1rem;
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    flex: 1;
+}
+
+.box h2 {
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.box p {
+    color: #666;
+}
+
+.box:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Mobile-first: estilos já funcionam bem para telas pequenas */
+
+/* Estilo para telas maiores (tablet e desktop) */
+@media (max-width: 768px) {
+    .section-banner-info {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .section-banner-info .box:first-child {
+        border-bottom: 2px solid #ddd;
+        margin-bottom: 10px;
+    }
+
+    .section-banner-info .box:last-child {
+        border-top: 2px solid #ddd;
+        margin-top: 10px;
+    }
 }
 
 @media only screen and (max-width: 810px) {
@@ -717,7 +814,8 @@ footer p {
     }
 
     .menu {
-        display: none; /* Esconde o menu em telas pequenas */
+        display: none;
+        /* Esconde o menu em telas pequenas */
         flex-direction: column;
         width: 100%;
         padding: 0;
@@ -728,10 +826,20 @@ footer p {
     }
 
     .menu-toggle {
-        display: block; /* Exibe o botão de menu */
+        display: block;
+        /* Exibe o botão de menu */
     }
 
     .menu.show {
-        display: flex; /* Exibe o menu quando ativado */
+        display: flex;
+        /* Exibe o menu quando ativado */
+    }
+
+    .section-call-generation {
+        flex-direction: column;
+    }
+
+    .section-call-generation a {
+        margin-top: 30px;
     }
 }

@@ -7,5 +7,4 @@
             Consent <span class="blue">Mode</span> Banner
         </div>
     </a>
-    <p>Create custom, data privacy and law-compliant consent banners for your website with ease.</p>
 </header>

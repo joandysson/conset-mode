@@ -19,9 +19,10 @@ $head = [
 
     <main class="container">
         <section class="section-default">
+            <h1>Contact Us</h1>
+
             <!-- Contact Form Section -->
             <section class="contact-form-section">
-                <h1>Contact Us</h1>
                 <form id="contact-form" action="/contact" method="post">
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" required>
