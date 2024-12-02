@@ -69,7 +69,7 @@ $head = [
             <div class="box">
                 <div>🔘</div>
                 <h2>Easy to integrate</h2>
-                <p>Em poucos cliques o banner de consentimento estará disponível em seu site</p>
+                <p>In just a few clicks, the consent banner will be available on your website</p>
             </div>
             <div class="box">
                 <div>🔘</div>
