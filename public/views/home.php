@@ -82,7 +82,7 @@ $head = [
             <div class="description">
                 <h2>What Is Cookie Banner Generator</h2>
                 <p>
-                    The General Data Protection Regulation (GDPR) applies to all sites with clients from the EU. Develop trust with your site clients while adhering to current data protection regulations and avoiding potential fines.
+                    Develop trust with your site clients while adhering to current data protection regulations and avoiding potential fines.
                 </p>
                 <p>
                     Cookie Notice Generator is an online web tool or app that creates highly customizable cookie consent banners for websites. You can modify the banner text, colors, layout position, and more.
