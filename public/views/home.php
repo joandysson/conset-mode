@@ -78,6 +78,31 @@ $head = [
             </div>
         </section>
         <div class="space"></div>
+        <section class="cookie-banner-section">
+            <div class="description">
+                <h2>What Is Cookie Banner Generator</h2>
+                <p>
+                    The General Data Protection Regulation (GDPR) applies to all sites with clients from the EU. Develop trust with your site clients while adhering to current data protection regulations and avoiding potential fines.
+                </p>
+                <p>
+                    Cookie Notice Generator is an online web tool or app that creates highly customizable cookie consent banners for websites. You can modify the banner text, colors, layout position, and more.
+                </p>
+            </div>
+            <div class="features">
+                <h3>Features of Cookie Banner Generator</h3>
+                <ul>
+                    <li>Free of Cost</li>
+                    <li>Highly customizable</li>
+                    <li>Millions of colors supported</li>
+                    <li>Various layouts to choose from</li>
+                    <li>Can be configured through the interface</li>
+                    <li>Easy integration with all types of websites including WordPress sites</li>
+                    <li>Available with Google Tag Manager</li>
+                    <li>Hassle-free download</li>
+                </ul>
+            </div>
+        </section>
+        <div class="space"></div>
         <section class="d-flex section-call-generation">
             <div>
                 <p class="text-center">Generate Free Consent Banner</p>
@@ -86,7 +111,6 @@ $head = [
                 <a class="btn" href="/generator">Generate Banner</a>
             </div>
         </section>
-
         <div class="space"></div>
         <!-- Benefits Section -->
         <section class="benefits-section">
@@ -112,6 +136,7 @@ $head = [
 
         </section>
         <div class="space"></div>
+
         <!-- Call to Action Section -->
         <?php include 'layouts/appSection.php' ?>
         <div class="space"></div>

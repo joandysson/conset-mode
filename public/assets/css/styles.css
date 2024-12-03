@@ -200,7 +200,7 @@ h3 {
 }
 
 header {
-    margin: 30px 0;
+    margin: 50px 0;
 }
 
 header a {
@@ -269,6 +269,35 @@ header p {
     border-left: 2px solid #ddd;
 }
 
+.cookie-banner-section .description,
+.cookie-banner-section .features {
+    margin-bottom: 1.5rem;
+}
+
+.cookie-banner-section h2,
+.cookie-banner-section h3 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.cookie-banner-section p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.cookie-banner-section ul {
+    list-style: disc inside;
+    padding-left: 0;
+    margin-top: 1rem;
+}
+
+.cookie-banner-section ul li {
+    color: #555;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
 .section-default,
 .consent-mode-tutorial,
 .banner-configuration-guide,
@@ -281,7 +310,8 @@ header p {
 .benefits-section,
 .call-to-action,
 .data-privacy-laws,
-.why-use {
+.why-use,
+.cookie-banner-section {
     background-color: #f8f9fa;
     padding: 20px;
     border-radius: 5px;
@@ -732,7 +762,11 @@ footer p {
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 
-/* Mobile-first: estilos já funcionam bem para telas pequenas */
+@media (min-width: 768px) {
+    .cookie-banner-section {
+        padding: 2rem;
+    }
+}
 
 /* Estilo para telas maiores (tablet e desktop) */
 @media (max-width: 768px) {
@@ -740,6 +774,7 @@ footer p {
         flex-direction: column;
         justify-content: space-between;
     }
+
     .section-banner-info .box:first-child {
         border-bottom: 2px solid #ddd;
         margin-bottom: 10px;

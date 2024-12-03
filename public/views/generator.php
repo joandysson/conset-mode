@@ -4,7 +4,7 @@
 <?php
 $head = [
     'title' => 'Generator',
-    'description' => 'Create a free consent mode banner that’s GDPR, LGPD, and CCPA compliant and delivers a seamless user experience. Customize the design, positioning, and functionality to match your brand while respecting user privacy. Perfect for websites of all sizes, our solution helps you stay aligned with global data privacy regulations without the hassle.',
+    'description' => 'Create and customize the Consent Mode to best suit your website, adjust the layout, colors, position, all for free',
     'keywords' => 'GDPR, LGPD, CCPA, custom consent banner, free consent banner tool, website compliance, HTML CSS JavaScript snippets, privacy regulations'
 ];
 ?>
