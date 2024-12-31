@@ -173,19 +173,18 @@ $head = [
                     <img class="border-1px" src="<?php echo asset('images/png/terms-and-politics.png') ?>">
                 </div>
 
-
                 <h2>6. Save</h2>
                 <p>You just need to click on <strong><em>Generate Banner</em></strong> button and a code will be displayed below
                     <br>
                     see how:
                     <br>
                     <a href="#how-to-configure-consent-mode">
-                        Configure it on your website
+                        Configure manually
                     </a>
                     <br>
-                    <!-- <a href="#">
-                            how Configure it on your website with google tag manager
-                        </a> -->
+                    <a href="#how-to-configure-consent-mode-gtm">
+                        Configure with Google tag manager
+                    </a>
                 </p>
 
                 <div class="note">
@@ -195,7 +194,7 @@ $head = [
         </section>
         <div class="space"></div>
         <section id="how-to-configure-consent-mode" class="consent-mode-tutorial">
-            <h1>How to Configure Consent Mode on Your Website</h1>
+            <h1>Configure Manually</h1>
             <div class="content">
                 <p>Follow this step-by-step tutorial to implement consent mode on your website using the provided script. This ensures compliance with data protection laws while maintaining control over cookie behavior.</p>
 
@@ -226,7 +225,6 @@ $head = [
                     <img class="border-1px" src="<?php echo asset('images/png/gtm-tracking.png') ?>">
                 </div>
 
-
                 <h2>Step 5: Update Your Privacy Policy</h2>
                 <p>Ensure that your privacy policy reflects the use of the consent banner and explains how user preferences are managed.</p>
 
@@ -235,6 +233,69 @@ $head = [
                 </div>
             </div>
         </section>
+        <div class="space"></div>
+        <section id="how-to-configure-consent-mode-gtm" class="consent-mode-tutorial">
+            <h1>Configure with Google Tag Manager</h1>
+            <div class="content">
+                <p>Follow this step-by-step tutorial to implement consent mode on your website using the provided GTM tutorial. This ensures compliance with data protection laws while maintaining control over cookie behavior.</p>
+
+                <h2>Step 1: Add tag in your GTM account</h2>
+                <p>As a first step, you need to add a new tag in your GTM account. To do this, follow the steps below:</p>
+                <p>
+                    1. Go to your GTM account and click on the <strong><em>Tags</em></strong> option.
+                    <br>
+                    2. Click on the <strong><em>New</em></strong> button to create a new tag.
+                    <br>
+                    3. Select the <strong><em>Discover more tag types in the Community Template Gallery</em></strong> option.
+                    <br>
+                    4. Search for the <strong><em>Consent Mode (Free) - Toolz</em></strong> tag and click on it.
+                    <br>
+                    5. Click on the <strong><em>Add to workspace</em></strong> button.
+                    <br>
+                    6. Confirm the tag creation by clicking on the <strong><em>Add</em></strong> button.
+                </p>
+
+                <p>You are going to see this image below</p>
+                <div class="example-image">
+                    <img class="border-1px" src="<?php echo asset('images/png/gtm-configure.png') ?>">
+                </div>
+
+                <h2>Step 2: Add your banner ID</h2>
+                <p>
+                    Get your banner ID generated in <strong><a href="#configuration"> Banner Configuration</a></strong>
+                    and put it in the <strong><em>Banner ID</em></strong> field.
+                </p>
+                <h2>Step 3: Add default settings</h2>
+                <p>
+                    You can also add the default cookie settings for your banner. <br>
+                    1. Click on <strong><em>Add Row</em></strong> option. <br>
+                    2. Select between <strong><em>Necessary</em></strong>, <strong><em>Marketing</em></strong>, <strong><em>Analytics</em></strong> and <strong><em>Preferences</em></strong> cookies.<br>
+                    3. Select <strong><em>Granted</em></strong> or <strong><em>Denied</em></strong> the cookie option to start as default.
+
+                </p>
+                <h2>Step 4: Save and Publish</h2>
+                <p>
+                    After completing the configuration, click on the <strong><em>Save</em></strong> button and then on the <strong><em>Publish</em></strong> button to apply the changes to your website.
+                </p>
+                <h2>Step 3: Verify Consent Tracking</h2>
+                <p>Test the consent banner to ensure that it correctly tracks user choices and applies them.
+                    Check that cookies behave according to user selections and only load after consent when required.
+                </p>
+                <p>
+                    If you use Google Tag Manager on your website,
+                    just go to your website option and when you enter the preview, you will be able to see all the options and there will be a new option called <strong><em>Consent Default</em></strong> with initial personalization.
+                    In case the user decides to refuse some options, it will also appear as in the example below.
+                </p>
+                <div class="example-image">
+                    <img class="border-1px" src="<?php echo asset('images/png/gtm-tracking.png') ?>">
+                </div>
+
+                <div class="note">
+                    <p>After completing these steps, your website will comply with cookie consent regulations, providing transparency and control to users. Now your banner are going to appear in your website</p>
+                </div>
+            </div>
+        </section>
+
         <section id="preview-section">
         </section>
 

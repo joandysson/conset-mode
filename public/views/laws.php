@@ -33,6 +33,11 @@ $head = [
                     <li>Automatically updates Google Tag Manager settings based on user choices.</li>
                 </ul>
             </article>
+        </section>
+        <div class="space"></div>
+
+        <section id="data-privacy-laws" class="data-privacy-laws">
+
             <article>
                 <h2>LGPD - Lei Geral de Proteção de Dados</h2>
                 <p>
@@ -45,6 +50,11 @@ $head = [
                     <li>Helps businesses demonstrate compliance with LGPD mandates.</li>
                 </ul>
             </article>
+        </section>
+        <div class="space"></div>
+
+        <section id="data-privacy-laws" class="data-privacy-laws">
+
             <article>
                 <h2>CCPA - California Consumer Privacy Act</h2>
                 <p>
@@ -57,6 +67,11 @@ $head = [
                     <li>Adapts cookie behavior dynamically based on user preferences.</li>
                 </ul>
             </article>
+        </section>
+        <div class="space"></div>
+
+        <section id="data-privacy-laws" class="data-privacy-laws">
+
             <article>
                 <h2>Other Global Privacy Laws</h2>
                 <p>
