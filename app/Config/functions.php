@@ -5,15 +5,6 @@ CONST LANG_EN = 'en';
 CONST LANG_FR = 'fr';
 CONST LANG_ES = 'es';
 
-
-/**
- * @return bool
- */
-function isMobileDevice(): bool
-{
-    return preg_match("/(android|avantgo|blackberry|bolt|boost|cricket|docomo|fone|hiptop|mini|mobi|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos)/i", $_SERVER["HTTP_USER_AGENT"]);
-}
-
 /**
  * @param string $view
  * @param array $data
@@ -100,8 +91,8 @@ function getPrefixLang(): string
 {
     $prefixLang = prefixLang();
 
-    if(empty($prefixLang) || $prefixLang === LANG_PT || !in_array($prefixLang, langs())) {
-        return LANG_PT;
+    if(empty($prefixLang) || $prefixLang === LANG_EN || !in_array($prefixLang, langs())) {
+        return LANG_EN;
     }
 
     return $prefixLang;
@@ -115,11 +106,6 @@ function prefixLang() {
 function getUri(string $uri)
 {
    return '/' . getPrefixLang() . ($uri === '/' ? '': $uri);
-}
-
-function isMultiLanguage(): true
-{
-    return true;
 }
 
 function changeLang(string $lang): string
@@ -136,4 +122,11 @@ function changeLang(string $lang): string
 function langs(): array
 {
     return [LANG_EN, LANG_PT, LANG_FR, LANG_ES, LANG_ES];
+}
+
+function __(string $text): string
+{
+    $texts = getTextLang();
+
+    return $texts[$text] ?? $text;
 }

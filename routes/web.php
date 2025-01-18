@@ -2,6 +2,8 @@
 
 use App\Config\Router\Router;
 
+Router::prefix('/' . getPrefixLang());
+
 Router::get('/', 'HomeController:index');
 Router::post('/cdn/upload', 'HomeController:upload');
 Router::get('/files/{id}', 'HomeController:getBanner');
@@ -19,6 +21,10 @@ Router::get('/about', fn() => view('about'));
 Router::get('/thank-you', fn() => view('thank-you'));
 
 Router::run();
+
+if (!in_array(prefixLang(), [LANG_PT, LANG_EN, LANG_FR, LANG_ES])) {
+    Router::redirect('/' . getPrefixLang());
+}
 
 if (Router::error()) {
     http_response_code(404);

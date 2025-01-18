@@ -1,6 +1,6 @@
 <?php
 $head = [
-    'title' => 'Contact Us',
+    'title' => 'Thank You',
     'description' => 'Get in touch with us for any queries, feedback, or support related to our free and customizable consent mode banner generator. We are here to help you.',
     'keywords' => 'contact us, support, queries, feedback, consent mode banner, customizable consent banner'
 ];

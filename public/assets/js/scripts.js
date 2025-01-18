@@ -86,7 +86,7 @@ function getBannerCSS(borderRadius, inputToggle, btnRadius, inputSuccess, inputR
         padding: 15px;
         font-size: 14px;
         text-align: center;
-        z-index: 1000;
+        z-index: 9999;
         border-radius: ${borderRadius > 10 ? 10: borderRadius }px;
     }
 
