@@ -3,9 +3,9 @@
 
 <?php
 $head = [
-    'title' => 'Generator',
-    'description' => 'Create and customize the Consent Mode to best suit your website, adjust the layout, colors, position, all for free',
-    'keywords' => 'GDPR, LGPD, CCPA, custom consent banner, free consent banner tool, website compliance, HTML CSS JavaScript snippets, privacy regulations'
+    'title' => __('Generator'),
+    'description' => __('Create and customize the Consent Mode to best suit your website, adjust the layout, colors, position, all for free'),
+    'keywords' => __('GDPR, LGPD, CCPA, custom consent banner, free consent banner tool, website compliance, HTML CSS JavaScript snippets, privacy regulations')
 ];
 ?>
 

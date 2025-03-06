@@ -3,9 +3,9 @@
 
 <?php
 $head = [
-    'title' => 'Data Privacy Laws',
-    'description' => 'Learn about essential data privacy laws, including GDPR, LGPD, and CCPA, designed to protect personal data and ensure companies handle information responsibly. Stay compliant, avoid penalties, and build trust with your users by aligning with data protection regulations.',
-    'keywords' => 'GDPR Compliance, Data Protection Laws, Personal Data Security'
+    'title' => __('Data Privacy Laws'),
+    'description' => __('Learn about essential data privacy laws, including GDPR, LGPD, and CCPA, designed to protect personal data and ensure companies handle information responsibly. Stay compliant, avoid penalties, and build trust with your users by aligning with data protection regulations.'),
+    'keywords' => __('GDPR Compliance, Data Protection Laws, Personal Data Security')
 ];
 ?>
 

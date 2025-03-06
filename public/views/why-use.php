@@ -3,9 +3,9 @@
 
 <?php
 $head = [
-    'title' => 'Why use',
-    'description' => 'Discover the benefits of adopting privacy-conscious practices, such as using the Google Consent Mode, to enhance user transparency and compliance with global regulations like GDPR and CCPA. Improve user trust while optimizing advertising performance and data collection.',
-    'keywords' => 'Data Privacy, Google Consent Mode, Privacy Compliance'
+    'title' => __('Why use'),
+    'description' => __('Discover the benefits of adopting privacy-conscious practices, such as using the Google Consent Mode, to enhance user transparency and compliance with global regulations like GDPR and CCPA. Improve user trust while optimizing advertising performance and data collection.'),
+    'keywords' => __('Data Privacy, Google Consent Mode, Privacy Compliance')
 ];
 ?>
 
