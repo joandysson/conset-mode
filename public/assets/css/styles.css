@@ -195,6 +195,23 @@ h3 {
     padding: 10px 0;
 }
 
+.alert {
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+.alert-warning {
+    background-color: #eff7b9;
+    border: 1px solid #cfc877;
+    color: #000000;
+}
+
+.alert-warning a {
+    color: #000000;
+    font-weight: 900;
+}
+
 .text-center {
     text-align: center;
 }
