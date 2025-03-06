@@ -249,7 +249,8 @@
   "A U.S. regulation granting California residents rights to know how their data is used, request deletion, and opt-out of data sales. It emphasizes transparency and user control over personal information.": "A U.S. regulation granting California residents rights to know how their data is used, request deletion, and opt-out of data sales. It emphasizes transparency and user control over personal information.",
   "Other Laws": "Other Laws",
   "Similar regulations exist worldwide, such as Canada's PIPEDA, Australia's Privacy Act, and Japan's APPI. These laws aim to protect user privacy, ensure data security, and hold businesses accountable for data practices.": "Similar regulations exist worldwide, such as Canada's PIPEDA, Australia's Privacy Act, and Japan's APPI. These laws aim to protect user privacy, ensure data security, and hold businesses accountable for data practices.",
-  "Note: These laws vary by region but share common goals of protecting individual privacy, ensuring transparency, and granting users control over their data.": "Note: These laws vary by region but share common goals of protecting individual privacy, ensuring transparency, and granting users control over their data.",
+  "Note:" : "Note:",
+  "These laws vary by region but share common goals of protecting individual privacy, ensuring transparency, and granting users control over their data.": "These laws vary by region but share common goals of protecting individual privacy, ensuring transparency, and granting users control over their data.",
 
   "Why Use Google Consent Mode V2?": "Why Use Google Consent Mode V2?",
   "Enhanced Privacy Compliance": "Enhanced Privacy Compliance",
