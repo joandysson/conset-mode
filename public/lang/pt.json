@@ -380,7 +380,42 @@
 
   "Thank you for choosing Consent Mode Banner. We look forward to helping you create a better and more compliant online experience.": "Obrigado por escolher o Consent Mode Banner. Estamos ansiosos para ajudá-lo a criar uma experiência online melhor e mais em conformidade.",
 
-  "For more information or support, feel free to": "Para mais informações ou suporte, sinta-se à vontade para"
+  "For more information or support, feel free to": "Para mais informações ou suporte, sinta-se à vontade para",
 
+  "Terms of Use": "Termos de Uso",
+  "1. Nature of Service": "1. Natureza do Serviço",
+  "The website provides a consent banner generator. No other services are offered.": "O site oferece um gerador de banners de consentimento. Nenhum outro serviço é fornecido.",
+  "2. Permitted Use": "2. Uso Permitido",
+  "Any person or entity may use the generated banners for personal or commercial purposes.": "Qualquer pessoa ou entidade pode utilizar os banners gerados, seja para fins pessoais ou comerciais.",
+  "3. Modifications and Updates": "3. Modificações e Atualizações",
+  "The website may modify the consent banners at any time. However, the Terms of Use will remain unchanged without prior notice.": "O site pode alterar os banners de consentimento a qualquer momento. No entanto, os Termos de Uso permanecerão inalterados sem aviso prévio.",
+  "4. Technical Restrictions": "4. Restrições Técnicas",
+  "There are no restrictions on reverse engineering or modifying the generator's code.": "Não há restrições quanto à engenharia reversa ou modificação do código do gerador.",
+  "5. Warranties and Responsibilities": "5. Garantias e Responsabilidades",
+  "The website disclaims any responsibility for problems arising from the use of the generated banners.": "O site se isenta de qualquer responsabilidade por problemas decorrentes do uso dos banners gerados.",
+  "6. External Links Policy": "6. Política de Links Externos",
+  "The website does not display third-party links and is not responsible for external site content.": "O site não exibe links para terceiros e não se responsabiliza pelo conteúdo de sites externos.",
+  "7. Jurisdiction": "7. Jurisdição",
+  "Legal responsibility for the use of the banners lies entirely with the user.": "A responsabilidade legal pelo uso dos banners é exclusivamente do usuário.",
 
+  "Data Collection and Usage": "Coleta e Uso de Dados",
+  "Our website does not collect, store, or process personal data from users.": "Nosso site não coleta, armazena ou processa dados pessoais dos usuários.",
+
+  "Use of Cookies": "Uso de Cookies",
+  "We only use optional cookies for analytical metrics. Users can disable them through their browser settings. We also use third-party cookies, such as Google Analytics, for statistical purposes.": "Utilizamos apenas cookies opcionais para análise de métricas analíticas. O usuário pode desativá-los através das configurações do navegador. Também usamos cookies de terceiros, como Google Analytics, para fins estatísticos.",
+
+  "Data Sharing": "Compartilhamento de Dados",
+  "We do not share any data with third parties.": "Não compartilhamos nenhum dado com terceiros.",
+
+  "Security": "Segurança",
+  "Since we do not store personal information, no additional data protection policies are required.": "Como não armazenamos informações pessoais, não há necessidade de políticas adicionais de proteção de dados.",
+
+  "User Rights": "Direitos do Usuário",
+  "Users do not need to request data deletion, as we do not store any personal information.": "O usuário não precisa solicitar a exclusão de dados, pois não armazenamos nenhuma informação pessoal.",
+
+  "Third-Party Links": "Links para Terceiros",
+  "Our website does not contain links to third-party sites, so we are not responsible for external privacy policies.": "Nosso site não contém links para terceiros, portanto, não nos responsabilizamos por políticas de privacidade externas.",
+
+  "Policy Changes": "Alterações na Política",
+  "This policy may be changed at any time without prior notice.": "Esta política pode ser alterada a qualquer momento, sem aviso prévio."
 }

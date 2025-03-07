@@ -19,34 +19,21 @@ $head = [
 
     <main class="container">
         <section class="section-default">
-            <h1><span style="color: rgb(68, 68, 68);">1. Terms of Service</span></h1>
-            <h3><span style="color: rgb(68, 68, 68);">1. Terms</span></h3>
-            <p><span style="color: rgb(68, 68, 68);">By accessing the website at <a href="https://toolz.at/">toolz</a> you are agreeing to be bound by these terms of service, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws. If you do not agree with any of these terms, you are prohibited from using or accessing this site. The materials contained in this website are protected by applicable copyright and trademark law.</span></p>
-            <h3><span style="color: rgb(68, 68, 68);">2. Use License</span></h3>
-            <ol>
-                <li><span style="color: rgb(68, 68, 68);">Permission is granted to temporarily download one copy of the materials (information or software) on toolz's website for personal, non-commercial transitory viewing only. This is the grant of a licence, not a transfer of title, and under this licence you may not:</span></li>
-                <li class="ql-indent-1"><span style="color: rgb(68, 68, 68);">modify or copy the materials;</span></li>
-                <li class="ql-indent-1"><span style="color: rgb(68, 68, 68);">use the materials for any commercial purpose, or for any public display (commercial or non-commercial);</span></li>
-                <li class="ql-indent-1"><span style="color: rgb(68, 68, 68);">attempt to decompile or reverse engineer any software contained on toolz website;</span></li>
-                <li class="ql-indent-1"><span style="color: rgb(68, 68, 68);">remove any copyright or other proprietary notations from the materials; or</span></li>
-                <li class="ql-indent-1"><span style="color: rgb(68, 68, 68);">transfer the materials to another person or 'mirror' the materials on any other server.</span></li>
-                <li><span style="color: rgb(68, 68, 68);">This licence shall automatically terminate if you violate any of these restrictions and may be terminated by toolz at any time. Upon terminating your viewing of these materials or upon the termination of this licence, you must destroy any downloaded materials in your possession whether in electronic or printed format.</span></li>
-            </ol>
-            <h3><span style="color: rgb(68, 68, 68);">3. Disclaimer</span></h3>
-            <ol>
-                <li><span style="color: rgb(68, 68, 68);">The materials on toolz's website are provided on an 'as is' basis. toolz makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.</span></li>
-                <li><span style="color: rgb(68, 68, 68);">Further, toolz does not warrant or make any representations concerning the accuracy, likely results, or reliability of the use of the materials on its website or otherwise relating to such materials or on any sites linked to this site.</span></li>
-            </ol>
-            <h3><span style="color: rgb(68, 68, 68);">4. Limitations</span></h3>
-            <p><span style="color: rgb(68, 68, 68);">In no event shall toolz or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on toolz's website, even if toolz or a toolz authorised representative has been notified orally or in writing of the possibility of such damage. Because some jurisdictions do not allow limitations on implied warranties, or limitations of liability for consequential or incidental damages, these limitations may not apply to you.</span></p>
-            <h3><span style="color: rgb(68, 68, 68);">5. Accuracy of materials</span></h3>
-            <p><span style="color: rgb(68, 68, 68);">The materials appearing on toolz's website could include technical, typographical, or photographic errors. toolz does not warrant that any of the materials on its website are accurate, complete or current. toolz may make changes to the materials contained on its website at any time without notice. However toolz does not make any commitment to update the materials.</span></p>
-            <h3><span style="color: rgb(68, 68, 68);">6. Links</span></h3>
-            <p><span style="color: rgb(68, 68, 68);">toolz has not reviewed all of the sites linked to its website and is not responsible for the contents of any such linked site. The inclusion of any link does not imply endorsement by toolz of the site. Use of any such linked website is at the user's own risk.</span></p>
-            <h3><span style="color: rgb(68, 68, 68);">7. Modifications</span></h3>
-            <p><span style="color: rgb(68, 68, 68);">toolz may revise these terms of service for its website at any time without notice. By using this website you are agreeing to be bound by the then current version of these terms of service.</span></p>
-            <h3><span style="color: rgb(68, 68, 68);">8. Governing Law</span></h3>
-            <p><span style="color: rgb(68, 68, 68);">These terms and conditions are governed by and construed in accordance with the laws of toolz and you irrevocably submit to the exclusive jurisdiction of the courts in that State or location.</span></p>
+            <h1><span style="color: rgb(68, 68, 68);"><?php echo __('Terms of Use') ?></span></h1>
+            <h3><span style="color: rgb(68, 68, 68);"><?php echo __('1. Nature of Service') ?></span></h3>
+            <p><span style="color: rgb(68, 68, 68);"><?php echo __('The website provides a consent banner generator. No other services are offered.') ?></span></p>
+            <h3><span style="color: rgb(68, 68, 68);"><?php echo __('2. Permitted Use') ?></span></h3>
+            <p><span style="color: rgb(68, 68, 68);"><?php echo __('Any person or entity may use the generated banners for personal or commercial purposes.') ?></span></p>
+            <h3><span style="color: rgb(68, 68, 68);"><?php echo __('3. Modifications and Updates') ?></span></h3>
+            <p><span style="color: rgb(68, 68, 68);"><?php echo __('The website may modify the consent banners at any time. However, the Terms of Use will remain unchanged without prior notice.') ?></span></p>
+            <h3><span style="color: rgb(68, 68, 68);"><?php echo __('4. Technical Restrictions') ?></span></h3>
+            <p><span style="color: rgb(68, 68, 68);"><?php echo __("There are no restrictions on reverse engineering or modifying the generator's code.") ?></span></p>
+            <h3><span style="color: rgb(68, 68, 68);"><?php echo __('5. Warranties and Responsibilities') ?></span></h3>
+            <p><span style="color: rgb(68, 68, 68);"><?php echo __("The website disclaims any responsibility for problems arising from the use of the generated banners.") ?></span></p>
+            <h3><span style="color: rgb(68, 68, 68);"><?php echo __('6. External Links Policy') ?></span></h3>
+            <p><span style="color: rgb(68, 68, 68);"><?php echo __("The website does not display third-party links and is not responsible for external site content.") ?></span></p>
+            <h3><span style="color: rgb(68, 68, 68);"><?php echo __('7. Jurisdiction') ?></span></h3>
+            <p><span style="color: rgb(68, 68, 68);"><?php echo __("Legal responsibility for the use of the banners lies entirely with the user.") ?></span></p>
         </section>
     </main>
     <?php include 'layouts/footer.php' ?>

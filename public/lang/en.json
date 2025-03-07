@@ -367,5 +367,43 @@
 
   "Thank you for choosing Consent Mode Banner. We look forward to helping you create a better and more compliant online experience.": "Thank you for choosing Consent Mode Banner. We look forward to helping you create a better and more compliant online experience.",
 
-  "For more information or support, feel free to": "For more information or support, feel free to"
+  "For more information or support, feel free to": "For more information or support, feel free to",
+
+  "Terms of Use": "Terms of Use",
+  "1. Nature of Service": "1. Nature of Service",
+  "The website provides a consent banner generator. No other services are offered.": "The website provides a consent banner generator. No other services are offered.",
+  "2. Permitted Use": "2. Permitted Use",
+  "Any person or entity may use the generated banners for personal or commercial purposes.": "Any person or entity may use the generated banners for personal or commercial purposes.",
+  "3. Modifications and Updates": "3. Modifications and Updates",
+  "The website may modify the consent banners at any time. However, the Terms of Use will remain unchanged without prior notice.": "The website may modify the consent banners at any time. However, the Terms of Use will remain unchanged without prior notice.",
+  "4. Technical Restrictions": "4. Technical Restrictions",
+  "There are no restrictions on reverse engineering or modifying the generator's code.": "There are no restrictions on reverse engineering or modifying the generator's code.",
+  "5. Warranties and Responsibilities": "5. Warranties and Responsibilities",
+  "The website disclaims any responsibility for problems arising from the use of the generated banners.": "The website disclaims any responsibility for problems arising from the use of the generated banners.",
+  "6. External Links Policy": "6. External Links Policy",
+  "The website does not display third-party links and is not responsible for external site content.": "The website does not display third-party links and is not responsible for external site content.",
+  "7. Jurisdiction": "7. Jurisdiction",
+  "Legal responsibility for the use of the banners lies entirely with the user.": "Legal responsibility for the use of the banners lies entirely with the user.",
+
+  "Data Collection and Usage": "Data Collection and Usage",
+  "Our website does not collect, store, or process personal data from users.": "Our website does not collect, store, or process personal data from users.",
+
+  "Use of Cookies": "Use of Cookies",
+  "We only use optional cookies for analytical metrics. Users can disable them through their browser settings. We also use third-party cookies, such as Google Analytics, for statistical purposes.": "We only use optional cookies for analytical metrics. Users can disable them through their browser settings. We also use third-party cookies, such as Google Analytics, for statistical purposes.",
+
+  "Data Sharing": "Data Sharing",
+  "We do not share any data with third parties.": "We do not share any data with third parties.",
+
+  "Security": "Security",
+  "Since we do not store personal information, no additional data protection policies are required.": "Since we do not store personal information, no additional data protection policies are required.",
+
+  "User Rights": "User Rights",
+  "Users do not need to request data deletion, as we do not store any personal information.": "Users do not need to request data deletion, as we do not store any personal information.",
+
+  "Third-Party Links": "Third-Party Links",
+  "Our website does not contain links to third-party sites, so we are not responsible for external privacy policies.": "Our website does not contain links to third-party sites, so we are not responsible for external privacy policies.",
+
+  "Policy Changes": "Policy Changes",
+  "This policy may be changed at any time without prior notice.": "This policy may be changed at any time without prior notice."
+
 }
