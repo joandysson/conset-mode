@@ -1,8 +1,8 @@
 <?php
 $head = [
-    'title' => 'About us',
-    'description' => 'Discover more about our mission to provide a free, customizable consent mode banner generator. Learn about our team and our commitment to compliance and user experience.',
-    'keywords' => 'about us, consent banner generator, our mission, compliance, user experience'
+    'title' => __('About Us'),
+    'description' => __('Discover more about our mission to provide a free, customizable consent mode banner generator. Learn about our team and our commitment to compliance and user experience.'),
+    'keywords' => __('about us, consent banner generator, our mission, compliance, user experience')
 ];
 ?>
 
@@ -19,39 +19,45 @@ $head = [
 
     <main class="container">
         <section class="section-default">
-            <h1>Welcome to Consent Mode Banner</h1>
-            <p>The home of the Free Consent Mode Banner Generator. Our mission is to provide web developers, site owners, and digital marketers with a simple, effective, and customizable solution for managing cookie consent on their websites.</p>
+            <h1><?php echo __('Welcome to Consent Mode Banner') ?> </h1>
+            <p><?php echo __('The home of the Free Consent Mode Banner Generator. Our mission is to provide web developers, site owners, and digital marketers with a simple, effective, and customizable solution for managing cookie consent on their websites.') ?></p>
         </section>
         <div class="space"></div>
         <section class="section-default">
-            <h1>Our Story</h1>
-            <p>In today's digital landscape, privacy and user consent are more important than ever. We recognized the need for an easy-to-use tool that would help website owners comply with regulations like GDPR and CCPA without compromising on user experience or aesthetics. That's why we created our Free Consent Mode Banner Generator.</p>
+            <h1><?php echo __('Our Story') ?></h1>
+            <p><?php echo __("In today's digital landscape, privacy and user consent are more important than ever. We recognized the need for an easy-to-use tool that would help website owners comply with regulations like GDPR and CCPA without compromising on user experience or aesthetics. That's why we created our Free Consent Mode Banner Generator.") ?></p>
         </section>
         <div class="space"></div>
         <section class="section-default">
-            <h1>What We Offer</h1>
+            <h1><?php echo __('What We Offer') ?></h1>
             <ul>
-                <li>Our tool allows you to create fully customizable consent banners with minimal effort.</li>
-                <li>You can choose from various placements, styles, and configurations to match your website's design and functionality.</li>
-                <li>Whether you need a simple accept button or a more detailed settings option, our generator has you covered.</li>
+                <li><?php echo __('Our tool allows you to create fully customizable consent banners with minimal effort.') ?></li>
+                <li><?php echo __("You can choose from various placements, styles, and configurations to match your website's design and functionality.") ?></li>
+                <li><?php echo __('Whether you need a simple accept button or a more detailed settings option, our generator has you covered.') ?></li>
             </ul>
         </section>
         <div class="space"></div>
         <section class="section-default">
-            <h1>Why Choose Us?</h1>
+            <h1><?php echo __('Why Choose Us?') ?></h1>
             <ul>
-                <li><strong>User-Friendly Interface:</strong> Our intuitive design ensures that you can create and implement a consent banner in minutes, even with no coding experience.</li>
-                <li><strong>Customization:</strong> Tailor your banner to fit the look and feel of your website with customizable colors, text, and buttons.</li>
-                <li><strong>Compliance:</strong> Stay compliant with the latest privacy laws and regulations by using our up-to-date consent solutions.</li>
-                <li><strong>Support:</strong> We're here to assist you with any questions or issues you might encounter while using our tool.</li>
+                <li><strong><?php echo __('User-Friendly Interface:') ?></strong>
+                <?php echo __('Our intuitive design ensures that you can create and implement a consent banner in minutes, even with no coding experience.') ?></li>
+                <li><strong><?php echo __('Customization:') ?></strong>
+                <?php echo __('Tailor your banner to fit the look and feel of your website with customizable colors, text, and buttons.') ?>
+                </li>
+                <li><strong><?php echo __('Compliance:') ?></strong>
+                <?php echo __('Stay compliant with the latest privacy laws and regulations by using our up-to-date consent solutions.') ?>
+                </li>
+                <li><strong><?php echo __('Support:') ?></strong>
+                <?php echo __("We're here to assist you with any questions or issues you might encounter while using our tool.") ?></li>
             </ul>
         </section>
         <div class="space"></div>
         <section class="section-default">
-            <h1>Our Commitment</h1>
-            <p>At Consent Mode Banner, we are committed to helping you navigate the complexities of digital privacy with ease. Our free tool is designed to save you time and effort, allowing you to focus on what really matters – your website and your audience.</p>
-            <p>Thank you for choosing Consent Mode Banner. We look forward to helping you create a better and more compliant online experience.</p>
-            <p>For more information or support, feel free to <a href="/contact">Contact Us</a>.</p>
+            <h1><?php echo __('Our Commitment') ?></h1>
+            <p><?php echo __('At Consent Mode Banner, we are committed to helping you navigate the complexities of digital privacy with ease. Our free tool is designed to save you time and effort, allowing you to focus on what really matters – your website and your audience.') ?></p>
+            <p><?php echo __('Thank you for choosing Consent Mode Banner. We look forward to helping you create a better and more compliant online experience.') ?></p>
+            <p><?php echo __('For more information or support, feel free to') ?> <a href="/contact"><?php echo __('Contact Us') ?></a>.</p>
         </section>
     </main>
     <?php include 'layouts/footer.php' ?>

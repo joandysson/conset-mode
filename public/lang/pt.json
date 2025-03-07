@@ -352,6 +352,35 @@
   "Name:": "Nome:",
   "Email:": "Email:",
   "Message:": "Mensagem:",
-  "Send Message": "Enviar Mensagem"
+  "Send Message": "Enviar Mensagem",
+
+  "Welcome to Consent Mode Banner": "Bem-vindo ao Consent Mode Banner",
+  "The home of the Free Consent Mode Banner Generator. Our mission is to provide web developers, site owners, and digital marketers with a simple, effective, and customizable solution for managing cookie consent on their websites.": "A casa do Gerador de Banner de Modo de Consentimento Gratuito. Nossa missão é fornecer a desenvolvedores web, proprietários de sites e profissionais de marketing digital uma solução simples, eficaz e personalizável para gerenciar o consentimento de cookies em seus sites.",
+
+  "Our Story": "Nossa História",
+  "In today's digital landscape, privacy and user consent are more important than ever. We recognized the need for an easy-to-use tool that would help website owners comply with regulations like GDPR and CCPA without compromising on user experience or aesthetics. That's why we created our Free Consent Mode Banner Generator.": "No cenário digital atual, a privacidade e o consentimento do usuário são mais importantes do que nunca. Reconhecemos a necessidade de uma ferramenta fácil de usar que ajudasse os proprietários de sites a cumprir regulamentações como o GDPR e o CCPA sem comprometer a experiência do usuário ou a estética. Foi por isso que criamos nosso Gerador de Banner de Modo de Consentimento Gratuito.",
+
+  "What We Offer": "O Que Oferecemos",
+  "Our tool allows you to create fully customizable consent banners with minimal effort.": "Nossa ferramenta permite que você crie banners de consentimento totalmente personalizáveis com o mínimo de esforço.",
+  "You can choose from various placements, styles, and configurations to match your website's design and functionality.": "Você pode escolher entre várias posições, estilos e configurações para combinar com o design e a funcionalidade do seu site.",
+  "Whether you need a simple accept button or a more detailed settings option, our generator has you covered.": "Seja um simples botão de aceitar ou uma opção de configurações mais detalhada, nosso gerador tem o que você precisa.",
+
+  "Why Choose Us?": "Por Que Escolher-nos?",
+  "User-Friendly Interface:": "Interface Amigável:",
+  "Our intuitive design ensures that you can create and implement a consent banner in minutes, even with no coding experience.": "Nosso design intuitivo garante que você possa criar e implementar um banner de consentimento em minutos, mesmo sem experiência em programação.",
+  "Customization:": "Personalização:",
+  "Tailor your banner to fit the look and feel of your website with customizable colors, text, and buttons.": "Personalize seu banner para se ajustar ao visual e à identidade do seu site com cores, textos e botões customizáveis.",
+  "Compliance:": "Conformidade:",
+  "Stay compliant with the latest privacy laws and regulations by using our up-to-date consent solutions.": "Mantenha-se em conformidade com as últimas leis e regulamentações de privacidade utilizando nossas soluções de consentimento sempre atualizadas.",
+  "Support:": "Suporte:",
+  "We're here to assist you with any questions or issues you might encounter while using our tool.": "Estamos aqui para ajudá-lo com qualquer dúvida ou problema que possa encontrar ao usar nossa ferramenta.",
+
+  "Our Commitment": "Nosso Compromisso",
+  "At Consent Mode Banner, we are committed to helping you navigate the complexities of digital privacy with ease. Our free tool is designed to save you time and effort, allowing you to focus on what really matters – your website and your audience.": "No Consent Mode Banner, estamos comprometidos em ajudá-lo a navegar pelas complexidades da privacidade digital com facilidade. Nossa ferramenta gratuita foi projetada para economizar seu tempo e esforço, permitindo que você se concentre no que realmente importa – seu site e seu público.",
+
+  "Thank you for choosing Consent Mode Banner. We look forward to helping you create a better and more compliant online experience.": "Obrigado por escolher o Consent Mode Banner. Estamos ansiosos para ajudá-lo a criar uma experiência online melhor e mais em conformidade.",
+
+  "For more information or support, feel free to": "Para mais informações ou suporte, sinta-se à vontade para"
+
 
 }
