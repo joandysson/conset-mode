@@ -121,6 +121,10 @@
   "Button Radius (0-10px):": "Button Radius (0-10px):",
   "Border Radius (0-10px):": "Border Radius (0-10px):",
 
+  "This is your banner ID": "This is your banner ID",
+  "Generated CDN Code (Place inside &lt;body&gt; tag)": "Generated CDN Code (Place inside &lt;body&gt; tag)",
+  "Copy": "Copy",
+
   "Banner Configuration Options": "Banner Configuration Options",
   "Customize your consent banner directly from our site to meet your website's needs. Below are the configuration options available and how they affect the banner's behavior:": "Customize your consent banner directly from our site to meet your website's needs. Below are the configuration options available and how they affect the banner's behavior:",
   "These are all the configuration options you can make on your banner, below we will explain each section.": "These are all the configuration options you can make on your banner, below we will explain each section.",

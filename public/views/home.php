@@ -25,7 +25,7 @@ $head = [
                 ?>
             </p>
             <div class="d-flex justify-content-center mt-40">
-                <a class="btn" href="/generator"><?php echo __('Generate Banner') ?> </a>
+                <a class="btn" href="/<?php echo getPrefixLang() ?>/generator"><?php echo __('Generate Banner') ?> </a>
             </div>
         </section>
         <div class="space"></div>

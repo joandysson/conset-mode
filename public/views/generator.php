@@ -113,11 +113,13 @@ $head = [
                         <button onclick="copyToClipboard('banner-id')"><?php echo __('Copy') ?></button>
                     </div>
 
+                    <br>
+                    <hr>
 
-                    <h2>Generated CDN Code (Place inside &lt;body&gt; tag)</h2>
+                    <h2><?php echo __('Generated CDN Code (Place inside &lt;body&gt; tag)') ?></h2>
                     <div class="code-section">
                         <pre><code id="generated-link"></code></pre>
-                        <button onclick="copyToClipboard('generated-link')">Copy</button>
+                        <button onclick="copyToClipboard('generated-link')"><?php echo __('Copy') ?></button>
                     </div>
                 </div>
             </div>

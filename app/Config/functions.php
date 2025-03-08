@@ -110,11 +110,13 @@ function getUri(string $uri)
 
 function changeLang(string $lang): string
 {
+    $langs = array_map(fn($value) => '/' . $value, langs());
+
     return match ($lang) {
-        LANG_PT => str_replace(langs(), LANG_PT, $_SERVER['REQUEST_URI']),
-        LANG_EN => str_replace(langs(), LANG_EN, $_SERVER['REQUEST_URI']),
-        LANG_FR => str_replace(langs(), LANG_FR, $_SERVER['REQUEST_URI']),
-        LANG_ES => str_replace(langs(), LANG_ES, $_SERVER['REQUEST_URI']),
+        LANG_PT => str_replace($langs, '/' . LANG_PT, $_SERVER['REQUEST_URI']),
+        LANG_EN => str_replace($langs, '/' . LANG_EN, $_SERVER['REQUEST_URI']),
+        LANG_FR => str_replace($langs, '/' . LANG_FR, $_SERVER['REQUEST_URI']),
+        LANG_ES => str_replace($langs, '/' . LANG_ES, $_SERVER['REQUEST_URI']),
         default => '/' . LANG_PT
     };
 }

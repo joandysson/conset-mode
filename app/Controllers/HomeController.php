@@ -43,7 +43,7 @@ class HomeController
             header('Content-Type: application/json');
             http_response_code(201);
             echo json_encode(['id' => $id]);
-
+            exit;
         } catch (Throwable $th) {
             dd($th->getMessage());
         }
@@ -64,8 +64,7 @@ class HomeController
 
             header('Content-Type: application/json');
             echo json_encode($fileContents);
-
-            exit();
+            exit;
 
         } catch (Throwable $th) {
             http_response_code(500);

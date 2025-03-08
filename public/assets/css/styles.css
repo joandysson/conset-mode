@@ -104,6 +104,7 @@ p {
 }
 
 .result {
+    margin-top: 15px;
     display: none;
 }
 
@@ -630,7 +631,7 @@ ol li {
 }
 
 .code-section {
-    margin-top: 20px;
+    /* margin-top: 20px; */
     width: 100%;
 }
 
@@ -641,6 +642,10 @@ ol li {
 
 .code-section pre code {
     word-break: break-all;
+}
+
+.code-section pre {
+    margin: 15px 0 10px 0;
 }
 
 pre {

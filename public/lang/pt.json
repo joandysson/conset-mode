@@ -130,6 +130,10 @@
   "Button Radius (0-10px):": "Raio do Botão (0-10px):",
   "Border Radius (0-10px):": "Raio da Borda (0-10px):",
 
+  "This is your banner ID": "Esse é o ID do seu banner",
+  "Generated CDN Code (Place inside &lt;body&gt; tag)": "Código CDN (Coloque dentro da tag &lt;body&gt;)",
+  "Copy": "Copiar",
+
   "Banner Configuration Options": "Opções de Configuração do Banner",
   "Customize your consent banner directly from our site to meet your website's needs. Below are the configuration options available and how they affect the banner's behavior:": "Personalize seu banner de consentimento diretamente do nosso site para atender às necessidades do seu site. Abaixo estão as opções de configuração disponíveis e como elas afetam o comportamento do banner:",
   "These are all the configuration options you can make on your banner, below we will explain each section.": "Estas são todas as opções de configuração que você pode fazer no seu banner, abaixo explicaremos cada seção.",
