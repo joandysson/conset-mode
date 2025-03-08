@@ -2,9 +2,11 @@ var toggle = null;
 var complementId = 'toolz-' + (new Date()).getTime();
 
 function previewInfoHTML() {
-   return `
-    <div id="preview-info" style="display: block;">
-        <button id="btn-close-preview" class="btn-close-preview">Close preview</button>
+    const closePreviewText = document.getElementsByTagName('body')[0].getAttribute('banner-close-preview');
+
+    return `
+        <div id="preview-info" style="display: block;">
+        <button id="btn-close-preview" class="btn-close-preview">${closePreviewText}</button>
     </div>
     `;
 }
@@ -17,6 +19,10 @@ function getBannerHTML(placement, customBannerTitle, bannerText, showCheckboxes)
 
     const linkTerms = document.getElementById('terms').value;
     const linkPoliticsPrivacy = document.getElementById('politics-privacy').value;
+
+    const preferencs = document.getElementsByTagName('body')[0];
+    const preferencesTitle = JSON.parse(preferencs.getAttribute('banner-preferences-title'))
+    const preferencesDescription = JSON.parse(preferencs.getAttribute('banner-preferences-description'))
 
     return `
     <div id="cookie-consent-banner" class="cookie-consent-banner ${placement}">
@@ -36,36 +42,36 @@ function getBannerHTML(placement, customBannerTitle, bannerText, showCheckboxes)
             <div id="cookie-consent-options-${complementId}" class="cookie-consent-options-${complementId}">
                 <div class="settings-cookies-container">
                     <div class="option">
-                        <label for="consent-necessary" data-type="title" >Necessary</label>
+                        <label for="consent-necessary" data-type="title" > ${preferencesTitle.necessary} </label>
                         <label class="toggle">
                             <input id="consent-necessary" type="checkbox" value="Necessary" checked disabled>
                             <span class="slider-${complementId} principal"></span>
                         </label>
-                        <p class="description">Enable essential cookies for the website to function properly.</p>
+                        <p class="description">${preferencesDescription.necessary}</p>
                     </div>
                     <div class="option">
-                        <label for="consent-analytics" data-type="title">Analytics</label>
+                        <label for="consent-analytics" data-type="title">${preferencesTitle.analytics}</label>
                         <label class="toggle">
                             <input id="consent-analytics" type="checkbox" value="Analytics" checked>
                             <span class="slider-${complementId}"></span>
                         </label>
-                        <p class="description">Allow anonymous tracking of website usage to improve user experience.</p>
+                        <p class="description">${preferencesDescription.analytics}</p>
                     </div>
                     <div class="option">
-                        <label for="consent-preferences" data-type="title">Preferences</label>
+                        <label for="consent-preferences" data-type="title">${preferencesTitle.preferences}</label>
                         <label class="toggle">
                             <input id="consent-preferences" type="checkbox" value="Preferences" checked>
                             <span class="slider-${complementId}"></span>
                         </label>
-                        <p class="description">Remember user preferences such as language and region settings.</p>
+                        <p class="description">${preferencesDescription.preferences}</p>
                     </div>
                     <div class="option">
-                        <label for="consent-marketing" data-type="title">Marketing</label>
+                        <label for="consent-marketing" data-type="title">${preferencesTitle.marketing}</label>
                         <label class="toggle">
                             <input id="consent-marketing" type="checkbox" value="Marketing" checked>
                             <span class="slider-${complementId}"></span>
                         </label>
-                        <p class="description">Enable personalized advertisements based on user interests and behavior.</p>
+                        <p class="description">${preferencesDescription.marketing}</p>
                     </div>
                 </div>
             </div>

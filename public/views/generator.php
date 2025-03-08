@@ -13,7 +13,8 @@ $head = [
     <?php include 'layouts/head.php' ?>
 </head>
 
-<body>
+<body banner-close-preview="<?php echo __('Close Preview') ?>" banner-preferences-title='{"necessary": "<?php echo __('Necessary') ?>", "analytics": "<?php echo __('Analytics') ?>", "preferences": "<?php echo __('Preferences') ?>", "marketing": "<?php echo __('Marketing') ?>"}' banner-preferences-description='{"necessary": "<?php echo __('Enable essential cookies for the website to function properly.') ?>", "analytics": "<?php echo __('Allow anonymous tracking of website usage to improve user experience.') ?>", "preferences": "<?php echo __('Remember user preferences such as language and region settings.') ?>", "marketing": "<?php echo __('Enable personalized advertisements based on user interests and behavior.') ?>"}' >
+
     <?php include 'layouts/scriptTagManager.php' ?>
     <?php include 'layouts/header.php' ?>
 

@@ -71,6 +71,7 @@
   "Available with Google Tag Manager": "Disponível com Google Tag Manager",
   "Hassle-free download": "Download sem complicações",
   "Generate Free Consent Banner": "Gerar Banner de Consentimento Gratuito",
+  "Access": "Acessar",
 
   "Benefits": "Benefícios",
   "Easy to Use": "Fácil de Usar",
@@ -417,5 +418,10 @@
   "Our website does not contain links to third-party sites, so we are not responsible for external privacy policies.": "Nosso site não contém links para terceiros, portanto, não nos responsabilizamos por políticas de privacidade externas.",
 
   "Policy Changes": "Alterações na Política",
-  "This policy may be changed at any time without prior notice.": "Esta política pode ser alterada a qualquer momento, sem aviso prévio."
+  "This policy may be changed at any time without prior notice.": "Esta política pode ser alterada a qualquer momento, sem aviso prévio.",
+
+  "Enable essential cookies for the website to function properly.": "Ative os cookies essenciais para o funcionamento adequado do site.",
+  "Allow anonymous tracking of website usage to improve user experience.": "Permitir o rastreamento anônimo do uso do site para melhorar a experiência do usuário.",
+  "Remember user preferences such as language and region settings.": "Lembre-se das preferências do usuário, como configurações de idioma e região.",
+  "Enable personalized advertisements based on user interests and behavior.": "Habilite anúncios personalizados com base nos interesses e comportamento do usuário."
 }

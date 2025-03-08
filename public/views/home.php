@@ -115,7 +115,7 @@ $head = [
                 <p class="text-center"><?php echo __('Generate Free Consent Banner') ?></p>
             </div>
             <div class="d-flex justify-content-center">
-                <a class="btn" href="/generator"><?php echo __('Generate Banner') ?></a>
+                <a class="btn" href="/generator"><?php echo __('Access') ?></a>
             </div>
         </section>
         <div class="space"></div>
