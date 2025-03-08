@@ -1,6 +1,6 @@
 <?php
 $head = [
-    'title' => __('About Us'),
+    'title' => __('About us'),
     'description' => __('Discover more about our mission to provide a free, customizable consent mode banner generator. Learn about our team and our commitment to compliance and user experience.'),
     'keywords' => __('about us, consent banner generator, our mission, compliance, user experience')
 ];

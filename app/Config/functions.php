@@ -91,8 +91,8 @@ function getPrefixLang(): string
 {
     $prefixLang = prefixLang();
 
-    if(empty($prefixLang) || $prefixLang === LANG_EN || !in_array($prefixLang, langs())) {
-        return LANG_EN;
+    if(empty($prefixLang) || $prefixLang === LANG_PT || !in_array($prefixLang, langs())) {
+        return LANG_PT;
     }
 
     return $prefixLang;

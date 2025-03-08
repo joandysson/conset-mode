@@ -1,8 +1,8 @@
 <?php
 $head = [
-    'title' => 'Privacy Policy',
-    'description' => 'Learn about our privacy policy and how we handle your data when you use our free consent mode banner generator. Your privacy and security are our priority.',
-    'keywords' => 'privacy policy, data handling, user privacy, data security, consent banner'
+    'title' => __('Privacy Policy'),
+    'description' => __('Learn about our privacy policy and how we handle your data when you use our free consent mode banner generator. Your privacy and security are our priority.'),
+    'keywords' => __('privacy policy, data handling, user privacy, data security, consent banner')
 ];
 ?>
 

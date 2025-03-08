@@ -1,8 +1,8 @@
 <?php
 $head = [
-    'title' => 'Terms of Service',
-    'description' => 'Read our terms of service to understand the rules and guidelines for using our free consent mode banner generator. Ensure compliance and transparency.',
-    'keywords' => 'terms of service, consent banner terms, usage guidelines, compliance, transparency'
+    'title' => __('Terms of Service'),
+    'description' => __('Read our terms of service to understand the rules and guidelines for using our free consent mode banner generator. Ensure compliance and transparency.'),
+    'keywords' => __('terms of service, consent banner terms, usage guidelines, compliance, transparency')
 ];
 ?>
 
