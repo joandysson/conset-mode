@@ -8,49 +8,94 @@
 
 
 <url>
-  <loc>https://toolz.at/</loc>
-  <lastmod>2024-12-03T00:50:54+00:00</lastmod>
+  <loc>https://toolz.at/pt</loc>
+  <lastmod>2025-03-08T22:57:53+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://toolz.at/generator</loc>
-  <lastmod>2024-12-03T00:50:54+00:00</lastmod>
+  <loc>https://toolz.at/pt/generator</loc>
+  <lastmod>2025-03-08T22:57:53+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://toolz.at/laws</loc>
-  <lastmod>2024-12-03T00:50:54+00:00</lastmod>
+  <loc>https://toolz.at/pt/laws</loc>
+  <lastmod>2025-03-08T22:57:53+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://toolz.at/why-use</loc>
-  <lastmod>2024-12-03T00:50:54+00:00</lastmod>
+  <loc>https://toolz.at/pt/why-use</loc>
+  <lastmod>2025-03-08T22:57:53+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://toolz.at/cookies</loc>
-  <lastmod>2024-12-03T00:50:54+00:00</lastmod>
+  <loc>https://toolz.at/pt/cookies</loc>
+  <lastmod>2025-03-08T22:57:53+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://toolz.at/contact</loc>
-  <lastmod>2024-12-03T00:50:54+00:00</lastmod>
+  <loc>https://toolz.at/pt/contact</loc>
+  <lastmod>2025-03-08T22:57:53+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://toolz.at/terms</loc>
-  <lastmod>2024-12-03T00:50:54+00:00</lastmod>
+  <loc>https://toolz.at/en</loc>
+  <lastmod>2025-03-08T22:57:53+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://toolz.at/politics-privacy</loc>
-  <lastmod>2024-12-03T00:50:54+00:00</lastmod>
+  <loc>https://toolz.at/pt/terms</loc>
+  <lastmod>2025-03-08T22:57:53+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://toolz.at/about</loc>
-  <lastmod>2024-12-03T00:50:54+00:00</lastmod>
+  <loc>https://toolz.at/pt/politics-privacy</loc>
+  <lastmod>2025-03-08T22:57:53+00:00</lastmod>
   <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://toolz.at/pt/about</loc>
+  <lastmod>2025-03-08T22:57:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://toolz.at/en/generator</loc>
+  <lastmod>2025-03-08T22:57:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://toolz.at/en/laws</loc>
+  <lastmod>2025-03-08T22:57:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://toolz.at/en/why-use</loc>
+  <lastmod>2025-03-08T22:57:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://toolz.at/en/cookies</loc>
+  <lastmod>2025-03-08T22:57:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://toolz.at/en/contact</loc>
+  <lastmod>2025-03-08T22:57:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://toolz.at/en/terms</loc>
+  <lastmod>2025-03-08T22:57:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://toolz.at/en/politics-privacy</loc>
+  <lastmod>2025-03-08T22:57:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://toolz.at/en/about</loc>
+  <lastmod>2025-03-08T22:57:53+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 
 
