@@ -2,11 +2,12 @@
 
 use App\Config\Router\Router;
 
+Router::post('/cdn/upload', 'HomeController:upload');
+Router::get('/files/{id}', 'HomeController:getBanner');
+
 Router::prefix('/' . getPrefixLang());
 
 Router::get('/', 'HomeController:index');
-Router::post('/cdn/upload', 'HomeController:upload');
-Router::get('/files/{id}', 'HomeController:getBanner');
 
 Router::get('/laws', fn() => view( 'laws'));
 Router::get('/why-use', fn() => view( 'why-use'));
