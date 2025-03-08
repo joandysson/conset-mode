@@ -65,6 +65,8 @@ class HomeController
             header('Content-Type: application/json');
             echo json_encode($fileContents);
 
+            exit();
+
         } catch (Throwable $th) {
             http_response_code(500);
             echo json_encode(['error' => $th->getMessage()]);
