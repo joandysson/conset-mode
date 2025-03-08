@@ -13,11 +13,11 @@
                     <?php
                         switch(getPrefixLang()) {
                             case 'en':
-                                echo '<img width="15px" src="' . asset('images/svg/us.svg') . '" alt="">';
+                                echo '<img width="15px" src="' . asset('images/svg/us.svg') . '" alt=""> ';
                                 echo __('English');
                                 break;
                             case 'pt':
-                                echo '<img width="15px" src="' . asset('images/svg/br.svg') . '" alt="">';
+                                echo '<img width="15px" src="' . asset('images/svg/br.svg') . '" alt=""> ';
                                 echo __('Portuguese');
                                 break;
                         }
