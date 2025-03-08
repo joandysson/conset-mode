@@ -50,7 +50,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta name="msapplication-TileImage" content="<?php echo asset('images/png/logo.png'); ?>">
 <meta name="theme-color" content="#ffffff">
 
-<link rel="stylesheet" href="<?php echo asset('css/styles.css?v=0.0.17'); ?> ">
+<link rel="stylesheet" href="<?php echo asset('css/styles.css?v=0.0.18'); ?> ">
 
 <meta name="google-adsense-account" content="ca-pub-2263036903177870">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2263036903177870"
