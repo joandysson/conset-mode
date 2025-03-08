@@ -44,6 +44,7 @@ class HomeController
             http_response_code(201);
             echo json_encode(['id' => $id]);
             exit;
+
         } catch (Throwable $th) {
             dd($th->getMessage());
         }
