@@ -19,7 +19,7 @@ $head = [
 
     <main class="container">
         <section class="section-default">
-            <h1><?php echo __('Page not found') ?></h1>
+            <h1><?php echo __('Page Not Found') ?></h1>
             <p><?php echo __('Oops! The page you are looking for could not be found. Please check the URL or return to the home page.') ?></p>
 
             <div class="space"></div>
