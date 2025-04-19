@@ -1,6 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <?php
 $head = [
     'title' => __('Data Privacy Laws'),
@@ -8,6 +5,9 @@ $head = [
     'keywords' => __('GDPR Compliance, Data Protection Laws, Personal Data Security')
 ];
 ?>
+
+<!DOCTYPE html>
+<html lang="<?php echo __('html_lang') ?>">
 
 <head>
     <?php include 'layouts/head.php' ?>

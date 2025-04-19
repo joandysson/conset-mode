@@ -1,4 +1,6 @@
 {
+  "html_lang": "pt-BR",
+
   "Home": "Início",
   "Generator": "Gerador",
   "Laws": "Leis",
@@ -427,5 +429,8 @@
   "Enable essential cookies for the website to function properly.": "Ative os cookies essenciais para o funcionamento adequado do site.",
   "Allow anonymous tracking of website usage to improve user experience.": "Permitir o rastreamento anônimo do uso do site para melhorar a experiência do usuário.",
   "Remember user preferences such as language and region settings.": "Lembre-se das preferências do usuário, como configurações de idioma e região.",
-  "Enable personalized advertisements based on user interests and behavior.": "Habilite anúncios personalizados com base nos interesses e comportamento do usuário."
+  "Enable personalized advertisements based on user interests and behavior.": "Habilite anúncios personalizados com base nos interesses e comportamento do usuário.",
+
+  "Oops! The page you are looking for could not be found. Please check the URL or return to the home page.": "Ops! A página que você está procurando não pôde ser encontrada. Verifique a URL ou retorne à página inicial.",
+  "Go back home": "Go back home"
 }

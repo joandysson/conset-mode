@@ -1,6 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <?php
 $head = [
     'title' => __('Generator'),
@@ -8,6 +5,9 @@ $head = [
     'keywords' => __('GDPR, LGPD, CCPA, custom consent banner, free consent banner tool, website compliance, HTML CSS JavaScript snippets, privacy regulations')
 ];
 ?>
+
+<!DOCTYPE html>
+<html lang="<?php echo __('html_lang') ?>">
 
 <head>
     <?php include 'layouts/head.php' ?>

@@ -1,6 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <?php
 $head = [
     'title' => __('Why use'),
@@ -8,6 +5,9 @@ $head = [
     'keywords' => __('Data Privacy, Google Consent Mode, Privacy Compliance')
 ];
 ?>
+
+<!DOCTYPE html>
+<html lang="<?php echo __('html_lang') ?>">
 
 <head>
     <?php include 'layouts/head.php' ?>

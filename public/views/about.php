@@ -7,7 +7,7 @@ $head = [
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<?php echo __('html_lang') ?>">
 
 <head>
     <?php include 'layouts/head.php' ?>

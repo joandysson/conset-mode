@@ -1,6 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <?php
 $head = [
     'title' =>  __('Home'),
@@ -8,6 +5,9 @@ $head = [
     'keywords' => __('GDPR, LGPD, CCPA, consent mode banner, custom consent banner, free consent banner tool, website compliance, privacy regulations')
 ];
 ?>
+
+<!DOCTYPE html>
+<html lang="<?php echo __('html_lang') ?>">
 
 <head>
     <?php include 'layouts/head.php' ?>

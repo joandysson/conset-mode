@@ -1,4 +1,6 @@
 {
+  "html_lang": "en-US",
+
   "Home": "Home",
   "Generator": "Generator",
   "Laws": "Laws",
@@ -414,6 +416,8 @@
   "Enable essential cookies for the website to function properly.": "Enable essential cookies for the website to function properly.",
   "Allow anonymous tracking of website usage to improve user experience.": "Allow anonymous tracking of website usage to improve user experience.",
   "Remember user preferences such as language and region settings.": "Remember user preferences such as language and region settings.",
-  "Enable personalized advertisements based on user interests and behavior.": "Enable personalized advertisements based on user interests and behavior."
+  "Enable personalized advertisements based on user interests and behavior.": "Enable personalized advertisements based on user interests and behavior.",
 
+  "Oops! The page you are looking for could not be found. Please check the URL or return to the home page.": "Oops! The page you are looking for could not be found. Please check the URL or return to the home page.",
+  "Go back home": "Go back home"
 }

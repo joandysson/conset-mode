@@ -1,6 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <?php
 $head = [
     'title' => __('Cookeis'),
@@ -8,6 +5,9 @@ $head = [
     'keywords' => __('Cookie Consent Management, GDPR Cookies, Online Privacy Compliance')
 ];
 ?>
+
+<!DOCTYPE html>
+<html lang="<?php echo __('html_lang') ?>">
 
 <head>
     <?php include 'layouts/head.php' ?>
