@@ -76,7 +76,7 @@ function getBannerHTML(placement, customBannerTitle, bannerText, showCheckboxes)
                 </div>
             </div>
         ` : `
-            <button id="btn-accept-${complementId}" class="cookie-consent-button btn-success">Accept</button>
+            <button id="btn-accept-${complementId}" class="cookie-consent-button btn-success-${complementId}">${textBtnSuccess}</button>
         `}
     </div>
     `;
