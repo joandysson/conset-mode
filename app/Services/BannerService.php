@@ -14,12 +14,12 @@ class BannerService {
         $this->banner = new Banner();
     }
 
-    public function getByShortId(string $shorId)
+    public function getByBannertId(string $shorId)
     {
-        $banner = $this->banner->getByShortId($shorId);
+        $banner = $this->banner->getByBannertId($shorId);
 
         $this->banner->update($banner['id'], [
-            'views' => $this->banner->getByShortId($shorId)['views'] + 1,
+            'views' => $this->banner->getByBannertId($shorId)['views'] + 1,
             'updated_at' => date('Y-m-d H:i:s')
         ]);
 

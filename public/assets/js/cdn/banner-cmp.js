@@ -20,7 +20,6 @@ console.log('Banner ID:', bannerId);
         return
     }
 
-
     function appendBanner(html,css,js) {
         const styleElement = document.createElement('style');
         styleElement.id = 'fetched-css';
@@ -38,8 +37,6 @@ console.log('Banner ID:', bannerId);
         jsContentDiv.innerHTML = js;
     }
 
-
-    // Fetch data and insert content
     fetch(`https://toolz.at/files/${bannerId}`)
         .then(response => response.json())
         .then(data => {

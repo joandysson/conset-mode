@@ -33,7 +33,7 @@ class Banner extends BaseModel
         return current($result);
     }
 
-    public function getByShortId(string $bannerId): mixed
+    public function getByBannertId(string $bannerId): mixed
     {
         $result = parent::queryRaw(
             'SELECT * FROM ' . self::$table . ' WHERE banner_id = ? AND deleted_at IS NULL',
@@ -43,7 +43,7 @@ class Banner extends BaseModel
         return current($result);
     }
 
-    public function getByShortIds(array $bannerIds): mixed
+    public function getByBannertIds(array $bannerIds): mixed
     {
         $params = trim(str_repeat('?, ', count($bannerIds)), ', ');
         $result = parent::queryRaw('SELECT * FROM ' . self::$table . ' WHERE banner_id in ('. $params .')', $bannerIds);

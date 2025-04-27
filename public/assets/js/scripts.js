@@ -1,3 +1,6 @@
+var toggle = null;
+var complementId = 'toolz-' + (new Date()).getTime();
+
 Handlebars.registerHelper('or', function (a, b, options) {
     if (a || b) {
         return options.fn(this);
@@ -6,7 +9,6 @@ Handlebars.registerHelper('or', function (a, b, options) {
     }
 });
 
-
 Handlebars.registerHelper('and', function (a, b, options) {
     if (a && b) {
         return options.fn(this);
@@ -14,10 +16,6 @@ Handlebars.registerHelper('and', function (a, b, options) {
         return options.inverse(this);
     }
 });
-
-
-var toggle = null;
-var complementId = 'toolz-' + (new Date()).getTime();
 
 function previewInfoHTML() {
     const closePreviewText = document.getElementsByTagName('body')[0].getAttribute('banner-close-preview');

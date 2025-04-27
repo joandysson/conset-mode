@@ -47,7 +47,7 @@ class CdnController
     public function getBanner(array $data): void
     {
         try {
-            $data = $this->bannerService->getByShortId($data['id']);
+            $data = $this->bannerService->getByBannertId($data['id']);
             $handlebars = new Handlebars([
                 'loader' => new StringLoader(),
             ]);
@@ -143,7 +143,6 @@ class CdnController
             $template
         );
 
-        // 2. Substituir {{key}} pelas variáveis
         $template = preg_replace_callback(
             '/\{\{(.*?)\}\}/',
             function ($matches) use ($data) {
