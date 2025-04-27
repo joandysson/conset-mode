@@ -24,6 +24,6 @@ ON banner (banner_id);
 
 RENAME TABLE banner TO banners;
 
-ALTER TABLE banners ADD COLUMN `template` VARCHAR(20) NOT NULL AFTER `banner_id`;
-ALTER TABLE banners ADD COLUMN `config` JSON NOT NULL AFTER `template`;
+ALTER TABLE banners ADD COLUMN `template` VARCHAR(20) NOT NULL DEFAULT 'default' AFTER `banner_id`;
+ALTER TABLE banners ADD COLUMN `config` JSON NULL AFTER `template`;
 ALTER TABLE banners ADD COLUMN `views` INT NOT NULL DEFAULT 0 AFTER `config`;
