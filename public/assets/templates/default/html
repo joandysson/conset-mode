@@ -1,0 +1,66 @@
+<div id="cookie-consent-banner-{{complementId}}" class="cookie-consent-banner-{{complementId}} {{placement}}">
+    <h3>{{title}}</h3>
+    <p>{{description}}</p>
+
+    {{#if showCheckboxes}}
+    <button id="btn-accept-{{complementId}}" class="cookie-consent-button btn-success-{{complementId}}">{{acceptButton}}</button>
+    <button id="btn-reject-{{complementId}}" class="cookie-consent-button btn-reject-{{complementId}}">{{rejectButton}}</button>
+    <button id="btn-settings-{{complementId}}" class="cookie-consent-button btn-settings-{{complementId}}">{{settingsButton}}</button>
+
+
+    {{#or linkTerms linkPoliticsPrivacy}}
+    <div class="internal-pages-links">
+        {{#if linkTerms}}
+        <a href="{{linkTerms}}">{{TermsOfUse}}</a>
+        {{/if}}
+
+        {{#and linkTerms linkPoliticsPrivacy}}
+        <span>|</span>
+        {{/and}}
+
+        {{#if linkPoliticsPrivacy}}
+        <a href="{{linkPoliticsPrivacy}}">{{PrivacyPolicy}}</a>
+        {{/if}}
+
+    </div>
+    {{/or}}
+    <div id="cookie-consent-options-{{complementId}}" class="cookie-consent-options-{{complementId}}">
+        <div class="settings-cookies-container">
+            <div class="option">
+                <label for="consent-necessary" data-type="title">{{necessaryTitle}}</label>
+                <label class="toggle">
+                    <input id="consent-necessary" type="checkbox" value="Necessary" checked disabled>
+                    <span class="slider-{{complementId}} principal"></span>
+                </label>
+                <p class="description">{{necessaryDescription}}</p>
+            </div>
+            <div class="option">
+                <label for="consent-analytics" data-type="title">{{analyticsTitle}}</label>
+                <label class="toggle">
+                    <input id="consent-analytics" type="checkbox" value="Analytics" checked>
+                    <span class="slider-{{complementId}}"></span>
+                </label>
+                <p class="description">{{analyticsDescription}}</p>
+            </div>
+            <div class="option">
+                <label for="consent-preferences" data-type="title">{{preferencesTitle}}</label>
+                <label class="toggle">
+                    <input id="consent-preferences" type="checkbox" value="Preferences" checked>
+                    <span class="slider-{{complementId}}"></span>
+                </label>
+                <p class="description">{{preferencesDescription}}</p>
+            </div>
+            <div class="option">
+                <label for="consent-marketing" data-type="title">{{marketingTitle}}</label>
+                <label class="toggle">
+                    <input id="consent-marketing" type="checkbox" value="Marketing" checked>
+                    <span class="slider-{{complementId}}"></span>
+                </label>
+                <p class="description">{{marketingDescription}}</p>
+            </div>
+        </div>
+    </div>
+    {{else}}
+    <button id="btn-accept-{{complementId}}" class="cookie-consent-button btn-success-{{complementId}}">{{acceptButton}}</button>
+    {{/if}}
+</div>

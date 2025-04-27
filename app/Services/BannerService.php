@@ -16,15 +16,27 @@ class BannerService {
 
     public function getByShortId(string $shorId)
     {
-        return $this->banner->getByShortId($shorId);
+        $banner = $this->banner->getByShortId($shorId);
+
+        $this->banner->update($banner['id'], [
+            'views' => $this->banner->getByShortId($shorId)['views'] + 1,
+            'updated_at' => date('Y-m-d H:i:s')
+        ]);
+
+        $banner['config'] = json_decode($banner['config'], true);
+
+        return $banner;
     }
 
-    public function create(): array
+    public function create(array $data): array
     {
         $date = date('Y-m-d H:i:s');
 
         return $this->banner->create([
             'banner_id' => Uuid::uuid7(),
+            'template' => $data['template'],
+            'config' => json_encode($data['config']),
+            'views' => 0,
             'created_at' => $date,
             'updated_at' => $date
         ]);
@@ -64,26 +76,5 @@ class BannerService {
 
 
         return $results;
-    }
-
-    private function uniqidId(int $lengthChars = 4): string
-    {
-        $ids = $this->createRandomString($lengthChars, 10);
-
-        $returnedIds = $this->banner->getByShortIds($ids);
-
-        if(!$returnedIds) {
-            return $ids[0];
-        }
-
-        $shortIds = array_column($returnedIds, 'short_id');
-
-        $result = array_diff($ids, $shortIds);
-
-        if(true || empty($result)) {
-            $this->uniqidId($lengthChars + 1);
-        }
-
-        return $result[0];
     }
 }

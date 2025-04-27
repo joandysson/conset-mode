@@ -22,4 +22,8 @@ CREATE TABLE contacts (
 CREATE UNIQUE INDEX banner_id_index
 ON banner (banner_id);
 
-ALTER TABLE banner MODIFY short_id VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_bin;
+RENAME TABLE banner TO banners;
+
+ALTER TABLE banners ADD COLUMN `template` VARCHAR(20) NOT NULL AFTER `banner_id`;
+ALTER TABLE banners ADD COLUMN `config` JSON NOT NULL AFTER `template`;
+ALTER TABLE banners ADD COLUMN `views` INT NOT NULL DEFAULT 0 AFTER `config`;
