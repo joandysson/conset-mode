@@ -18,7 +18,6 @@ class CdnController
         $this->bannerService = new BannerService();
     }
 
-
     public function index(): void
     {
         view('home');
