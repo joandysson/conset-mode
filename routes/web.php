@@ -2,8 +2,8 @@
 
 use App\Config\Router\Router;
 
-Router::post('/cdn/upload', 'HomeController:upload');
-Router::get('/files/{id}', 'HomeController:getBanner');
+Router::post('/cdn/create', 'CdnController:create');
+Router::get('/files/{id}', 'CdnController:getBanner');
 
 Router::prefix('/' . getPrefixLang());
 

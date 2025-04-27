@@ -1,0 +1,107 @@
+window.dataLayer = window.dataLayer || [];
+function gtag() {
+    dataLayer.push(arguments);
+}
+
+function setDefaultConsent() {
+    if (typeof gtmUtmSource !== 'undefined' && gtmUtmSource === 'gtm') {
+       return
+    }
+
+    if (localStorage.getItem('consentMode') === null) {
+        gtag('consent', 'default', {
+            'ad_storage': 'denied',
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied',
+            'analytics_storage': 'denied',
+            'personalization_storage': 'denied',
+            'functionality_storage': 'denied',
+            'security_storage': 'denied',
+        });
+
+        return
+    }
+
+    gtag('consent', 'default', JSON.parse(localStorage.getItem('consentMode')));
+}
+
+setDefaultConsent()
+
+function setConsentAndHideBanner(consent) {
+    const consentMode = {
+        'functionality_storage': consent.necessary ? 'granted' : 'denied',
+        'security_storage': consent.necessary ? 'granted' : 'denied',
+        'ad_storage': consent.marketing ? 'granted' : 'denied',
+        'ad_user_data': consent.marketing ? 'granted' : 'denied',
+        'ad_personalization': consent.marketing ? 'granted' : 'denied',
+        'analytics_storage': consent.analytics ? 'granted' : 'denied',
+        'personalization_storage': consent.preferences ? 'granted' : 'denied',
+    };
+    gtag('consent', 'update', consentMode);
+    localStorage.setItem('consentMode', JSON.stringify(consentMode));
+    hideBanner();
+}
+
+function hideBanner() {
+    document.getElementById(`cookie-consent-banner-{{complementId}}`).style.display = 'none';
+}
+
+document.getElementById('btn-accept-{{complementId}}').addEventListener('click', function () {
+    setConsentAndHideBanner({
+        necessary: true,
+        analytics: document.getElementById('consent-analytics')?.checked ?? true,
+        preferences: document.getElementById('consent-preferences')?.checked ?? true,
+        marketing: document.getElementById('consent-marketing')?.checked ?? true
+    });
+
+    setCookie('cookieConsent', 'accepted', 30);
+});
+
+document.getElementById('btn-reject-{{complementId}}')?.addEventListener('click', function () {
+    setConsentAndHideBanner({
+        necessary: false,
+        analytics: false,
+        preferences: false,
+        marketing: false
+    });
+
+    setCookie('cookieConsent', 'reject', 30);
+});
+
+
+document.getElementById('btn-settings-{{complementId}}')?.addEventListener('click', function () {
+    const element = document.getElementById('cookie-consent-options-{{complementId}}');
+    if (element.style.display === 'flex') {
+        document.getElementById('cookie-consent-options-{{complementId}}').style.display = 'none'
+    } else {
+        document.getElementById('cookie-consent-options-{{complementId}}').style.display = 'flex'
+    }
+});
+
+
+function setCookie(name, value, days) {
+    const date = new Date();
+    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+    const expires = "expires=" + date.toUTCString();
+    document.cookie = name + "=" + value + ";" + expires + ";path=/";
+}
+
+function getCookie(name) {
+    const nameEQ = name + "=";
+    const ca = document.cookie.split(';');
+    for (let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) === ' ') {
+            c = c.substring(1, c.length);
+        }
+        if (c.indexOf(nameEQ) === 0) {
+            return c.substring(nameEQ.length, c.length);
+        }
+    }
+    return null;
+}
+
+const consent = getCookie('cookieConsent');
+if (!consent) {
+    document.getElementById(`cookie-consent-banner-{{complementId}}`).style.display = 'block';
+}

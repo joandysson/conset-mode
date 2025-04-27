@@ -13,7 +13,7 @@ $head = [
     <?php include 'layouts/head.php' ?>
 </head>
 
-<body banner-close-preview="<?php echo __('Close Preview') ?>" banner-preferences-title='{"necessary": "<?php echo __('Necessary') ?>", "analytics": "<?php echo __('Analytics') ?>", "preferences": "<?php echo __('Preferences') ?>", "marketing": "<?php echo __('Marketing') ?>"}' banner-preferences-description='{"necessary": "<?php echo __('Enable essential cookies for the website to function properly.') ?>", "analytics": "<?php echo __('Allow anonymous tracking of website usage to improve user experience.') ?>", "preferences": "<?php echo __('Remember user preferences such as language and region settings.') ?>", "marketing": "<?php echo __('Enable personalized advertisements based on user interests and behavior.') ?>"}' >
+<body banner-close-preview="<?php echo __('Close Preview') ?>" banner-privacy-policy="<?php echo __('Privacy Policy') ?>" banner-terms-of-use="<?php echo __('Terms of Use') ?>" banner-preferences-title='{"necessary": "<?php echo __('Necessary') ?>", "analytics": "<?php echo __('Analytics') ?>", "preferences": "<?php echo __('Preferences') ?>", "marketing": "<?php echo __('Marketing') ?>"}' banner-preferences-description='{"necessary": "<?php echo __('Enable essential cookies for the website to function properly.') ?>", "analytics": "<?php echo __('Allow anonymous tracking of website usage to improve user experience.') ?>", "preferences": "<?php echo __('Remember user preferences such as language and region settings.') ?>", "marketing": "<?php echo __('Enable personalized advertisements based on user interests and behavior.') ?>"}' >
 
     <?php include 'layouts/scriptTagManager.php' ?>
     <?php include 'layouts/header.php' ?>
@@ -321,8 +321,20 @@ $head = [
         <section id="preview-section">
         </section>
 
+        <div class="space"></div>
+
+        <script id="preview-banner-html" type="text/template">
+            <?php include dirname(__DIR__) . '/assets/templates/default/html' ?>
+        </script>
+        <script id="preview-banner-css" type="text/template">
+            <?php include dirname(__DIR__) . '/assets/templates/default/css' ?>
+        </script>
+        <script id="preview-banner-js" type="text/template">
+            <?php include dirname(__DIR__) . '/assets/templates/default/js' ?>
+        </script>
     </main>
     <?php include 'layouts/footer.php' ?>
+    <script src="<?php echo asset('js/libs/handlebars.min.js'); ?>"></script>
 
     <?php include 'layouts/script.php' ?>
 

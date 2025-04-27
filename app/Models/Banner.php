@@ -12,7 +12,7 @@ class Banner extends BaseModel
     /**
      * @var string
      */
-    private static $table = 'banner';
+    private static $table = 'banners';
 
     /**
      * @return array
@@ -33,20 +33,20 @@ class Banner extends BaseModel
         return current($result);
     }
 
-    public function getByShortId(string $shorId): mixed
+    public function getByBannertId(string $bannerId): mixed
     {
         $result = parent::queryRaw(
-            'SELECT * FROM ' . self::$table . ' WHERE short_id = ? AND deleted_at IS NULL',
-            [$shorId]
+            'SELECT * FROM ' . self::$table . ' WHERE banner_id = ? AND deleted_at IS NULL',
+            [$bannerId]
         );
 
         return current($result);
     }
 
-    public function getByShortIds(array $shorIds): mixed
+    public function getByBannertIds(array $bannerIds): mixed
     {
-        $params = trim(str_repeat('?, ', count($shorIds)), ', ');
-        $result = parent::queryRaw('SELECT * FROM ' . self::$table . ' WHERE short_id in ('. $params .')', $shorIds);
+        $params = trim(str_repeat('?, ', count($bannerIds)), ', ');
+        $result = parent::queryRaw('SELECT * FROM ' . self::$table . ' WHERE banner_id in ('. $params .')', $bannerIds);
 
         return $result;
     }
@@ -81,7 +81,7 @@ class Banner extends BaseModel
 
         $sql = 'UPDATE ' . self::$table;
         $sql .= ' SET deleted_at = :deleted_at, updated_at = :updated_at';
-        $sql .= ' WHERE short_id = :id';
+        $sql .= ' WHERE banner_id = :id';
 
         self::save($sql, [
             ':deleted_at' => $date,

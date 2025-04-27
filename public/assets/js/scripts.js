@@ -1,6 +1,22 @@
 var toggle = null;
 var complementId = 'toolz-' + (new Date()).getTime();
 
+Handlebars.registerHelper('or', function (a, b, options) {
+    if (a || b) {
+        return options.fn(this);
+    } else {
+        return options.inverse(this);
+    }
+});
+
+Handlebars.registerHelper('and', function (a, b, options) {
+    if (a && b) {
+        return options.fn(this);
+    } else {
+        return options.inverse(this);
+    }
+});
+
 function previewInfoHTML() {
     const closePreviewText = document.getElementsByTagName('body')[0].getAttribute('banner-close-preview');
 
@@ -20,381 +36,77 @@ function getBannerHTML(placement, customBannerTitle, bannerText, showCheckboxes)
     const linkTerms = document.getElementById('terms').value;
     const linkPoliticsPrivacy = document.getElementById('politics-privacy').value;
 
-    const preferencs = document.getElementsByTagName('body')[0];
-    const preferencesTitle = JSON.parse(preferencs.getAttribute('banner-preferences-title'))
-    const preferencesDescription = JSON.parse(preferencs.getAttribute('banner-preferences-description'))
+    const body = document.getElementsByTagName('body')[0];
 
-    return `
-    <div id="cookie-consent-banner" class="cookie-consent-banner ${placement}">
-        ${customBannerTitle ? `<h3>${customBannerTitle}</h3>`: ''}
-        <p>${bannerText}</p>
-        ${showCheckboxes ? `
-            <button id="btn-accept-${complementId}" class="cookie-consent-button btn-success-${complementId}">${textBtnSuccess}</button>
-            <button id="btn-reject-${complementId}" class="cookie-consent-button btn-reject-${complementId}">${textBtnReject}</button>
-            <button id="btn-settings-${complementId}" class="cookie-consent-button btn-settings-${complementId}">${textBtnSettings}</button>
-            ${linkTerms || linkPoliticsPrivacy ? `
-            <div class="internal-pages-links">
-                ${linkTerms ? `<a href="${linkTerms}">Terms of use</a>`: '' }
-                ${linkTerms && linkPoliticsPrivacy ? `<span>|</span>` : '' }
-                ${linkPoliticsPrivacy ? `<a href="${linkPoliticsPrivacy}">Privacy policy</a>`: '' }
-            </div>
-            ` : ''}
-            <div id="cookie-consent-options-${complementId}" class="cookie-consent-options-${complementId}">
-                <div class="settings-cookies-container">
-                    <div class="option">
-                        <label for="consent-necessary" data-type="title" > ${preferencesTitle.necessary} </label>
-                        <label class="toggle">
-                            <input id="consent-necessary" type="checkbox" value="Necessary" checked disabled>
-                            <span class="slider-${complementId} principal"></span>
-                        </label>
-                        <p class="description">${preferencesDescription.necessary}</p>
-                    </div>
-                    <div class="option">
-                        <label for="consent-analytics" data-type="title">${preferencesTitle.analytics}</label>
-                        <label class="toggle">
-                            <input id="consent-analytics" type="checkbox" value="Analytics" checked>
-                            <span class="slider-${complementId}"></span>
-                        </label>
-                        <p class="description">${preferencesDescription.analytics}</p>
-                    </div>
-                    <div class="option">
-                        <label for="consent-preferences" data-type="title">${preferencesTitle.preferences}</label>
-                        <label class="toggle">
-                            <input id="consent-preferences" type="checkbox" value="Preferences" checked>
-                            <span class="slider-${complementId}"></span>
-                        </label>
-                        <p class="description">${preferencesDescription.preferences}</p>
-                    </div>
-                    <div class="option">
-                        <label for="consent-marketing" data-type="title">${preferencesTitle.marketing}</label>
-                        <label class="toggle">
-                            <input id="consent-marketing" type="checkbox" value="Marketing" checked>
-                            <span class="slider-${complementId}"></span>
-                        </label>
-                        <p class="description">${preferencesDescription.marketing}</p>
-                    </div>
-                </div>
-            </div>
-        ` : `
-            <button id="btn-accept-${complementId}" class="cookie-consent-button btn-success-${complementId}">${textBtnSuccess}</button>
-        `}
-    </div>
-    `;
+    const TermsOfUse = body.getAttribute('banner-terms-of-use')
+    const PrivacyPolicy = body.getAttribute('banner-privacy-policy')
+
+
+    const preferencesTitle = JSON.parse(body.getAttribute('banner-preferences-title'))
+    const preferencesDescription = JSON.parse(body.getAttribute('banner-preferences-description'))
+
+    const source = document.getElementById('preview-banner-html').innerHTML;
+    const template = Handlebars.compile(source);
+
+    const data = {
+        complementId: complementId,
+        placement: placement,
+        showCheckboxes: showCheckboxes,
+        title: customBannerTitle,
+        description: bannerText,
+        acceptButton: textBtnSuccess,
+        rejectButton: textBtnReject,
+        settingsButton: textBtnSettings,
+        TermsOfUse: TermsOfUse,
+        linkTerms: linkTerms,
+        PrivacyPolicy: PrivacyPolicy,
+        linkPoliticsPrivacy: linkPoliticsPrivacy,
+        necessaryTitle: preferencesTitle.necessary,
+        necessaryDescription: preferencesDescription.necessary,
+        analyticsTitle: preferencesTitle.analytics,
+        analyticsDescription: preferencesDescription.analytics,
+        preferencesTitle: preferencesTitle.preferences,
+        preferencesDescription: preferencesDescription.preferences,
+        marketingTitle: preferencesTitle.marketing,
+        marketingDescription: preferencesDescription.marketing,
+    }
+
+    return {
+        config: data,
+        code: template(data)
+    };
 }
 
-function getBannerCSS(borderRadius, inputToggle, btnRadius, inputSuccess, inputReject, inputSettings) {
-    return `
-    .cookie-consent-banner {
-        position: fixed;
-        display: none;
-        background-color: #f8f9fa;
-        color: black;
-        padding: 15px;
-        font-size: 14px;
-        text-align: center;
-        z-index: 9999;
-        border-radius: ${borderRadius > 10 ? 10: borderRadius }px;
+function getBannerCSS(borderBanner, inputToggle, btnRadius, inputSuccess, inputReject, inputSettings) {
+    const source = document.getElementById('preview-banner-css').innerHTML;
+
+    const data = {
+        complementId,
+        borderBanner,
+        btnRadius,
+        inputToggle,
+        inputSuccess,
+        inputReject,
+        inputSettings
     }
 
-    .cookie-consent-banner.bottom {
-        bottom: 0;
-        left: 0;
-        right: 0;
-        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .cookie-consent-banner.top {
-        top: 0;
-        left: 0;
-        right: 0;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .cookie-consent-banner.bottom-left {
-        max-width: 660px;
-        bottom: 15px;
-        left: 15px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    }
-
-    .cookie-consent-banner.bottom-right {
-        max-width: 660px;
-        bottom: 15px;
-        right: 15px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    }
-
-    .cookie-consent-banner.bottom-center {
-        width: 100%;
-        max-width: 660px;
-        bottom: 15px;
-        left: 50%;
-        transform: translateX(-50%);
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    }
-
-    .cookie-consent-options-${complementId} {
-        display: none;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .settings-cookies-container {
-        margin-top: 20px;
-        padding: 10px;
-        margin-top: 15px;
-        background-color: #f3f3f3;
-        border-radius: ${borderRadius > 10 ? 10: borderRadius }px;
-    }
-
-    .option {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        margin: 10px 0;
-        width: 100%;
-        max-width: 650px;
-    }
-
-    .option label {
-
-        font-weight: bold;
-        text-align: left;
-    }
-
-    .option label[data-type="title"] {
-        min-width: 85px
-    }
-
-    .option .toggle {
-        display: inline-block;
-        width: 50px;
-        height: 26px;
-        position: relative;
-    }
-
-    .option .toggle input {
-        opacity: 0;
-        width: 0;
-        height: 0;
-    }
-
-    .option .toggle .slider-${complementId} {
-        position: absolute;
-        cursor: pointer;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: #ccc;
-        transition: .4s;
-        border-radius: 15px;
-    }
-
-    .option .toggle .slider-${complementId}:before {
-        position: absolute;
-        content: "";
-        height: 18px;
-        width: 18px;
-        left: 4px;
-        bottom: 4px;
-        background-color: white;
-        transition: .4s;
-        border-radius: 50%;
-    }
-
-    .option .toggle input:checked + .slider-${complementId} {
-        background-color: ${inputToggle};
-    }
-
-    .option .toggle input:checked + .slider-${complementId}.principal {
-        background-color: #ff0000;
-    }
-
-    .option .toggle input:checked + .slider-${complementId}:before {
-        transform: translateX(20px);
-    }
-
-    .option p.description {
-        flex: 1;
-        font-size: 0.9rem;
-        color: #666;
-        text-align: justify;
-        margin: 0;
-        padding-left: 10px;
-    }
-
-    .cookie-consent-button {
-        padding: 8px 16px;
-        font-size: 1rem;
-        cursor: pointer;
-        border: none;
-        border-radius: ${btnRadius > 10 ? 10 : btnRadius}px;
-        color: #fff;
-        margin: 1px 0;
-    }
-
-    .cookie-consent-button:active {
-        opacity: 0.8;
-    }
-
-    .btn-success-${complementId} {
-        background-color: ${inputSuccess}
-    }
-
-    .btn-success-${complementId}:hover {
-        background-color: ${inputSuccess};
-    }
-
-    .btn-reject-${complementId} {
-        background-color: ${inputReject}
-    }
-
-    .btn-reject-${complementId}:hover {
-        background-color: ${inputReject};
-    }
-
-    .btn-settings-${complementId} {
-        background-color: ${inputSettings}
-    }
-
-    .btn-settings-${complementId}:hover {
-        background-color: ${inputSettings};
-    }
-
-    .internal-pages-links {
-        margin: 5px;
-    }
-
-    .internal-pages-links a {
-        text-decoration: none;
-        color: #333;
-        margin: 0 10px;
-    }
-
-    @media only screen and (max-width: 720px) {
-        .cookie-consent-banner {
-            width: auto !important;
-            right: 0 !important;
-            left: 0 !important;
-            transform: translateX(0%) !important;
-            margin: 0 1px;
-        }
-    }
-    `;
-
+    return {
+        config: data,
+        code: renderTemplate(source, data)
+    };
 }
 
-function getBannerJS(showCheckboxes) {
-    return `
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-        dataLayer.push(arguments);
+function getBannerJS() {
+    const source = document.getElementById('preview-banner-js').innerHTML;
+
+    const data = {
+        complementId
     }
 
-    function setDefaultConsent() {
-        if(gtmUtmSource === 'gtm') {
-            return
-        }
-
-        if(localStorage.getItem('consentMode') === null) {
-            gtag('consent', 'default', {
-                'ad_storage': 'denied',
-                'ad_user_data': 'denied',
-                'ad_personalization': 'denied',
-                'analytics_storage': 'denied',
-                'personalization_storage': 'denied',
-                'functionality_storage': 'denied',
-                'security_storage': 'denied',
-            });
-
-            return
-        }
-
-        gtag('consent', 'default', JSON.parse(localStorage.getItem('consentMode')));
-    }
-
-    setDefaultConsent()
-
-    function setConsentAndHideBanner(consent) {
-        const consentMode = {
-            'functionality_storage': consent.necessary ? 'granted' : 'denied',
-            'security_storage': consent.necessary ? 'granted' : 'denied',
-            'ad_storage': consent.marketing ? 'granted' : 'denied',
-            'ad_user_data': consent.marketing ? 'granted' : 'denied',
-            'ad_personalization': consent.marketing ? 'granted' : 'denied',
-            'analytics_storage': consent.analytics ? 'granted' : 'denied',
-            'personalization_storage': consent.preferences ? 'granted' : 'denied',
-        };
-        gtag('consent', 'update', consentMode);
-        localStorage.setItem('consentMode', JSON.stringify(consentMode));
-        hideBanner();
-    }
-
-    function hideBanner() {
-        document.getElementById('cookie-consent-banner').style.display = 'none';
-    }
-
-    document.getElementById('btn-accept-${complementId}').addEventListener('click', function() {
-        setConsentAndHideBanner({
-            necessary: true,
-            analytics: document.getElementById('consent-analytics')?.checked ?? true,
-            preferences: document.getElementById('consent-preferences')?.checked ?? true,
-            marketing: document.getElementById('consent-marketing')?.checked ?? true
-        });
-
-        setCookie('cookieConsent', 'accepted', 30);
-    });
-
-    document.getElementById('btn-reject-${complementId}')?.addEventListener('click', function() {
-        setConsentAndHideBanner({
-            necessary: false,
-            analytics: false,
-            preferences: false,
-            marketing: false
-        });
-
-        setCookie('cookieConsent', 'reject', 30);
-    });
-
-    ${showCheckboxes ? `
-        document.getElementById('btn-settings-${complementId}').addEventListener('click', function() {
-            const element = document.getElementById('cookie-consent-options-${complementId}');
-            if(element.style.display === 'flex') {
-                document.getElementById('cookie-consent-options-${complementId}').style.display = 'none'
-            } else {
-                document.getElementById('cookie-consent-options-${complementId}').style.display = 'flex'
-            }
-        });
-        `: ``}
-
-    function setCookie(name, value, days) {
-        const date = new Date();
-        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-        const expires = "expires=" + date.toUTCString();
-        document.cookie = name + "=" + value + ";" + expires + ";path=/";
-    }
-
-    function getCookie(name) {
-        const nameEQ = name + "=";
-        const ca = document.cookie.split(';');
-        for (let i = 0; i < ca.length; i++) {
-            let c = ca[i];
-            while (c.charAt(0) === ' ') {
-                c = c.substring(1, c.length);
-            }
-            if (c.indexOf(nameEQ) === 0) {
-                return c.substring(nameEQ.length, c.length);
-            }
-        }
-        return null;
-    }
-
-    const consent = getCookie('cookieConsent');
-    if (!consent) {
-        document.getElementById('cookie-consent-banner').style.display = 'block';
-    }
-    `;
+    return {
+        config: data,
+        code: renderTemplate(source, data)
+    };
 }
 
 function getCdn(id) {
@@ -434,7 +146,8 @@ function insertCodeInPage(bannerHTML, bannerCSS, bannerJS) {
 function getBannerElementPreview(previewInfo, bannerHTML) {
     const previewInfoElement = document.createRange().createContextualFragment(previewInfo);
     const bannerElement = document.createRange().createContextualFragment(bannerHTML);
-    bannerElement.getElementById('cookie-consent-banner').prepend(previewInfoElement);
+    bannerElement.getElementById('preview-info')?.remove()
+    bannerElement.getElementById(`cookie-consent-banner-${complementId}`).prepend(previewInfoElement);
 
     return bannerElement;
 }
@@ -464,22 +177,22 @@ function getBannerCode() {
 function generatePreview() {
     const [previewInfo, bannerHTML, bannerCSS, bannerJS] = getBannerCode();
 
-    const bannerElementPreview = getBannerElementPreview(previewInfo, bannerHTML)
-    addAndRemoveDynamicStyleCss(bannerCSS)
+    const bannerElementPreview = getBannerElementPreview(previewInfo, bannerHTML.code)
+    addAndRemoveDynamicStyleCss(bannerCSS.code)
     replacePreview(bannerElementPreview)
 
     document.getElementById('btn-close-preview').addEventListener('click', function () {
-        document.getElementById('cookie-consent-banner').style.display = 'none';
+        document.getElementById(`cookie-consent-banner-${complementId}`).style.display = 'none';
     });
 
     document.getElementById(`btn-settings-${complementId}`)?.addEventListener('click', () => {
         const element = document.getElementById(`cookie-consent-options-${complementId}`);
-        const display = element.style.display === 'flex' ? 'none': 'flex'
+        const display = element.style.display === 'flex' ? 'none' : 'flex'
         document.getElementById(`cookie-consent-options-${complementId}`).style.display = display
         toggle = display
     });
 
-    document.getElementById('cookie-consent-banner').style.display = 'block';
+    document.getElementById(`cookie-consent-banner-${complementId}`).style.display = 'block';
 
     return [bannerHTML, bannerCSS, bannerJS]
 }
@@ -508,13 +221,13 @@ function getExampleCode(html, css, js) {
 
 document.getElementById('generate-code')?.addEventListener('click', async () => {
     const [bannerHTML, bannerCSS, bannerJS] = generatePreview()
-    insertCodeInPage(bannerHTML, bannerCSS, bannerJS)
+    insertCodeInPage(bannerHTML.code, bannerCSS.code, bannerJS.code)
 });
 
 document.getElementById('example-code')?.addEventListener('click', async () => {
     const [bannerHTML, bannerCSS, bannerJS] = generatePreview()
 
-    const exempleCode = getExampleCode(bannerHTML, bannerCSS, bannerJS);
+    const exempleCode = getExampleCode(bannerHTML.code, bannerCSS.code, bannerJS.code);
     const blob = new Blob([exempleCode], { type: 'application/json' });
     const url = URL.createObjectURL(blob)
 
@@ -532,41 +245,23 @@ document.getElementById('example-code')?.addEventListener('click', async () => {
 document.getElementById('cdn-code')?.addEventListener('click', async (e) => {
     e.target.setAttribute('disabled', 'disabled')
     const [bannerHTML, bannerCSS, bannerJS] = generatePreview()
-    const minifiedHTML = await HTMLMinifier.minify(bannerHTML, {
-        collapseWhitespace: true,
-        removeComments: true,
-        minifyCSS: true,
-        minifyJS: true
-    });
 
-    const minifiedCSS = await HTMLMinifier.minify(bannerCSS, {
-        collapseWhitespace: true,
-        removeComments: true,
-        minifyCSS: true,
-        minifyJS: true
-    });
+    const jsonData = {
+        template: 'default',
+        config: {
+            html: bannerHTML.config,
+            css: bannerCSS.config,
+            js: bannerJS.config
+        }
+    };
 
-    const minifiedJS = await Terser.minify(bannerJS, { sourceMap: true })
-
-    const html = new Blob([minifiedHTML], { type: 'text/html' });
-    const css = new Blob([minifiedCSS], { type: 'text/css' });
-    const js = new Blob([minifiedJS.code], { type: 'text/javascript' });
-
-    const htmlFile = new File([html], 'data.html', { type: 'text/html' });
-    const cssFile = new File([css], 'data.css', { type: 'text/css' });
-    const jsFile = new File([js], 'data.js', { type: 'text/javascript' });
-
-    // Create FormData object and append files
-    const formData = new FormData();
-    formData.append('html', htmlFile);
-    formData.append('css', cssFile);
-    formData.append('js', jsFile);
-
-    // Perform the upload via fetch
-    const uploadUrl = '/cdn/upload'; // Replace with your actual upload endpoint
+    const uploadUrl = '/cdn/create';
     const requestOptions = {
         method: 'POST',
-        body: formData
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(jsonData)
     };
 
     try {
@@ -577,10 +272,8 @@ document.getElementById('cdn-code')?.addEventListener('click', async (e) => {
             document.getElementById('banner-id').innerText = data.id;
             document.getElementById('result').style = 'display:block'
             console.log('Files uploaded successfully!');
-            // Handle success
         } else {
             console.error('Failed to upload files.');
-            // Handle error
         }
 
         e.target.removeAttribute('disabled')
@@ -627,14 +320,39 @@ document.addEventListener('DOMContentLoaded', (_) => {
         generatePreview()
 
         const display = input.name === 'input-toggle' ? 'flex' : toggle
-        if(document.getElementById(`cookie-consent-options-${complementId}`)) {
+        if (document.getElementById(`cookie-consent-options-${complementId}`)) {
             document.getElementById(`cookie-consent-options-${complementId}`).style.display = display
             toggle = display
         }
 
-        if(input.type === 'number' && input.value > 10) {
+        if (input.type === 'number' && input.value > 10) {
             input.value = 10
         }
 
     });
 });
+
+
+function renderTemplate(template, data) {
+    template = template.replace(/\{\{#if (.*?)\}\}([\s\S]*?)\{\{\/if\}\}/g, (match, condition, content) => {
+        condition = condition.replace(/\b(\w+)\b/g, key => data[key] !== undefined ? `data["${key}"]` : key);
+
+        try {
+            if (eval(condition)) {
+                return content;
+            } else {
+                return '';
+            }
+        } catch (e) {
+            console.error('Erro no IF do template:', e);
+            return '';
+        }
+    });
+
+    template = template.replace(/\{\{(.*?)\}\}/g, (match, key) => {
+        key = key.trim();
+        return data[key] !== undefined ? data[key] : '';
+    });
+
+    return template;
+}

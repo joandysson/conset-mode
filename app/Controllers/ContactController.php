@@ -17,7 +17,7 @@ class ContactController
     /**
      * @return void
      */
-    public function index(): never
+    public function index()
     {
         view('contact');
     }
