@@ -92,7 +92,7 @@ class BannerService {
 
     public function getConfiguredBanner(string $bannerId): array
     {
-        $banner = $this->banner->getByBannertId($bannerId);
+        $banner = $this->getByBannertId($bannerId);
         $this->incrementBannerViews($banner);
         $this->sendEventToAnalytics($banner);
         $handlebars = $this->loadHandlebars();
